@@ -1,0 +1,17 @@
+#composer stuff
+/vendor/
+composer.lock
+composer.phar
+
+#build stuff
+/build/logs
+/build/cache
+/build/docs
+/build/pdepend
+/build/coverage
+
+#macos stuff
+.DS_Store
+
+#
+cache.properties

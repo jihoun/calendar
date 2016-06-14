@@ -1,0 +1,20 @@
+<ruleset name="name-of-your-coding-standard"
+  xmlns="http://pmd.sf.net/ruleset/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0
+                      http://pmd.sf.net/ruleset_xml_schema.xsd"
+  xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+  <description>Description of triedgeteam.com coding standard</description>
+
+   <!-- Import the entire unused code rule set -->
+    <rule ref="rulesets/unusedcode.xml" />
+
+    <!-- Import the entire cyclomatic complexity rule -->
+<!--     <rule ref="rulesets/codesize.xml/CyclomaticComplexity" /> -->
+	
+ 	<rule ref="rulesets/controversial.xml/Superglobals"/> 
+
+	<!-- Import the entire Design Rules -->
+ 	<rule ref="rulesets/design.xml"/>
+
+</ruleset>

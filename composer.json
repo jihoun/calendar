@@ -1,0 +1,26 @@
+{
+    "name": "triedge/calendar",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Nicolas Lagier",
+            "email": "nicolas.lagier@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "require-dev":{
+        "pdepend/pdepend" : "2.0.4",
+        "phpunit/phpunit": "4.8.*",
+        "phploc/phploc": "*",
+        "phpmd/phpmd" : "@stable",
+        "sami/sami": "3.0.*",
+        "sebastian/phpcpd": "*",
+        "squizlabs/php_codesniffer":"2.*"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": { "Triedge\\Calendar\\": "src/" }
+    }
+}

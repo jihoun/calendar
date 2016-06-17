@@ -1,5 +1,5 @@
 <?php
-namespace Triedge\Calendar;
+namespace Triedge\Calendar\Component;
 
 abstract class IComponent 
 {

@@ -2,7 +2,7 @@
 namespace Triedge\Calendar\Component;
 
 /**
- * Provide a grouping of component properties that describe either a request for free/busy time, describe a response to 
+ * Provide a grouping of component properties that describe either a request for free/busy time, describe a response to
  * a request for free/busy time, or describe a published set of busy time.
  */
 class FreeBusy extends IComponent

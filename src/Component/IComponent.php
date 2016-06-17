@@ -1,7 +1,7 @@
 <?php
 namespace Triedge\Calendar\Component;
 
-abstract class IComponent 
+abstract class IComponent
 {
-    abstract function toString();
+    abstract public function toString();
 }

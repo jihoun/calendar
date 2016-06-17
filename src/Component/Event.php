@@ -66,7 +66,24 @@ class Event extends IComponent
         $res .= 'UID:'.$this->uid_."\n";
         $res .= 'DTSTAMP:'.$this->dtstamp_."\n";
         //TODO
+        if (!is_null($this->class_)) {
+            //TODO
+        }
+        if (!is_null($this->created_)) {
+            //TODO
+        }
+        //TODO
+        if (!is_null($this->transp_)) {
+            $res .= $this->transp_->toString();
+        }
+        //TODO
         $res .= "END:VEVENT\n";
         return $res;
+    }
+
+    public function &setTimeTransparency(\Triedge\Calendar\Property\TimeTransparency $transp)
+    {
+        $this->transp_ = $transp;
+        return $this;
     }
 }

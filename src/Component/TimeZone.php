@@ -29,5 +29,4 @@ class TimeZone extends IComponent
         $res .= "END:VTIMEZONE\n";
         return $res;
     }
-
 }

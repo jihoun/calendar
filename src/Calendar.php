@@ -10,9 +10,10 @@ class Calendar
     
     private $componentList_ = array();
 
-    public function addComponent(\Triedge\Calendar\Component\IComponent $component)
+    public function &addComponent(\Triedge\Calendar\Component\IComponent $component)
     {
         $this->componentsList_[] = $component;
+        return $this;
     }
 
     public function toString()

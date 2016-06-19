@@ -32,7 +32,17 @@ class FreeBusy extends IComponent
         $res = "BEGIN:VFREEBUSY\n";
         $res .= "UID:".$this->uid_."\n";
         //TODO
+        foreach ($this->commentList_ as $comment) {
+            $res .= $comment->toString();
+        }
+        //TODO
         $res .= "END:VFREEBUSY\n";
         return $res;
+    }
+
+    public function &addComment(\Triedge\Calendar\Property\Comment $comment)
+    {
+        $this->commentList_[] = $comment;
+        return $this;
     }
 }

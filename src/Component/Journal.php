@@ -45,7 +45,27 @@ class Journal extends IComponent
         $res = "BEGIN:VJOURNAL\n";
         $res .= "UID:".$this->uid_."\n";
         //TODO
+        foreach ($this->commentList_ as $comment) {
+            $res .= $comment->toString();
+        }
+        //TODO
+        foreach ($this->descriptionList_ as $description) {
+            $res .= $description->toString();
+        }
+        //TODO
         $res .= "END:VJOURNAL\n";
         return $res;
+    }
+
+    public function &addComment(\Triedge\Calendar\Property\Comment $comment)
+    {
+        $this->commentList_[] = $comment;
+        return $this;
+    }
+
+    public function &addDescription(\Triedge\Calendar\Property\Description $description)
+    {
+        $this->descriptionList_[] = $description;
+        return $this;
     }
 }

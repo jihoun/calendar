@@ -67,23 +67,142 @@ class Event extends IComponent
         $res .= 'DTSTAMP:'.$this->dtstamp_."\n";
         //TODO
         if (!is_null($this->class_)) {
-            //TODO
+            $res .= $this->class_->toString();
         }
         if (!is_null($this->created_)) {
             //TODO
         }
-        //TODO
+        if (!is_null($this->description_)) {
+            $res .= $this->description_->toString();
+        }
+        if (!is_null($this->geo_)) {
+            $res .= $this->geo_->toString();
+        }
+        if (!is_null($this->lastMod_)) {
+            //TODO
+        }
+        if (!is_null($this->location_)) {
+            $res .= $this->location_->toString();
+        }
+        if (!is_null($this->organizer_)) {
+            //TODO
+        }
+        if (!is_null($this->priority_)) {
+            $res .= $this->priority_->toString();
+        }
+        if (!is_null($this->seq_)) {
+            //TODO
+        }
+        if (!is_null($this->status_)) {
+            //TODO
+        }
+        if (!is_null($this->summary_)) {
+            //TODO
+        }
         if (!is_null($this->transp_)) {
             $res .= $this->transp_->toString();
+        }
+        if (!is_null($this->url_)) {
+            //TODO
+        }
+        if (!is_null($this->recurid_)) {
+            //TODO
+        }
+        foreach ($this->commentList_ as $comment) {
+            $res .= $comment->toString();
         }
         //TODO
         $res .= "END:VEVENT\n";
         return $res;
     }
 
+    public function &setClass(\Triedge\Calendar\Property\Classification $class)
+    {
+        $this->class_ = $class;
+        return $this;
+    }
+
+    public function &setCreated(\Triedge\Calendar\Property\Created $created)
+    {
+        $this->created_ = $created;
+        return $this;
+    }
+
+    public function &setDescription(\Triedge\Calendar\Property\Description $description)
+    {
+        $this->description_ = $description;
+        return $this;
+    }
+
+    public function &setGeographicPosition(\Triedge\Calendar\Property\GeographicPosition& $geo)
+    {
+        $this->geo_ = $geo;
+        return $this;
+    }
+    
+    public function &setLastModified(\Triedge\Calendar\Property\LastModified $lastMod)
+    {
+        //TODO
+        return $this;
+    }
+
+    public function &setLocation(\Triedge\Calendar\Property\Location $location)
+    {
+        $this->location_ = $location;
+        return $this;
+    }
+    
+    public function &setOrganizer(\Triedge\Calendar\Property\Organizer $organizer)
+    {
+        //TODO
+        return $this;
+    }
+
+    public function &setPriority(\Triedge\Calendar\Property\Priority $priority)
+    {
+        $this->priority_ = $priority;
+        return $this;
+    }
+
+    public function &setSeq(\Triedge\Calendar\Property\SequenceNumber $seq)
+    {
+        //TODO
+        return $this;
+    }
+    
+    public function &setStatus(\Triedge\Calendar\Property\Status $status)
+    {
+        //TODO
+        return $this;
+    }
+    
+    public function &setSummary(\Triedge\Calendar\Property\Summary $summary)
+    {
+        //TODO
+        return $this;
+    }
+
     public function &setTimeTransparency(\Triedge\Calendar\Property\TimeTransparency $transp)
     {
         $this->transp_ = $transp;
+        return $this;
+    }
+    
+    public function &setUrl(\Triedge\Calendar\Property\Url $url)
+    {
+        //TODO
+        return $this;
+    }
+    
+    public function &setRecurid(\Triedge\Calendar\Property\RecurrenceId $recurrenceId)
+    {
+        //TODO
+        return $this;
+    }
+
+    public function &addComment(\Triedge\Calendar\Property\Comment $comment)
+    {
+        $this->commentList_[] = $comment;
         return $this;
     }
 }

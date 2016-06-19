@@ -1,6 +1,10 @@
 <?php
 namespace Triedge\Calendar\Property;
 
+/**
+ * This property specifies information related to the global position for the
+ * activity specified by a calendar component.
+ */
 class GeographicPosition
 {
     const NAME = 'GEO';

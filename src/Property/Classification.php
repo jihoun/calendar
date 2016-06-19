@@ -4,7 +4,7 @@ namespace Triedge\Calendar\Property;
 /**
  * This property defines the access classification for a calendar component.
  */
-class Classification
+class Classification extends IText
 {
     const NAME = 'CLASS';
 
@@ -12,10 +12,12 @@ class Classification
     const PRIVATE_CLASS = 'PRIVATE';
     const CONFIDENTIAL_CLASS = 'CONFIDENTIAL';
 
-    public $value_ = self::PUBLIC_CLASS;
+    protected $text_ = self::PUBLIC_CLASS;
 
-    public function toString()
+    public function __construct($text = null)
     {
-        return self::NAME.':'.$this->value_."\n";
+        if (!is_null($text)) {
+            parent::__construct($text);
+        }
     }
 }

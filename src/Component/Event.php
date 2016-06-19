@@ -42,8 +42,8 @@ class Event extends IComponent
     // Either 'dtend' or 'duration' MAY appear in
     // a 'eventprop', but 'dtend' and 'duration'
     // MUST NOT occur in the same 'eventprop'.
-    public $dtend_;
-    public $duration_;
+    public $dtend_ = null;
+    public $duration_ = null;
 
     // The following are OPTIONAL,
     // and MAY occur more than once.
@@ -55,22 +55,28 @@ class Event extends IComponent
     public $exdateList_ = array();
     public $rstatusList_ = array();
     public $relatedList_ = array();
-    public $resources_ = array();
-    public $rdate_ = array();
-    public $xProp_ = array();
-    public $ianaProp_ = array();
+    public $resourcesList_ = array();
+    public $rdateList_ = array();
+    public $xPropList_ = array();
+    public $ianaPropList_ = array();
+
+    public function __construct()
+    {
+        $this->dtstamp_ = new \Triedge\Calendar\Property\DateTimeStamp();
+        $this->uid_ = new \Triedge\Calendar\Property\Uid();
+    }
 
     public function toString()
     {
         $res = "BEGIN:VEVENT\n";
-        $res .= 'UID:'.$this->uid_."\n";
-        $res .= 'DTSTAMP:'.$this->dtstamp_."\n";
+        $res .= $this->uid_->toString();
+        $res .= $this->dtstamp_->toString();
         //TODO
         if (!is_null($this->class_)) {
             $res .= $this->class_->toString();
         }
         if (!is_null($this->created_)) {
-            //TODO
+            $this->created_->toString();
         }
         if (!is_null($this->description_)) {
             $res .= $this->description_->toString();
@@ -79,39 +85,80 @@ class Event extends IComponent
             $res .= $this->geo_->toString();
         }
         if (!is_null($this->lastMod_)) {
-            //TODO
+            $res .= $this->lastMod_->toString();
         }
         if (!is_null($this->location_)) {
             $res .= $this->location_->toString();
         }
         if (!is_null($this->organizer_)) {
-            //TODO
+            $res .= $this->organizer_->toString();
         }
         if (!is_null($this->priority_)) {
             $res .= $this->priority_->toString();
         }
         if (!is_null($this->seq_)) {
-            //TODO
+            $res .= $this->seq_->toString();
         }
         if (!is_null($this->status_)) {
-            //TODO
+            $res .= $this->status_->toString();
         }
         if (!is_null($this->summary_)) {
-            //TODO
+            $res .= $this->summary_->toString();
         }
         if (!is_null($this->transp_)) {
             $res .= $this->transp_->toString();
         }
         if (!is_null($this->url_)) {
-            //TODO
+            $res .= $this->url_->toString();
         }
         if (!is_null($this->recurid_)) {
-            //TODO
+            $res .= $this->recurid_->toString();
+        }
+        
+        //TODO
+        
+        if (!is_null($this->dtend_)) {
+            $res .= $this->dtend_->toString();
+        } elseif (!is_null($this->duration_)) {
+            $res .= $this->duration_->toString();
+        }
+
+        foreach($this->attachList_ as $attach) {
+            $res .= $attach->toString();
+        }
+        foreach($this->attendeeList_ as $attendee) {
+            $res .= $attendee->toString();
+        }
+        foreach ($this->categoriesList_ as $categorie) {
+            $res .= $categorie->toString();
         }
         foreach ($this->commentList_ as $comment) {
             $res .= $comment->toString();
         }
-        //TODO
+        foreach ($this->contactList_ as $contact) {
+            $res .= $contact->toString();
+        }
+        foreach ($this->exdateList_ as $exDate) {
+            $rs .= $exDate->toString();
+        }
+        foreach ($this->rstatusList_ as $rstatus) {
+            $rs .= $rstatus->toString();
+        }
+        foreach ($this->relatedList_ as $related) {
+            $rs .= $related->toString();
+        }
+        foreach ($this->resourcesList_ as $resources) {
+            $rs .= $resources->toString();
+        }
+        foreach ($this->rdateList_ as $rDate) {
+            $rs .= $rDate->toString();
+        }
+        foreach ($this->xPropList_ as $xProp) {
+            $rs .= $xProp->toString();
+        }
+        foreach ($this->ianaPropList_ as $ianaList) {
+            $rs .= $ianaList->toString();
+        }
         $res .= "END:VEVENT\n";
         return $res;
     }
@@ -122,7 +169,7 @@ class Event extends IComponent
         return $this;
     }
 
-    public function &setCreated(\Triedge\Calendar\Property\Created $created)
+    public function &setDateTimeCreated(\Triedge\Calendar\Property\DateTimeCreated $created)
     {
         $this->created_ = $created;
         return $this;
@@ -142,7 +189,7 @@ class Event extends IComponent
     
     public function &setLastModified(\Triedge\Calendar\Property\LastModified $lastMod)
     {
-        //TODO
+        $this->lastMod_ = $lastMod;
         return $this;
     }
 
@@ -199,6 +246,10 @@ class Event extends IComponent
         //TODO
         return $this;
     }
+
+    //TODO
+
+    //TODO
 
     public function &addComment(\Triedge\Calendar\Property\Comment $comment)
     {

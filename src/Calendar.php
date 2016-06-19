@@ -3,12 +3,18 @@ namespace Triedge\Calendar;
 
 class Calendar
 {
-    public $prodid_ = '-//Triedge//EN';
-    public $version_ = '2.0';
-    public $calscale_ = 'GREGORIAN';
+    protected $prodid_;
+    protected $version_;
+    public $calscale_ = null;
     public $method_ = null;
     
     private $componentList_ = array();
+
+    public function __construct()
+    {
+        $this->prodid_ = new \Triedge\Calendar\Property\ProductIdentifier();
+        $this->version_ = new \Triedge\Calendar\Property\Version();
+    }
 
     public function &addComponent(\Triedge\Calendar\Component\IComponent $component)
     {
@@ -19,10 +25,10 @@ class Calendar
     public function toString()
     {
         $res = "BEGIN:VCALENDAR\n";
-        $res .= 'VERSION:'.$this->version_."\n";
-        $res .= 'PRODID:'.$this->prodid_."\n";
+        $res .= $this->version_->toString();
+        $res .= $this->prodid_->toString();
         if (!is_null($this->calscale_)) {
-            $res .= 'CALSCALE:'.$this->calscale_."\n";
+            $res .= $this->calscale_->toString();
         }
         if (!is_null($this->method_)) {
             $res .= 'METHOD:'.$this->method_."\n";

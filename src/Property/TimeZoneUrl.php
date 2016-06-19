@@ -1,0 +1,13 @@
+<?php
+namespace Triedge\Calendar\Property;
+
+/**
+ * This property provides a means for a "VTIMEZONE" component to point to a
+ * network location that can be used to retrieve an up-to-date version of
+ * itself.
+ */
+class TimeZoneUrl
+{
+    const NAME = 'TZURL';
+    //TODO
+}

@@ -2,8 +2,8 @@
 namespace Triedge\Calendar\Property;
 
 /**
- * This property is used by an assignee or delegatee of a to-do to convey the percent completion of
- * a to-do to the "Organizer".
+ * This property is used by an assignee or delegatee of a to-do to convey the
+ * percent completion of a to-do to the "Organizer".
  * @todo  merge with Priority
  */
 class PercentComplete

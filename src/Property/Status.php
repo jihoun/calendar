@@ -1,8 +1,12 @@
 <?php
 namespace Triedge\Calendar\Property;
 
-class Status
+/**
+ * This property defines the overall status or confirmation for the calendar
+ * component.
+ * @todo make it stronger to follow the documentation
+ */
+class Status extends IText
 {
     const NAME = 'STATUS';
-    //TODO
 }

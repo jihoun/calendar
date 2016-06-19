@@ -1,8 +1,11 @@
 <?php
 namespace Triedge\Calendar\Property;
 
-class Resources
+/**
+ * This property defines the equipment or resources anticipated for an activity
+ * specified by a calendar component.
+ */
+class Resources extends ITextList
 {
     const NAME = 'RESOURCES';
-    //TODO
 }

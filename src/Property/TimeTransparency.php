@@ -1,17 +1,23 @@
 <?php
 namespace Triedge\Calendar\Property;
 
-class TimeTransparency
+/**
+ * This property defines whether or not an event is transparent to busy time
+ * searches.
+ */
+class TimeTransparency extends IText
 {
     const NAME = 'TRANSP';
 
     const OPAQUE = 'OPAQUE';
     const TRANSPARENT = 'TRANSPARENT';
 
-    public $value_ = self::OPAQUE;
+    protected $text_ = self::OPAQUE;
 
-    public function toString()
+    public function __construct($text = null)
     {
-        return self::NAME.':'.$this->value_."\n";
+        if (!is_null($text)) {
+            parent::__construct($text);
+        }
     }
 }

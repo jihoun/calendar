@@ -6,6 +6,7 @@ namespace Triedge\Calendar\Property;
  */
 class Priority
 {
+    const NAME = 'PRIORITY';
     public $integer_;
 
     public function __construct($value = 0)
@@ -15,7 +16,7 @@ class Priority
 
     public function toString()
     {
-        return 'PRIORITY:'.$this->integer_."\n";
+        return self::NAME.':'.$this->integer_."\n";
     }
 
     private function normalize($value)

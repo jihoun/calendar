@@ -2,11 +2,13 @@
 namespace Triedge\Calendar\Property;
 
 /**
- * This property is used by an assignee or delegatee of a to-do to convey the percent completion of 
+ * This property is used by an assignee or delegatee of a to-do to convey the percent completion of
  * a to-do to the "Organizer".
+ * @todo  merge with Priority
  */
 class PercentComplete
 {
+    const NAME = 'PERCENT-COMPLETE';
     public $integer_;
 
     public function __construct($value)
@@ -16,7 +18,7 @@ class PercentComplete
 
     public function toString()
     {
-        return 'PERCENT-COMPLETE:'.$this->integer_."\n";
+        return self::NAME.':'.$this->integer_."\n";
     }
 
     private function normalize($value)

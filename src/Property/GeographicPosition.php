@@ -3,6 +3,8 @@ namespace Triedge\Calendar\Property;
 
 class GeographicPosition
 {
+    const NAME = 'GEO';
+
     public $lat_;
     public $lon_;
 
@@ -21,6 +23,6 @@ class GeographicPosition
 
     public function toString()
     {
-        return 'GEO:'.$this->lat_.';'.$this->lon_."\n";
+        return self::NAME.':'.$this->lat_.';'.$this->lon_."\n";
     }
 }

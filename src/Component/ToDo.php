@@ -170,7 +170,8 @@ class ToDo extends IComponent
         return $this;
     }
 
-    public function &setPercentComplete(\Triedge\Calendar\Property\PercentComplete $percent) {
+    public function &setPercentComplete(\Triedge\Calendar\Property\PercentComplete $percent)
+    {
         $this->percent_ = $percent;
         return $this;
     }

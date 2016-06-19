@@ -6,6 +6,8 @@ namespace Triedge\Calendar\Property;
  */
 class Classification
 {
+    const NAME = 'CLASS';
+
     const PUBLIC_CLASS = 'PUBLIC';
     const PRIVATE_CLASS = 'PRIVATE';
     const CONFIDENTIAL_CLASS = 'CONFIDENTIAL';
@@ -14,6 +16,6 @@ class Classification
 
     public function toString()
     {
-        return 'CLASS:'.$this->value_."\n";
+        return self::NAME.':'.$this->value_."\n";
     }
 }

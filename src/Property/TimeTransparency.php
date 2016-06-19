@@ -3,6 +3,8 @@ namespace Triedge\Calendar\Property;
 
 class TimeTransparency
 {
+    const NAME = 'TRANSP';
+
     const OPAQUE = 'OPAQUE';
     const TRANSPARENT = 'TRANSPARENT';
 
@@ -10,6 +12,6 @@ class TimeTransparency
 
     public function toString()
     {
-        return 'TRANSP:'.$this->value_."\n";
+        return self::NAME.':'.$this->value_."\n";
     }
 }

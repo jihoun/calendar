@@ -12,7 +12,7 @@ class Calendar extends \PHPUnit_Framework_TestCase
             ->setClass(new \Triedge\Calendar\Property\Classification())
             ->addComment(new \Triedge\Calendar\Property\Comment('Hi there!'))
             ->setDescription(new \Triedge\Calendar\Property\Description('Very very lengthy description'))
-            ->setGeographicPosition(new \Triedge\Calendar\Property\GeographicPosition(1.5,101))
+            ->setGeographicPosition(new \Triedge\Calendar\Property\GeographicPosition(1.5, 101))
             ->setLocation(new \Triedge\Calendar\Property\Location('in the office'))
             ->setPriority(new \Triedge\Calendar\Property\Priority());
 
@@ -20,7 +20,7 @@ class Calendar extends \PHPUnit_Framework_TestCase
         $todo = new \Triedge\Calendar\Component\ToDo();
         $todo->addComment(new \Triedge\Calendar\Property\Comment('Yo!'))
             ->setDescription(new \Triedge\Calendar\Property\Description('Very very lengthy description'))
-            ->setGeographicPosition(new \Triedge\Calendar\Property\GeographicPosition(2.2,95))
+            ->setGeographicPosition(new \Triedge\Calendar\Property\GeographicPosition(2.2, 95))
             ->setLocation(new \Triedge\Calendar\Property\Location('Home'))
             ->setPercentComplete(new \Triedge\Calendar\Property\PercentComplete(42))
             ->setPriority(new \Triedge\Calendar\Property\Priority(20));

@@ -2,11 +2,13 @@
 namespace Triedge\Calendar\Property;
 
 /**
- * This property specifies non-processing information intended to provide a comment to the calendar user.
+ * This property specifies non-processing information intended to provide a comment to the calendar
+ * user.
  * @todo  merge with description
  */
 class Comment
 {
+    const NAME = 'COMMENT';
     public $value_;
 
     public function __construct($text)
@@ -19,6 +21,6 @@ class Comment
     public function toString()
     {
         //TODO sanitize text
-        return 'COMMENT:'.$this->value_."\n";
+        return self::NAME.':'.$this->value_."\n";
     }
 }

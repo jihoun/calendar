@@ -2,11 +2,11 @@
 namespace Triedge\Calendar\Property;
 
 /**
- * This property defines the intended venue for the activity
-      defined by a calendar component.
+ * This property defines the intended venue for the activity defined by a calendar component.
  */
 class Location
 {
+    const NAME = 'LOCATION';
     public $text;
 
     public function __construct($text)
@@ -16,8 +16,9 @@ class Location
         }
     }
 
-    public function toString() {
+    public function toString()
+    {
         //TODO escape text
-        return 'LOCATION:'.$this->text."\n";
+        return self::NAME.':'.$this->text."\n";
     }
 }

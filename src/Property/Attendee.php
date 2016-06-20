@@ -7,4 +7,10 @@ namespace Triedge\Calendar\Property;
 class Attendee
 {
     const NAME = 'ATTENDEE';
+    //TODO
+    public function toString()
+    {
+        //TODO
+        return '';
+    }
 }

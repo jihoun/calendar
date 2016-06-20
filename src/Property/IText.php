@@ -17,4 +17,9 @@ abstract class IText
         //TODO sanitize text
         return static::NAME.':'.$this->text_."\n";
     }
+
+    public function getValue()
+    {
+        return $this->text_;
+    }
 }

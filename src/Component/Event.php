@@ -169,6 +169,11 @@ class Event extends IComponent
         return $res;
     }
 
+    public function getUid()
+    {
+        return $this->uid_;
+    }
+
     public function &setClassification(\Triedge\Calendar\Property\Classification $class)
     {
         $this->class_ = $class;

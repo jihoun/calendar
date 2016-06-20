@@ -9,4 +9,9 @@ class DateTimeDue
 {
     const NAME = 'DUE';
     //TODO
+    public function toString()
+    {
+        //TODO
+        return '';
+    }
 }

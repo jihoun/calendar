@@ -4,7 +4,7 @@ namespace Triedge\Calendar\Component;
 /**
  * Provide a grouping of component properties that define an alarm.
  */
-class Alarm extends IComponent
+class Alarm
 {
     //TODO
     

@@ -8,4 +8,10 @@ namespace Triedge\Calendar\Property;
 class Attachment
 {
     const NAME = 'ATTACH';
+    //TODO
+    public function toString()
+    {
+        //TODO
+        return '';
+    }
 }

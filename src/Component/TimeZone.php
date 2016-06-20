@@ -4,7 +4,7 @@ namespace Triedge\Calendar\Component;
 /**
  * Provide a grouping of component properties that defines a time zone.
  */
-class TimeZone extends IComponent
+class TimeZone
 {
     // 'tzid' is REQUIRED, but MUST NOT occur more
     // than once.

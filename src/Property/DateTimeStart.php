@@ -8,4 +8,9 @@ class DateTimeStart
 {
     const NAME = 'DTSTART';
     //TODO
+    public function toString()
+    {
+        //TODO
+        return '';
+    }
 }

@@ -8,4 +8,9 @@ class DateTimeEnd
 {
     const NAME = 'DTEND';
     //TODO
+    public function toString()
+    {
+        //TODO
+        return '';
+    }
 }

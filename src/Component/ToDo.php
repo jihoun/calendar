@@ -72,7 +72,7 @@ class ToDo extends IComponent
             $res .= $this->completed_->toString();
         }
         if (!is_null($this->created_)) {
-            $this .= $this->created_->toString();
+            $res .= $this->created_->toString();
         }
         if (!is_null($this->description_)) {
             $res .= $this->description_->toString();
@@ -84,7 +84,7 @@ class ToDo extends IComponent
             $res .= $this->geo_->toString();
         }
         if (!is_null($this->last_mod_)) {
-            $res .= $this->lastMod_->toString();
+            $res .= $this->last_mod_->toString();
         }
         if (!is_null($this->location_)) {
             $res .= $this->location_->toString();
@@ -108,7 +108,7 @@ class ToDo extends IComponent
             $res .=$this->status_->toString();
         }
         if (!is_null($this->summary_)) {
-            $res .= $this->summary_();
+            $res .= $this->summary_->toString();
         }
         if (!is_null($this->url_)) {
             $res .= $this->url_->toString();
@@ -154,14 +154,19 @@ class ToDo extends IComponent
         foreach ($this->rdateList_ as $rdate) {
             $res .= $rdate->toString();
         }
-        foreach ($this->xPropList_ as $xProp) {
+        foreach ($this->x_propList_ as $xProp) {
             $res .= $xProp->toString();
         }
-        foreach ($this->ianaPropList_ as $ianaList) {
+        foreach ($this->iana_propList_ as $ianaList) {
             $res .= $ianaList->toString();
         }
         $res .= "END:VTODO\n";
         return $res;
+    }
+
+    public function getUid()
+    {
+        return $this->uid_;
     }
 
     public function &setClassification(\Triedge\Calendar\Property\Classification $class)
@@ -170,13 +175,13 @@ class ToDo extends IComponent
         return $this;
     }
 
-    public function &setCompleted(\Triedge\Calendar\Property\Completed $completed)
+    public function &setDateTimeCompleted(\Triedge\Calendar\Property\DateTimeCompleted $completed)
     {
         $this->completed_ = $completed;
         return $this;
     }
 
-    public function &setCreated(\Triedge\Calendar\Property\Created $created)
+    public function &setDateTimeCreated(\Triedge\Calendar\Property\DateTimeCreated $created)
     {
         $this->created_ = $created;
         return $this;
@@ -188,7 +193,7 @@ class ToDo extends IComponent
         return $this;
     }
 
-    public function &setDtstart(\Triedge\Calendar\Property\DtStart $dtStart)
+    public function &setDateTimestart(\Triedge\Calendar\Property\DateTimeStart $dtStart)
     {
         $this->dtstart_ = $dtStart;
         return $this;
@@ -260,9 +265,77 @@ class ToDo extends IComponent
         return $this;
     }
 
+    public function &setDateTimeDue(\Triedge\Calendar\Property\DateTimeDue $due)
+    {
+        $this->due_ = $due;
+        return $this;
+    }
+
+    public function &setDuration(\Triedge\Calendar\Property\Duration $duration)
+    {
+        $this->duration_ = $duration;
+        return $this;
+    }
+
+    public function &addAttachment(\Triedge\Calendar\Property\Attachment $attach)
+    {
+        $this->attachList_[] = $attach;
+        return $this;
+    }
+
+    public function &addAttendee(\Triedge\Calendar\Property\Attendee $attendee)
+    {
+        $this->attendeeList_[] = $attendee;
+        return $this;
+    }
+
+    public function &addCategories(\Triedge\Calendar\Property\Categories $categories)
+    {
+        $this->categoriesList_[] = $categories;
+        return $this;
+    }
+
     public function &addComment(\Triedge\Calendar\Property\Comment $comment)
     {
         $this->commentList_[] = $comment;
         return $this;
     }
+
+    public function &addcontact(\Triedge\Calendar\Property\Contact $contact)
+    {
+        $this->contactList_[] = $contact;
+        return $this;
+    }
+    
+    public function &addExceptionDateTimes(\Triedge\Calendar\Property\ExceptionDateTimes $exdate)
+    {
+        $this->exdateList_[] = $exdate;
+        return $this;
+    }
+    
+    public function &addRequestStatus(\Triedge\Calendar\Property\RequestStatus $rstatus)
+    {
+        $this->rstatusList_[] = $rstatus;
+        return $this;
+    }
+
+    public function &addRelatedTo(\Triedge\Calendar\Property\RelatedTo $related)
+    {
+        $this->relatedList_[] = $related;
+        return $this;
+    }
+    public function &addResources(\Triedge\Calendar\Property\Resources $resources)
+    {
+        $this->resourcesList_[] = $resources;
+        return $this;
+    }
+    public function &addRecurrenceDateTimes(\Triedge\Calendar\Property\RecurrenceDateTimes $rdate)
+    {
+        $this->rdateList_[] = $rdate;
+        return $this;
+    }
+    
+    //TODO
+    // public $x_propList_ = array();
+    // public $iana_propList_ = array();
 }

@@ -2,82 +2,86 @@
 
 namespace Test\Triedge\Calendar;
 
-class Calendar extends \PHPUnit_Framework_TestCase
+use \Triedge\Calendar\Component as Component;
+use \Triedge\Calendar\Property as Property;
+
+class CalendarTest extends \PHPUnit_Framework_TestCase
 {
     public function testCalendar()
     {
-        $event = new \Triedge\Calendar\Component\Event();
-        $todo = new \Triedge\Calendar\Component\ToDo();
+        $event = new Component\Event();
+        $todo = new Component\ToDo();
 
         $event
-            ->setClassification(new \Triedge\Calendar\Property\Classification())
-            ->setDateTimeCreated(new \Triedge\Calendar\Property\DateTimeCreated())
-            ->setDescription(new \Triedge\Calendar\Property\Description('Very very lengthy description'))
-            ->setGeographicPosition(new \Triedge\Calendar\Property\GeographicPosition(1.5, 101))
-            ->setLastModified(new \Triedge\Calendar\Property\LastModified(new \DateTime()))
-            ->setLocation(new \Triedge\Calendar\Property\Location('in the office'))
-            ->setOrganizer(new \Triedge\Calendar\Property\Organizer())
-            ->setPriority(new \Triedge\Calendar\Property\Priority())
-            ->setSequenceNumber(new \Triedge\Calendar\Property\SequenceNumber())
-            // ->setStatus(new \Triedge\Calendar\Property\Status())
-            ->setSummary(new \Triedge\Calendar\Property\Summary('new test event'))
-            ->setTimeTransparency(new \Triedge\Calendar\Property\TimeTransparency())
-            ->setUrl(new \Triedge\Calendar\Property\Url())
-            ->setRecurrenceId(new \Triedge\Calendar\Property\RecurrenceId())
+            ->setDateTimeStart(new Property\DateTimeStart(new \DateTime(), true))
+            ->setClassification(new Property\Classification())
+            ->setDateTimeCreated(new Property\DateTimeCreated())
+            ->setDescription(new Property\Description('Very very lengthy description'))
+            ->setGeographicPosition(new Property\GeographicPosition(1.5, 101))
+            ->setLastModified(new Property\LastModified(new \DateTime()))
+            ->setLocation(new Property\Location('in the office'))
+            ->setOrganizer(new Property\Organizer())
+            ->setPriority(new Property\Priority())
+            ->setSequenceNumber(new Property\SequenceNumber())
+            ->setStatus(new Property\Status(Property\Status::CONFIRMED))
+            ->setSummary(new Property\Summary('new test event'))
+            ->setTimeTransparency(new Property\TimeTransparency())
+            ->setUrl(new Property\Url('http://coaching.triedgeteam.com'))
+            // ->setRecurrenceId(new Property\RecurrenceId())
             //TODO rrule
-            ->setDateTimeEnd(new \Triedge\Calendar\Property\DateTimeEnd(new \DateTime()))
-            ->setDuration(new \Triedge\Calendar\Property\Duration())
-            ->addAttachment(new \Triedge\Calendar\Property\Attachment())
-            ->addAttendee(new \Triedge\Calendar\Property\Attendee())
-            ->addCategories(new \Triedge\Calendar\Property\Categories())
-            ->addComment(new \Triedge\Calendar\Property\Comment('Hi there!'))
-            ->addContact(new \Triedge\Calendar\Property\Contact("John Wayne"))
-            ->addExceptionDateTimes(new \Triedge\Calendar\Property\ExceptionDateTimes())
-            ->addRequestStatus(new \Triedge\Calendar\Property\RequestStatus())
-            ->addRelatedTo(new \Triedge\Calendar\Property\RelatedTo($todo))
-            ->addResources(new \Triedge\Calendar\Property\Resources())
-            ->addRecurrenceDateTimes(new \Triedge\Calendar\Property\RecurrenceDateTimes());
+            ->setDateTimeEnd(new Property\DateTimeEnd(new \DateTime()))
+            ->setDuration(new Property\Duration())
+            ->addAttachment(new Property\Attachment())
+            ->addAttendee(new Property\Attendee())
+            ->addCategories(new Property\Categories())
+            ->addComment(new Property\Comment('Hi there!'))
+            ->addContact(new Property\Contact("John Wayne"))
+            ->addExceptionDateTimes(new Property\ExceptionDateTimes())
+            ->addRequestStatus(new Property\RequestStatus())
+            ->addRelatedTo(new Property\RelatedTo($todo))
+            ->addResources(new Property\Resources())
+            ->addRecurrenceDateTimes(new Property\RecurrenceDateTimes());
 
 
         $todo
-            ->setClassification(new \Triedge\Calendar\Property\Classification())
-            ->setDateTimeCompleted(new \Triedge\Calendar\Property\DateTimeCompleted(new \DateTime()))
-            ->setDateTimeCreated(new \Triedge\Calendar\Property\DateTimeCreated())
-            ->setDescription(new \Triedge\Calendar\Property\Description('Very very lengthy description'))
-            ->setDateTimeStart(new \Triedge\Calendar\Property\DateTimeStart(new \DateTime()))
-            ->setGeographicPosition(new \Triedge\Calendar\Property\GeographicPosition(2.2, 95))
-            ->setLastModified(new \Triedge\Calendar\Property\LastModified(new \DateTime()))
-            ->setLocation(new \Triedge\Calendar\Property\Location('Home'))
-            ->setOrganizer(new \Triedge\Calendar\Property\Organizer())
-            ->setPercentComplete(new \Triedge\Calendar\Property\PercentComplete(42))
-            ->setPriority(new \Triedge\Calendar\Property\Priority(20))
-            ->setRecurrenceId(new \Triedge\Calendar\Property\RecurrenceId())
-            ->setSequenceNumber(new \Triedge\Calendar\Property\SequenceNumber())
-            // ->setStatus(new \Triedge\Calendar\Property\Status())
-            ->setSummary(new \Triedge\Calendar\Property\Summary('TODO do the summary'))
-            ->setUrl(new \Triedge\Calendar\Property\Url())
+            ->setClassification(new Property\Classification())
+            ->setDateTimeCompleted(new Property\DateTimeCompleted(new \DateTime()))
+            ->setDateTimeCreated(new Property\DateTimeCreated())
+            ->setDescription(new Property\Description('Very very lengthy description'))
+            ->setDateTimeStart(new Property\DateTimeStart(new \DateTime()))
+            ->setGeographicPosition(new Property\GeographicPosition(2.2, 95))
+            ->setLastModified(new Property\LastModified(new \DateTime()))
+            ->setLocation(new Property\Location('Home'))
+            ->setOrganizer(new Property\Organizer())
+            ->setPercentComplete(new Property\PercentComplete(42))
+            ->setPriority(new Property\Priority(20))
+            ->setRecurrenceId(new Property\RecurrenceId())
+            ->setSequenceNumber(new Property\SequenceNumber())
+            // ->setStatus(new Property\Status())
+            ->setSummary(new Property\Summary('TODO do the summary'))
+            ->setUrl(new Property\Url('http://coaching.triedgeteam.com'))
             //TODO rrule
-            ->setDateTimeDue(new \Triedge\Calendar\Property\DateTimeDue())
-            ->setDuration(new \Triedge\Calendar\Property\Duration())
-            ->addAttachment(new \Triedge\Calendar\Property\Attachment())
-            ->addAttendee(new \Triedge\Calendar\Property\Attendee())
-            ->addCategories(new \Triedge\Calendar\Property\Categories())
-            ->addComment(new \Triedge\Calendar\Property\Comment('Yo!'))
-            ->addContact(new \Triedge\Calendar\Property\Contact('John Mcnroe'));
+            ->setDateTimeDue(new Property\DateTimeDue(new \DateTime()))
+            ->setDuration(new Property\Duration())
+            ->addAttachment(new Property\Attachment())
+            ->addAttendee(new Property\Attendee())
+            ->addCategories(new Property\Categories())
+            ->addComment(new Property\Comment('Yo!'))
+            ->addContact(new Property\Contact('John Mcnroe'));
 
-        // $journal = new \Triedge\Calendar\Component\Journal();
-        // $journal->addComment(new \Triedge\Calendar\Property\Comment('Hello'))
-        //     ->addDescription(new \Triedge\Calendar\Property\Description('Very very lengthy description'));
+        // $journal = new Component\Journal();
+        // $journal->addComment(new Property\Comment('Hello'))
+        //     ->addDescription(new Property\Description('Very very lengthy description'));
 
-        // $freeBusy = new \Triedge\Calendar\Component\FreeBusy();
-        // $freeBusy->addComment(new \Triedge\Calendar\Property\Comment('Bonjour'));
+        // $freeBusy = new Component\FreeBusy();
+        // $freeBusy->addComment(new Property\Comment('Bonjour'));
 
         $cal = new \Triedge\Calendar\Calendar();
         $cal->addComponent($event);
             // ->addComponent($freeBusy)
             // ->addComponent($journal)
-            // ->addComponent(new \Triedge\Calendar\Component\TimeZone())
-            // ->addComponent($todo);
+            // ->addComponent(new Component\TimeZone())
+        // $cal->addComponent($todo);
 
         file_put_contents('/Users/nicolaslagier/workspace/triedge/calendar/test.ics', $cal->toString());
     }

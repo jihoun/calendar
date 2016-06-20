@@ -7,9 +7,15 @@ namespace Triedge\Calendar\Property;
 class Priority
 {
     const NAME = 'PRIORITY';
-    public $integer_;
 
-    public function __construct($value = 0)
+    const UNDEFINED = 0;
+    const HIGH = 1;
+    const MEDIUM = 5;
+    const LOW = 9;
+
+    protected $integer_;
+
+    public function __construct($value = self::UNDEFINED)
     {
         $this->integer_ = $this->normalize($value);
     }
@@ -21,7 +27,7 @@ class Priority
 
     private function normalize($value)
     {
-        $val = 0;
+        $val = self::UNDEFINED;
         if (is_numeric($value)) {
             $val = (int)$value;
             if ($val>9) {

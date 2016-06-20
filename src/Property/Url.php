@@ -8,10 +8,21 @@ namespace Triedge\Calendar\Property;
 class Url
 {
     const NAME = 'URL';
-    //TODO
+    protected $url_;
+
+    public function __construct($url)
+    {
+        if (filter_var($url, FILTER_VALIDATE_URL)) {
+            $this->url_ = $url;
+        }
+    }
+
     public function toString()
     {
-        //TODO
-        return '';
+        if (filter_var($this->url_, FILTER_VALIDATE_URL)) {
+            return self::NAME.':'.$this->url_."\n";
+        } else {
+            return '';
+        }
     }
 }

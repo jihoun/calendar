@@ -80,7 +80,7 @@ class Event extends IComponent
             $res .= $this->class_->toString();
         }
         if (!is_null($this->created_)) {
-            $this->created_->toString();
+            $res .= $this->created_->toString();
         }
         if (!is_null($this->description_)) {
             $res .= $this->description_->toString();
@@ -172,6 +172,12 @@ class Event extends IComponent
     public function getUid()
     {
         return $this->uid_;
+    }
+
+    public function &setDateTimeStart(\Triedge\Calendar\Property\DateTimeStart $dtstart)
+    {
+        $this->dtstart_ = $dtstart;
+        return $this;
     }
 
     public function &setClassification(\Triedge\Calendar\Property\Classification $class)

@@ -54,10 +54,17 @@ class ToDo extends IComponent
     public $x_propList_ = array();
     public $iana_propList_ = array();
 
+    public function __construct()
+    {
+        $this->dtstamp_ = new \Triedge\Calendar\Property\DateTimeStamp();
+        $this->uid_ = new \Triedge\Calendar\Property\Uid();
+    }
+
     public function toString()
     {
         $res = "BEGIN:VTODO\n";
-        $res .= "UID:".$this->uid_."\n";
+        $res .= $this->dtstamp_->toString();
+        $res .= $this->uid_->toString();
         if (!is_null($this->class_)) {
             //TODO
         }
@@ -107,11 +114,35 @@ class ToDo extends IComponent
             //TODO
         }
 
+        if (!is_null($this->rrule_)) {
+            $res .= $this->rrule_->toString();
+        }
+
+        if (!is_null($this->due_)) {
+            $res.= $this->due_->toString();
+        } elseif (!is_null($this->duration_)) {
+            $res .= $this->duration_->toString();
+        }
+
+        foreach($this->attachList_ as $attach) {
+            //TODO
+        }
+    // public $attendeeList_ = array();
+    // public $categoriesList_ = array();
+    // public $commentList_ = array();
         //TODO
         foreach ($this->commentList_ as $comment) {
             $res .= $comment->toString();
         }
         //TODO
+    // public $contactList_ = array();
+    // public $exdateList_ = array();
+    // public $rstatusList_ = array();
+    // public $relatedList_ = array();
+    // public $resourcesList_ = array();
+    // public $rdateList_ = array();
+    // public $x_propList_ = array();
+    // public $iana_propList_ = array();
         $res .= "END:VTODO\n";
         return $res;
     }

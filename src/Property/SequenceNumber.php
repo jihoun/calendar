@@ -1,17 +1,14 @@
 <?php
 namespace Triedge\Calendar\Property;
 
-/**
- * This property defines the organizer for a calendar component.
- */
-class Organizer
+class SequenceNumber
 {
-    const NAME = 'ORGANIZER';
+    const NAME = 'SEQUENCE';
     //TODO
-
+    
     public function toString()
     {
         //TODO
         return '';
-    }    
+    }
 }

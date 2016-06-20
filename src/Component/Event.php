@@ -71,7 +71,11 @@ class Event extends IComponent
         $res = "BEGIN:VEVENT\n";
         $res .= $this->uid_->toString();
         $res .= $this->dtstamp_->toString();
-        //TODO
+        
+        if (!is_null($this->dtstart_)) {
+            $res .= $this->dtstart_->toString();
+        }
+
         if (!is_null($this->class_)) {
             $res .= $this->class_->toString();
         }
@@ -115,7 +119,9 @@ class Event extends IComponent
             $res .= $this->recurid_->toString();
         }
         
-        //TODO
+        if (!is_null($this->rrule_)) {
+            $res .= $this->rrule_->toString();
+        }
         
         if (!is_null($this->dtend_)) {
             $res .= $this->dtend_->toString();
@@ -163,7 +169,7 @@ class Event extends IComponent
         return $res;
     }
 
-    public function &setClass(\Triedge\Calendar\Property\Classification $class)
+    public function &setClassification(\Triedge\Calendar\Property\Classification $class)
     {
         $this->class_ = $class;
         return $this;
@@ -201,7 +207,7 @@ class Event extends IComponent
     
     public function &setOrganizer(\Triedge\Calendar\Property\Organizer $organizer)
     {
-        //TODO
+        $this->organizer_ = $organizer;
         return $this;
     }
 
@@ -211,21 +217,21 @@ class Event extends IComponent
         return $this;
     }
 
-    public function &setSeq(\Triedge\Calendar\Property\SequenceNumber $seq)
+    public function &setSequenceNumber(\Triedge\Calendar\Property\SequenceNumber $seq)
     {
-        //TODO
+        $this->seq_ = $seq;
         return $this;
     }
     
     public function &setStatus(\Triedge\Calendar\Property\Status $status)
     {
-        //TODO
+        $this->status_ = $status;
         return $this;
     }
     
     public function &setSummary(\Triedge\Calendar\Property\Summary $summary)
     {
-        //TODO
+        $this->summary_ = $summary;
         return $this;
     }
 
@@ -237,23 +243,88 @@ class Event extends IComponent
     
     public function &setUrl(\Triedge\Calendar\Property\Url $url)
     {
-        //TODO
+        $this->url_ = $url;
         return $this;
     }
     
-    public function &setRecurid(\Triedge\Calendar\Property\RecurrenceId $recurrenceId)
+    public function &setRecurrenceId(\Triedge\Calendar\Property\RecurrenceId $recurid)
     {
-        //TODO
+        $this->recurid_ = $recurid;
         return $this;
     }
 
     //TODO
 
     //TODO
+    public function &addAttachment(\Triedge\Calendar\Property\Attachment $attach)
+    {
+        $this->attachList_[] = $attach;
+        return $this;
+    }
+
+    public function &addAttendee(\Triedge\Calendar\Property\Attendee $attendee)
+    {
+        $this->attendeeList_[] = $attendee;
+        return $this;
+    }
+
+    public function &addCategories(\Triedge\Calendar\Property\Categories $categories)
+    {
+        $this->categoriesList_[] = $categories;
+        return $this;
+    }
 
     public function &addComment(\Triedge\Calendar\Property\Comment $comment)
     {
         $this->commentList_[] = $comment;
         return $this;
     }
+
+    public function &addContact(\Triedge\Calendar\Property\Contact $contact)
+    {
+        $this->contactList_[] = $contact;
+        return $this;
+    }
+
+    public function &addExceptionDateTimes(\Triedge\Calendar\Property\ExceptionDateTimes $exDate)
+    {
+        $this->exdateList_[] = $exDate;
+        return $this;
+    }
+
+    public function &addRequestStatus(\Triedge\Calendar\Property\RequestStatus $rstatus)
+    {
+        $this->rstatusList_[] = $rstatus;
+        return $this;
+    }
+    
+    public function &addRelatedTo(\Triedge\Calendar\Property\RelatedTo $related)
+    {
+        $this->relatedList_[] = $related;
+        return $this;
+    }
+    
+    public function &addResources(\Triedge\Calendar\Property\Resources $resources)
+    {
+        $this->resourcesList_[] = $resources;
+        return $this;
+    }
+    
+    public function &addRecurrenceDateTimes(\Triedge\Calendar\Property\RecurrenceDateTimes $rDate)
+    {
+        $this->rdateList_[] = $rDate;
+        return $this;
+    }
+    
+    // public function &addXProp(\Triedge\Calendar\Property\ $)
+    // {
+    //     $this->[] = $;
+    //     return $this;
+    // }
+    
+    // public function &addIanaProp(\Triedge\Calendar\Property\ $)
+    // {
+    //     $this->[] = $;
+    //     return $this;
+    // }
 }

@@ -8,15 +8,20 @@ class Calendar extends \PHPUnit_Framework_TestCase
     {
         $event = new \Triedge\Calendar\Component\Event();
         $event
-            ->setClass(new \Triedge\Calendar\Property\Classification())
+            ->setClassification(new \Triedge\Calendar\Property\Classification())
             ->setDateTimeCreated(new \Triedge\Calendar\Property\DateTimeCreated())
             ->setDescription(new \Triedge\Calendar\Property\Description('Very very lengthy description'))
             ->setGeographicPosition(new \Triedge\Calendar\Property\GeographicPosition(1.5, 101))
             ->setLastModified(new \Triedge\Calendar\Property\LastModified(new \DateTime()))
             ->setLocation(new \Triedge\Calendar\Property\Location('in the office'))
-            
-            ->setTimeTransparency(new \Triedge\Calendar\Property\TimeTransparency())
+            ->setOrganizer(new \Triedge\Calendar\Property\Organizer())
             ->setPriority(new \Triedge\Calendar\Property\Priority())
+            ->setSequenceNumber(new \Triedge\Calendar\Property\SequenceNumber())
+            // ->setStatus(new \Triedge\Calendar\Property\Status())
+            ->setSummary(new \Triedge\Calendar\Property\Summary('new test event'))
+            ->setTimeTransparency(new \Triedge\Calendar\Property\TimeTransparency())
+            ->setUrl(new \Triedge\Calendar\Property\Url())
+            ->setRecurrenceId(new \Triedge\Calendar\Property\RecurrenceId())
             ->addComment(new \Triedge\Calendar\Property\Comment('Hi there!'));
 
 

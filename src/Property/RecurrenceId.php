@@ -12,4 +12,9 @@ class RecurrenceId
 {
     const NAME = 'RECURRENCE-ID';
     //TODO
+    public function toString()
+    {
+        //TODO
+        return '';
+    }
 }

@@ -9,4 +9,9 @@ class Url
 {
     const NAME = 'URL';
     //TODO
+    public function toString()
+    {
+        //TODO
+        return '';
+    }
 }

@@ -129,10 +129,10 @@ class Event extends IComponent
             $res .= $this->duration_->toString();
         }
 
-        foreach($this->attachList_ as $attach) {
+        foreach ($this->attachList_ as $attach) {
             $res .= $attach->toString();
         }
-        foreach($this->attendeeList_ as $attendee) {
+        foreach ($this->attendeeList_ as $attendee) {
             $res .= $attendee->toString();
         }
         foreach ($this->categoriesList_ as $categorie) {
@@ -145,25 +145,25 @@ class Event extends IComponent
             $res .= $contact->toString();
         }
         foreach ($this->exdateList_ as $exDate) {
-            $rs .= $exDate->toString();
+            $res .= $exDate->toString();
         }
         foreach ($this->rstatusList_ as $rstatus) {
-            $rs .= $rstatus->toString();
+            $res .= $rstatus->toString();
         }
         foreach ($this->relatedList_ as $related) {
-            $rs .= $related->toString();
+            $res .= $related->toString();
         }
         foreach ($this->resourcesList_ as $resources) {
-            $rs .= $resources->toString();
+            $res .= $resources->toString();
         }
         foreach ($this->rdateList_ as $rDate) {
-            $rs .= $rDate->toString();
+            $res .= $rDate->toString();
         }
         foreach ($this->xPropList_ as $xProp) {
-            $rs .= $xProp->toString();
+            $res .= $xProp->toString();
         }
         foreach ($this->ianaPropList_ as $ianaList) {
-            $rs .= $ianaList->toString();
+            $res .= $ianaList->toString();
         }
         $res .= "END:VEVENT\n";
         return $res;
@@ -254,8 +254,20 @@ class Event extends IComponent
     }
 
     //TODO
+    // public $rrule_ = null;
 
-    //TODO
+    public function &setDateTimeEnd(\Triedge\Calendar\Property\DateTimeEnd $dtend)
+    {
+        $this->dtend_ = $dtend;
+        return $this;
+    }
+
+    public function &setDuration(\Triedge\Calendar\Property\Duration $duration)
+    {
+        $this->duration_ = $duration;
+        return $this;
+    }
+
     public function &addAttachment(\Triedge\Calendar\Property\Attachment $attach)
     {
         $this->attachList_[] = $attach;

@@ -3,7 +3,7 @@ namespace Triedge\Calendar\Property;
 
 abstract class ITextList
 {
-    protected $texts_[];
+    protected $texts_ = array();
 
     public function __construct(array $values = array())
     {

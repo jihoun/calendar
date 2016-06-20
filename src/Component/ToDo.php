@@ -66,31 +66,31 @@ class ToDo extends IComponent
         $res .= $this->dtstamp_->toString();
         $res .= $this->uid_->toString();
         if (!is_null($this->class_)) {
-            //TODO
+            $res .= $this->class_->toString();
         }
         if (!is_null($this->completed_)) {
-            //TODO
+            $res .= $this->completed_->toString();
         }
         if (!is_null($this->created_)) {
-            //TODO
+            $this .= $this->created_->toString();
         }
         if (!is_null($this->description_)) {
             $res .= $this->description_->toString();
         }
         if (!is_null($this->dtstart_)) {
-            //TODO
+            $res .= $this->dtstart_->toString();
         }
         if (!is_null($this->geo_)) {
             $res .= $this->geo_->toString();
         }
         if (!is_null($this->last_mod_)) {
-            //TODO
+            $res .= $this->lastMod_->toString();
         }
         if (!is_null($this->location_)) {
-            //TODO
+            $res .= $this->location_->toString();
         }
         if (!is_null($this->organizer_)) {
-            //TODO
+            $res .= $this->organizer_->toString();
         }
         if (!is_null($this->percent_)) {
             $res .= $this->percent_->toString();
@@ -99,19 +99,19 @@ class ToDo extends IComponent
             $res .= $this->priority_->toString();
         }
         if (!is_null($this->recurid_)) {
-            //TODO
+            $res .= $this->recurid_->toString();
         }
         if (!is_null($this->seq_)) {
-            //TODO
+            $res .= $this->seq_->toString();
         }
         if (!is_null($this->status_)) {
-            //TODO
+            $res .=$this->status_->toString();
         }
         if (!is_null($this->summary_)) {
-            //TODO
+            $res .= $this->summary_();
         }
         if (!is_null($this->url_)) {
-            //TODO
+            $res .= $this->url_->toString();
         }
 
         if (!is_null($this->rrule_)) {
@@ -124,25 +124,42 @@ class ToDo extends IComponent
             $res .= $this->duration_->toString();
         }
 
-        foreach($this->attachList_ as $attach) {
-            //TODO
+        foreach ($this->attachList_ as $attach) {
+            $res .= $attach->toString();
         }
-    // public $attendeeList_ = array();
-    // public $categoriesList_ = array();
-    // public $commentList_ = array();
-        //TODO
+        foreach ($this->attendeeList_ as $attendee) {
+            $res .= $attendee->toString();
+        }
+        foreach ($this->categoriesList_ as $categories) {
+            $res .= $categories->toString();
+        }
         foreach ($this->commentList_ as $comment) {
             $res .= $comment->toString();
         }
-        //TODO
-    // public $contactList_ = array();
-    // public $exdateList_ = array();
-    // public $rstatusList_ = array();
-    // public $relatedList_ = array();
-    // public $resourcesList_ = array();
-    // public $rdateList_ = array();
-    // public $x_propList_ = array();
-    // public $iana_propList_ = array();
+        foreach ($this->contactList_ as $contact) {
+            $res .= $contact->toString();
+        }
+        foreach ($this->exdateList_ as $exdate) {
+            $res .= $exdate->toString();
+        }
+        foreach ($this->rstatusList_ as $rstatus) {
+            $res .= $rstatus->toString();
+        }
+        foreach ($this->relatedList_ as $related) {
+            $res .= $related->toString();
+        }
+        foreach ($this->resourcesList_ as $resources) {
+            $res .= $resources->toString();
+        }
+        foreach ($this->rdateList_ as $rdate) {
+            $res .= $rdate->toString();
+        }
+        foreach ($this->xPropList_ as $xProp) {
+            $res .= $xProp->toString();
+        }
+        foreach ($this->ianaPropList_ as $ianaList) {
+            $res .= $ianaList->toString();
+        }
         $res .= "END:VTODO\n";
         return $res;
     }
@@ -215,7 +232,7 @@ class ToDo extends IComponent
 
     public function &setRecurrenceId(\Triedge\Calendar\Property\RecurrenceId $recurid)
     {
-        $this->recurid_ = $recurid_;
+        $this->recurid_ = $recurid;
         return $this;
     }
 

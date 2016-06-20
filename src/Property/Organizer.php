@@ -13,5 +13,5 @@ class Organizer
     {
         //TODO
         return '';
-    }    
+    }
 }

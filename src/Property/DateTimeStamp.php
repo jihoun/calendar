@@ -12,7 +12,7 @@ namespace Triedge\Calendar\Property;
 class DateTimeStamp extends IDateTime
 {
     const NAME = 'DTSTAMP';
-    public function __construct(\DateTime $dt=null)
+    public function __construct(\DateTime $dt = null)
     {
         $this->dateTime_ = (is_null($dt) ? new \DateTime() : $dt);
     }

@@ -18,7 +18,7 @@ class Calendar
 
     public function &addComponent(\Triedge\Calendar\Component\IComponent $component)
     {
-        $this->componentsList_[] = $component;
+        $this->componentList_[] = $component;
         return $this;
     }
 
@@ -33,7 +33,7 @@ class Calendar
         if (!is_null($this->method_)) {
             $res .= 'METHOD:'.$this->method_."\n";
         }
-        foreach ($this->componentsList_ as $component) {
+        foreach ($this->componentList_ as $component) {
             $res .= $component->toString();
         }
         $res .= "END:VCALENDAR";

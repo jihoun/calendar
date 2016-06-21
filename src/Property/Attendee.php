@@ -7,10 +7,25 @@ namespace Triedge\Calendar\Property;
 class Attendee
 {
     const NAME = 'ATTENDEE';
-    //TODO
+    
+    protected $mail_;
+
+    public function __construct($email)
+    {
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $this->email_ = $email;
+        }
+    }
+
     public function toString()
     {
-        //TODO
-        return '';
+        if (filter_var($this->email_, FILTER_VALIDATE_EMAIL)) {
+            $res = static::NAME.':';
+            $res .= 'mailto:'.$this->email_;
+            $res .= "\n";
+            return $res;
+        } else {
+            return '';
+        }
     }
 }

@@ -13,7 +13,7 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
         $todo = new Component\ToDo();
 
         $event
-            ->setDateTimeStart(new Property\DateTimeStart(new \DateTime(), true))
+            ->setDateTimeStart(new Property\DateTimeStart(new \DateTime()))
             ->setClassification(new Property\Classification())
             ->setDateTimeCreated(new Property\DateTimeCreated())
             ->setDescription(new Property\Description('Very very lengthy description'))
@@ -29,8 +29,8 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
             ->setUrl(new Property\Url('http://coaching.triedgeteam.com'))
             // ->setRecurrenceId(new Property\RecurrenceId())
             //TODO rrule
-            ->setDateTimeEnd(new Property\DateTimeEnd(new \DateTime()))
-            ->setDuration(new Property\Duration())
+            // ->setDateTimeEnd(new Property\DateTimeEnd(new \DateTime()))
+            ->setDuration(new Property\Duration(0, 1, 1, 1, 1))
             ->addAttachment(new Property\Attachment())
             ->addAttendee(new Property\Attendee())
             ->addCategories(new Property\Categories())

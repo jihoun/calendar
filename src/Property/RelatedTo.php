@@ -5,7 +5,7 @@ namespace Triedge\Calendar\Property;
  * This property is used to represent a relationship or reference between one
  * calendar component and another.
  */
-class RelatedTo
+class RelatedTo extends IProperty
 {
     const NAME = 'RELATED-TO';
 
@@ -15,8 +15,8 @@ class RelatedTo
         $this->relatedTo_ = $comp;
     }
 
-    public function toString()
+    public function getValue()
     {
-        return self::NAME.':'.$this->relatedTo_->getUid()->getValue()."\n";
+        return $this->relatedTo_->getUid()->getValue();
     }
 }

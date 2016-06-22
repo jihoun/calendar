@@ -8,4 +8,10 @@ namespace Triedge\Calendar\Property;
 class TimeZoneName extends IText
 {
     const NAME = 'TZNAME';
+
+    protected $languageparam_;
+    public function getParams()
+    {
+        return array($this->languageparam_);
+    }
 }

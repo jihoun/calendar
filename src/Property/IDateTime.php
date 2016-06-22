@@ -1,7 +1,7 @@
 <?php
 namespace Triedge\Calendar\Property;
 
-abstract class IDateTime
+abstract class IDateTime extends IProperty
 {
     protected $dateTime_;
 
@@ -10,8 +10,8 @@ abstract class IDateTime
         $this->dateTime_ = $dt;
     }
 
-    public function toString()
+    public function getValue()
     {
-        return static::NAME.':'.$this->dateTime_->format('Ymd').'T'.$this->dateTime_->format('His')."Z\n";
+        return $this->dateTime_->format('Ymd\THis\Z');
     }
 }

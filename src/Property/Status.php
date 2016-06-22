@@ -6,7 +6,7 @@ namespace Triedge\Calendar\Property;
  * component.
  * @todo make it stronger to follow the documentation
  */
-class Status extends IText
+class Status extends IProperty
 {
     const NAME = 'STATUS';
 
@@ -23,7 +23,52 @@ class Status extends IText
     const CANCELLED     = 'CANCELLED';      //Indicates journal is removed.
                                             //Indicates event was cancelled.
                                             //Indicates to-do was cancelled.
-    
-    //TODO specify make sure that only the above status are used and make sure
-    //it is dependent on the component type
+    protected $value_;
+
+    private function __construct($value)
+    {
+        $this->value_ = $value;
+    }
+
+    public function getValue()
+    {
+        return $this->value_;
+    }
+
+    public static function TENTATIVE()
+    {
+        return new static(static::TENTATIVE);
+    }
+
+    public static function CONFIRMED()
+    {
+        return new static(static::CONFIRMED);
+    }
+
+    public static function NEEDS_ACTION()
+    {
+        return new static(static::NEEDS_ACTION);
+    }
+    public static function COMPLETED()
+    {
+        return new static(static::COMPLETED);
+    }
+    public static function IN_PROCESS()
+    {
+        return new static(static::IN_PROCESS);
+    }
+
+    public static function DRAFT()
+    {
+        return new static(static::DRAFT);
+    }
+    public static function FINAL_()
+    {
+        return new static(static::FINAL_);
+    }
+
+    public static function CANCELLED()
+    {
+        return new static(static::CANCELLED);
+    }
 }

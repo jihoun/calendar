@@ -1,13 +1,13 @@
 <?php
 namespace Triedge\Calendar\Property;
 
-class RecurrenceDateTimes
+class RecurrenceDateTimes extends IProperty
 {
     const NAME = 'RDATE';
     //TODO
-    public function toString()
+    public function getValue()
     {
         //TODO
-        return '';
+        return null;
     }
 }

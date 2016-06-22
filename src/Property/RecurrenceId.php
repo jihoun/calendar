@@ -8,13 +8,26 @@ namespace Triedge\Calendar\Property;
  * The property value is the original value of the "DTSTART" property of the
  * recurrence instance.
  */
-class RecurrenceId
+class RecurrenceId extends IProperty
 {
     const NAME = 'RECURRENCE-ID';
-    //TODO
-    public function toString()
+
+    protected $tzidparam_ = null;
+    protected $rangeparam_ = null;
+    protected $valueparam_ = null;    //"VALUE" "=" ("DATE-TIME" / "DATE")) 
+    
+    public function getValue()
     {
         //TODO
-        return '';
+        return null;
+    }
+
+    public function getParams()
+    {
+        return array(
+            $this->tzidparam_,
+            $this->rangeparam_,
+            $this->valueparam_
+        );
     }
 }

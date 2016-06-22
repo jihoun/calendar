@@ -11,6 +11,7 @@ namespace Triedge\Calendar\Property;
 class DateTimeCreated extends IDateTime
 {
     const NAME = 'CREATED';
+    
     public function __construct(\DateTime $dt = null)
     {
         $this->dateTime_ = (is_null($dt) ? new \DateTime() : $dt);

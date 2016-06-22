@@ -4,7 +4,7 @@ namespace Triedge\Calendar\Property;
 /**
  * This property defines the relative priority for a calendar component.
  */
-class Priority
+class Priority extends IProperty
 {
     const NAME = 'PRIORITY';
 
@@ -20,9 +20,9 @@ class Priority
         $this->integer_ = $this->normalize($value);
     }
 
-    public function toString()
+    public function getValue()
     {
-        return self::NAME.':'.$this->integer_."\n";
+        return $this->integer_;
     }
 
     private function normalize($value)

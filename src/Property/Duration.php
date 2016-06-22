@@ -5,7 +5,7 @@ namespace Triedge\Calendar\Property;
  * This value type is used to identify properties that contain a duration of
  * time.
  */
-class Duration
+class Duration extends IProperty
 {
     const NAME = 'DURATION';
 
@@ -30,27 +30,29 @@ class Duration
         $this->seconds_ = intval($seconds);
     }
 
-    public function toString()
+    public function getValue()
     {
-        $res = self::NAME.':P';
+        $res = null;
         if ($this->weeks_!==0) {
-            $res .= $this->weeks_.'W';
+            $res = $this->weeks_.'W';
         } else {
             if ($this->days_!=0) {
-                $res .= $this->days_.'D';
+                $res = $this->days_.'D';
             }
             if ($this->seconds_!=0) {
+                $res = (is_null($res) ? '' : $res);
                 $res .= 'T'.$this->hours_.'H';
                 $res .= $this->minutes_.'M';
                 $res .= $this->seconds_.'S';
             } elseif ($this->minutes_!=0) {
+                $res = (is_null($res) ? '' : $res);
                 $res .= 'T'.$this->hours_.'H';
                 $res .= $this->minutes_.'M';
             } elseif ($this->hours_!==0) {
+                $res = (is_null($res) ? '' : $res);
                 $res .= 'T'.$this->hours_.'H';
             }
         }
-        $res .= "\n";
         return $res;
     }
 }

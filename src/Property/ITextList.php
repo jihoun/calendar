@@ -1,7 +1,7 @@
 <?php
 namespace Triedge\Calendar\Property;
 
-abstract class ITextList
+abstract class ITextList extends IProperty
 {
     protected $texts_ = array();
 
@@ -12,14 +12,18 @@ abstract class ITextList
         }
     }
 
-    public function toString()
+    public function getValue()
     {
+        if (empty($this->texts_)) {
+            return null;
+        }
+        
         //TODO sanitize text
-        $res = static::NAME.':';
+        $res = '';
         foreach ($this->texts_ as $value) {
             $res .= $value .',';
         }
-        $res .= "\n";
+        //TODO remove last ,
         return $res;
     }
 

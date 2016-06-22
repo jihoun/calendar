@@ -8,4 +8,11 @@ namespace Triedge\Calendar\Property;
 class Categories extends ITextList
 {
     const NAME = 'CATEGORIES';
+
+    protected $languageparam_;
+    
+    public function getParams()
+    {
+        return array($this->languageparam_);
+    }
 }

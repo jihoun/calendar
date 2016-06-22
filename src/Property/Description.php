@@ -8,4 +8,12 @@ namespace Triedge\Calendar\Property;
 class Description extends IText
 {
     const NAME = 'DESCRIPTION';
+
+    protected $altrepparam_ = null;
+    protected $languageparam_ = null;
+
+    public function getParams()
+    {
+        return array($this->altrepparam_, $this->languageparam_);
+    }
 }

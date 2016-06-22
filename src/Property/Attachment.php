@@ -5,13 +5,20 @@ namespace Triedge\Calendar\Property;
  * This property provides the capability to associate a document object with a
  * calendar component.
  */
-class Attachment
+class Attachment extends IProperty
 {
     const NAME = 'ATTACH';
-    //TODO
-    public function toString()
+
+    protected $fmttypeparam_ = null;
+
+    public function getValue()
     {
         //TODO
-        return '';
+        return null;
+    }
+
+    public function getParams()
+    {
+        return array($this->fmttypeparam_);
     }
 }

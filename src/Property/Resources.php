@@ -8,4 +8,12 @@ namespace Triedge\Calendar\Property;
 class Resources extends ITextList
 {
     const NAME = 'RESOURCES';
+
+    protected $altrepparam_ = null;
+    protected $languageparam_ = null;
+
+    public function getParams()
+    {
+        return array($this->altrepparam_, $this->languageparam_);
+    }
 }

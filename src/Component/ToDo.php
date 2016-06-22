@@ -60,105 +60,62 @@ class ToDo extends IComponent
         $this->uid_ = new \Triedge\Calendar\Property\Uid();
     }
 
+    private function getProperties()
+    {
+        $res = array(
+            $this->dtstamp_,
+            $this->uid_,
+            $this->class_,
+            $this->completed_,
+            $this->created_,
+            $this->description_,
+            $this->dtstart_,
+            $this->geo_,
+            $this->last_mod_,
+            $this->location_,
+            $this->organizer_,
+            $this->percent_,
+            $this->priority_,
+            $this->recurid_,
+            $this->seq_,
+            $this->status_,
+            $this->summary_,
+            $this->url_,
+            $this->rrule_
+        );
+        
+        if (!is_null($this->due_)) {
+            $res[] = $this->due_;
+        } elseif (!is_null($this->duration_)) {
+            $res[] = $this->duration_;
+        }
+
+        $res = array_merge(
+            $res,
+            $this->attachList_,
+            $this->attendeeList_,
+            $this->categoriesList_,
+            $this->commentList_,
+            $this->contactList_,
+            $this->exdateList_,
+            $this->rstatusList_,
+            $this->relatedList_,
+            $this->resourcesList_,
+            $this->rdateList_,
+            $this->x_propList_,
+            $this->iana_propList_
+        );
+
+        return $res;
+    }
+
     public function toString()
     {
         $res = "BEGIN:VTODO\n";
-        $res .= $this->dtstamp_->toString();
-        $res .= $this->uid_->toString();
-        if (!is_null($this->class_)) {
-            $res .= $this->class_->toString();
-        }
-        if (!is_null($this->completed_)) {
-            $res .= $this->completed_->toString();
-        }
-        if (!is_null($this->created_)) {
-            $res .= $this->created_->toString();
-        }
-        if (!is_null($this->description_)) {
-            $res .= $this->description_->toString();
-        }
-        if (!is_null($this->dtstart_)) {
-            $res .= $this->dtstart_->toString();
-        }
-        if (!is_null($this->geo_)) {
-            $res .= $this->geo_->toString();
-        }
-        if (!is_null($this->last_mod_)) {
-            $res .= $this->last_mod_->toString();
-        }
-        if (!is_null($this->location_)) {
-            $res .= $this->location_->toString();
-        }
-        if (!is_null($this->organizer_)) {
-            $res .= $this->organizer_->toString();
-        }
-        if (!is_null($this->percent_)) {
-            $res .= $this->percent_->toString();
-        }
-        if (!is_null($this->priority_)) {
-            $res .= $this->priority_->toString();
-        }
-        if (!is_null($this->recurid_)) {
-            $res .= $this->recurid_->toString();
-        }
-        if (!is_null($this->seq_)) {
-            $res .= $this->seq_->toString();
-        }
-        if (!is_null($this->status_)) {
-            $res .=$this->status_->toString();
-        }
-        if (!is_null($this->summary_)) {
-            $res .= $this->summary_->toString();
-        }
-        if (!is_null($this->url_)) {
-            $res .= $this->url_->toString();
-        }
-
-        if (!is_null($this->rrule_)) {
-            $res .= $this->rrule_->toString();
-        }
-
-        if (!is_null($this->due_)) {
-            $res.= $this->due_->toString();
-        } elseif (!is_null($this->duration_)) {
-            $res .= $this->duration_->toString();
-        }
-
-        foreach ($this->attachList_ as $attach) {
-            $res .= $attach->toString();
-        }
-        foreach ($this->attendeeList_ as $attendee) {
-            $res .= $attendee->toString();
-        }
-        foreach ($this->categoriesList_ as $categories) {
-            $res .= $categories->toString();
-        }
-        foreach ($this->commentList_ as $comment) {
-            $res .= $comment->toString();
-        }
-        foreach ($this->contactList_ as $contact) {
-            $res .= $contact->toString();
-        }
-        foreach ($this->exdateList_ as $exdate) {
-            $res .= $exdate->toString();
-        }
-        foreach ($this->rstatusList_ as $rstatus) {
-            $res .= $rstatus->toString();
-        }
-        foreach ($this->relatedList_ as $related) {
-            $res .= $related->toString();
-        }
-        foreach ($this->resourcesList_ as $resources) {
-            $res .= $resources->toString();
-        }
-        foreach ($this->rdateList_ as $rdate) {
-            $res .= $rdate->toString();
-        }
-        foreach ($this->x_propList_ as $xProp) {
-            $res .= $xProp->toString();
-        }
-        foreach ($this->iana_propList_ as $ianaList) {
-            $res .= $ianaList->toString();
+        foreach ($this->getProperties() as $property) {
+            if (!is_null($property)) {
+                $res .= $property->toString();
+            }
         }
         $res .= "END:VTODO\n";
         return $res;

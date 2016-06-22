@@ -5,7 +5,7 @@ namespace Triedge\Calendar\Property;
  * This property specifies information related to the global position for the
  * activity specified by a calendar component.
  */
-class GeographicPosition
+class GeographicPosition extends IProperty
 {
     const NAME = 'GEO';
 
@@ -25,8 +25,8 @@ class GeographicPosition
         }
     }
 
-    public function toString()
+    public function getValue()
     {
-        return self::NAME.':'.$this->lat_.';'.$this->lon_."\n";
+        return $this->lat_.';'.$this->lon_;
     }
 }

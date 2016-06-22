@@ -9,19 +9,33 @@ namespace Triedge\Calendar\Property;
 class DateTimeDue extends IDateTime
 {
     const NAME = 'DUE';
+
     protected $fullDay_;
+
+    protected $valueparam_ = null; //"VALUE" "=" ("DATE-TIME" / "DATE")) /
+    protected $tzidparam_ = null;
 
     public function __construct(\DateTime $dt, $fullDay = false)
     {
         parent::__construct($dt);
         $this->fullDay_ = boolval($fullDay);
+        if ($fullDay) {
+            $this->valueparam_ = \Triedge\Calendar\Parameter\ValueDataTypes::DATE();
+        } else {
+            $this->valueparam_ = \Triedge\Calendar\Parameter\ValueDataTypes::DATE_TIME();
+        }
     }
 
-    public function toString()
+    public function getValue()
     {
         if (!$this->fullDay_) {
-            return parent::toString();
+            return parent::getValue();
         }
-        return static::NAME.':'.$this->dateTime_->format('Ymd')."\n";
+        return $this->dateTime_->format('Ymd');
+    }
+
+    public function getParams()
+    {
+        return array($this->valueparam_, $this->tzidparam_);
     }
 }

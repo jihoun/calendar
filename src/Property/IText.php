@@ -1,7 +1,7 @@
 <?php
 namespace Triedge\Calendar\Property;
 
-abstract class IText
+abstract class IText extends IProperty
 {
     protected $text_;
 
@@ -12,14 +12,9 @@ abstract class IText
         }
     }
 
-    public function toString()
-    {
-        //TODO sanitize text
-        return static::NAME.':'.$this->text_."\n";
-    }
-
     public function getValue()
     {
+        //TODO sanitize text
         return $this->text_;
     }
 }

@@ -6,7 +6,7 @@ namespace Triedge\Calendar\Property;
  * percent completion of a to-do to the "Organizer".
  * @todo  merge with Priority
  */
-class PercentComplete
+class PercentComplete extends IProperty
 {
     const NAME = 'PERCENT-COMPLETE';
     public $integer_;
@@ -16,9 +16,9 @@ class PercentComplete
         $this->integer_ = $this->normalize($value);
     }
 
-    public function toString()
+    public function getValue()
     {
-        return self::NAME.':'.$this->integer_."\n";
+        return $this->integer_;
     }
 
     private function normalize($value)

@@ -11,6 +11,22 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
     {
         $event = new Component\Event();
         $todo = new Component\ToDo();
+        $journal = new Component\Journal();
+
+        $exDateTime1 = new Property\ExceptionDateTimes();
+        $dt = new \DateTime();
+        $dt->setDate(2018,12,25);
+        $exDateTime1->addValue($dt);
+        $dt = new \DateTime();
+        $dt->setDate(2018,12,25);
+        $exDateTime1->addValue($dt);
+        $exDateTime2 = new Property\ExceptionDateTimes(true);
+        $dt = new \DateTime();
+        $dt->setDate(2018,12,6);
+        $exDateTime2->addValue($dt);
+        $dt = new \DateTime();
+        $dt->setDate(2018,12,6);
+        $exDateTime2->addValue($dt);
 
         $event
             ->setDateTimeStart(new Property\DateTimeStart(new \DateTime()))
@@ -23,25 +39,25 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
             ->setOrganizer(new Property\Organizer('nicolas.lagier@gmail.com'))
             ->setPriority(new Property\Priority())
             ->setSequenceNumber(new Property\SequenceNumber())
-            ->setStatus(new Property\Status(Property\Status::CONFIRMED))
+            ->setStatus(Property\Status::CONFIRMED())
             ->setSummary(new Property\Summary('new test event'))
             ->setTimeTransparency(new Property\TimeTransparency())
             ->setUrl(new Property\Url('http://coaching.triedgeteam.com'))
             // ->setRecurrenceId(new Property\RecurrenceId())
             //TODO rrule
-            // ->setDateTimeEnd(new Property\DateTimeEnd(new \DateTime()))
+            ->setDateTimeEnd(new Property\DateTimeEnd(new \DateTime()))
             ->setDuration(new Property\Duration(0, 1, 1, 1, 1))
-            ->addAttachment(new Property\Attachment())
+            ->addAttachment(new Property\Attachment())//*
             ->addAttendee(new Property\Attendee('nicolas.cadeaux@gmail.com'))
-            ->addCategories(new Property\Categories())
+            ->addCategories(new Property\Categories())//*
             ->addComment(new Property\Comment('Hi there!'))
             ->addContact(new Property\Contact("John Wayne"))
-            ->addExceptionDateTimes(new Property\ExceptionDateTimes())
-            ->addRequestStatus(new Property\RequestStatus())
+            ->addExceptionDateTimes($exDateTime1)
+            ->addExceptionDateTimes($exDateTime2)
+            ->addRequestStatus(new Property\RequestStatus())//*
             ->addRelatedTo(new Property\RelatedTo($todo))
-            ->addResources(new Property\Resources())
-            ->addRecurrenceDateTimes(new Property\RecurrenceDateTimes());
-
+            ->addResources(new Property\Resources())//*
+            ->addRecurrenceDateTimes(new Property\RecurrenceDateTimes());//*
 
         $todo
             ->setClassification(new Property\Classification())
@@ -57,7 +73,7 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
             ->setPriority(new Property\Priority(20))
             ->setRecurrenceId(new Property\RecurrenceId())
             ->setSequenceNumber(new Property\SequenceNumber())
-            // ->setStatus(new Property\Status())
+            ->setStatus(Property\Status::NEEDS_ACTION())
             ->setSummary(new Property\Summary('TODO do the summary'))
             ->setUrl(new Property\Url('http://coaching.triedgeteam.com'))
             //TODO rrule
@@ -67,21 +83,49 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
             ->addAttendee(new Property\Attendee('nicolas.cadeaux@gmail.com'))
             ->addCategories(new Property\Categories())
             ->addComment(new Property\Comment('Yo!'))
-            ->addContact(new Property\Contact('John Mcnroe'));
+            ->addContact(new Property\Contact('John Mcnroe'))
+            ->addExceptionDateTimes($exDateTime1)
+            ->addExceptionDateTimes($exDateTime2)
+            ->addRequestStatus(new Property\RequestStatus())
+            ->addRelatedTo(new Property\RelatedTo($event))
+            ->addResources(new Property\Resources())
+            ->addRecurrenceDateTimes(new Property\RecurrenceDateTimes());
 
-        // $journal = new Component\Journal();
-        // $journal->addComment(new Property\Comment('Hello'))
+        $journal
+            ->setClassification(new Property\Classification())
+            ->setDateTimeCreated(new Property\DateTimeCreated())
+            ->setDateTimeStart(new Property\DateTimeStart(new \DateTime()))
+            ->setLastModified(new Property\LastModified(new \DateTime()))
+            ->setOrganizer(new Property\Organizer('nicolas.cadeaux@gmail.com'))
+            ->setRecurrenceId(new Property\RecurrenceId())
+            ->setSequenceNumber(new Property\SequenceNumber())
+            ->setStatus(Property\Status::DRAFT())
+            ->setSummary(new Property\Summary('Summary of my journal'))
+            ->setUrl(new Property\Url('http://coaching.triedgeteam.com'))
+            //TODO rrule
+            ->addAttachment(new Property\Attachment())
+            ->addAttendee(new Property\Attendee('nicolas.cadeaux@gmail.com'))
+            ->addCategories(new Property\Categories())
+            ->addComment(new Property\Comment('Hello'))
+            ->addContact(new Property\Contact('John Doe'))
+            ->addDescription(new Property\Description('New Description on the journal front'))
+            ->addExceptionDateTimes($exDateTime1)
+            ->addExceptionDateTimes($exDateTime2)
+            ->addRelatedTo(new Property\RelatedTo($event))
+            ->addRecurrenceDateTimes(new Property\RecurrenceDateTimes())
+            ->addRequestStatus(new Property\RequestStatus());
+
         //     ->addDescription(new Property\Description('Very very lengthy description'));
 
         // $freeBusy = new Component\FreeBusy();
         // $freeBusy->addComment(new Property\Comment('Bonjour'));
 
         $cal = new \Triedge\Calendar\Calendar();
-        $cal->addComponent($event);
-            // ->addComponent($freeBusy)
-            // ->addComponent($journal)
-            // ->addComponent(new Component\TimeZone())
+        // $cal->addComponent($event);
         // $cal->addComponent($todo);
+        // $cal->addComponent($journal);
+            // ->addComponent($freeBusy)
+            // ->addComponent(new Component\TimeZone())
 
         file_put_contents('/Users/nicolaslagier/workspace/triedge/calendar/test.ics', $cal->toString());
     }

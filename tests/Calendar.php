@@ -131,8 +131,9 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
         // $cal->addComponent($event);
         // $cal->addComponent($todo);
         // $cal->addComponent($journal);
-        $cal->addComponent($freeBusy);
-            // ->addComponent(new Component\TimeZone())
+        // $cal->addComponent($freeBusy);
+        
+        // ->addComponent(new Component\TimeZone())
 
         file_put_contents('/Users/nicolaslagier/workspace/triedge/calendar/test.ics', $cal->toString());
     }

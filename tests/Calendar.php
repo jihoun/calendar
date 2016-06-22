@@ -43,7 +43,7 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
             ->setSummary(new Property\Summary('new test event'))
             ->setTimeTransparency(new Property\TimeTransparency())
             ->setUrl(new Property\Url('http://coaching.triedgeteam.com'))
-            // ->setRecurrenceId(new Property\RecurrenceId())
+            ->setRecurrenceId(new Property\RecurrenceId())
             //TODO rrule
             ->setDateTimeEnd(new Property\DateTimeEnd(new \DateTime()))
             ->setDuration(new Property\Duration(0, 1, 1, 1, 1))
@@ -115,16 +115,23 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
             ->addRecurrenceDateTimes(new Property\RecurrenceDateTimes())
             ->addRequestStatus(new Property\RequestStatus());
 
-        //     ->addDescription(new Property\Description('Very very lengthy description'));
-
-        // $freeBusy = new Component\FreeBusy();
-        // $freeBusy->addComment(new Property\Comment('Bonjour'));
+        $freeBusy = new Component\FreeBusy();
+        $freeBusy
+            ->setContact(new Property\Contact('Nicolas Lagier'))
+            ->setDateTimeStart(new Property\DateTimeStart(new \DateTime()))
+            ->setDateTimeEnd(new Property\DateTimeEnd(new \DateTime()))
+            ->setOrganizer(new Property\Organizer('nicolas.lagier@gmail.com'))
+            ->setUrl(new Property\Url('http://coaching.triedgeteam.com'))
+            ->addAttendee(new Property\Attendee('nicolas.cadeaux@gmail.com'))
+            ->addComment(new Property\Comment('Bonjour'))
+            ->addFreeBusy(new Property\FreeBusyTime())
+            ->addRequestStatus(new Property\RequestStatus());
 
         $cal = new \Triedge\Calendar\Calendar();
         // $cal->addComponent($event);
         // $cal->addComponent($todo);
         // $cal->addComponent($journal);
-            // ->addComponent($freeBusy)
+        $cal->addComponent($freeBusy);
             // ->addComponent(new Component\TimeZone())
 
         file_put_contents('/Users/nicolaslagier/workspace/triedge/calendar/test.ics', $cal->toString());

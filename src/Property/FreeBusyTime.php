@@ -11,5 +11,9 @@ class FreeBusyTime extends IProperty
     {
         return array($this->fmttypeparam_);
     }
-    //TODO
+    public function getValue()
+    {
+        //TODO
+        return null;
+    }
 }

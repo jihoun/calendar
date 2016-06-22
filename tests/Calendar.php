@@ -15,17 +15,17 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
 
         $exDateTime1 = new Property\ExceptionDateTimes();
         $dt = new \DateTime();
-        $dt->setDate(2018,12,25);
+        $dt->setDate(2018, 12, 25);
         $exDateTime1->addValue($dt);
         $dt = new \DateTime();
-        $dt->setDate(2018,12,25);
+        $dt->setDate(2018, 12, 25);
         $exDateTime1->addValue($dt);
         $exDateTime2 = new Property\ExceptionDateTimes(true);
         $dt = new \DateTime();
-        $dt->setDate(2018,12,6);
+        $dt->setDate(2018, 12, 6);
         $exDateTime2->addValue($dt);
         $dt = new \DateTime();
-        $dt->setDate(2018,12,6);
+        $dt->setDate(2018, 12, 6);
         $exDateTime2->addValue($dt);
 
         $event

@@ -15,14 +15,13 @@ class ExceptionDateTimes extends IProperty
     protected $values_ = array();
     protected $fullDay_;
 
-    public function __construct($fullDay=false)
+    public function __construct($fullDay = false)
     {
         $this->fullDay_ = boolval($fullDay);
         if ($this->fullDay_) {
             $this->valueparam_ = \Triedge\Calendar\Parameter\ValueDataTypes::DATE();
         } else {
             $this->valueparam_ = \Triedge\Calendar\Parameter\ValueDataTypes::DATE_TIME();
-
         }
     }
 

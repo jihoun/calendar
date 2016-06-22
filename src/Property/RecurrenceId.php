@@ -14,7 +14,7 @@ class RecurrenceId extends IProperty
 
     protected $tzidparam_ = null;
     protected $rangeparam_ = null;
-    protected $valueparam_ = null;    //"VALUE" "=" ("DATE-TIME" / "DATE")) 
+    protected $valueparam_ = null;    //"VALUE" "=" ("DATE-TIME" / "DATE"))
     
     public function getValue()
     {

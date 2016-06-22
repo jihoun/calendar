@@ -208,5 +208,4 @@ class Journal extends IComponent
     }
     // public $x_propList_ = array();
     // public $iana_propList_ = array();
-
 }

@@ -18,12 +18,12 @@ abstract class ITextList extends IProperty
             return null;
         }
         
-        //TODO sanitize text
         $res = '';
         foreach ($this->texts_ as $value) {
+            //TODO sanitize text
             $res .= $value .',';
         }
-        //TODO remove last ,
+        $res = substr($res, 0, -1);
         return $res;
     }
 

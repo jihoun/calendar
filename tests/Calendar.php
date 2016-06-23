@@ -27,6 +27,9 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
         $dt = new \DateTime();
         $dt->setDate(2018, 12, 6);
         $exDateTime2->addValue($dt);
+        $categories = new Property\Categories();
+        $categories->addValue('APPOINTMENT');
+        $categories->addValue('EDUCATION');
 
         $event
             ->setDateTimeStart(new Property\DateTimeStart(new \DateTime()))
@@ -49,12 +52,12 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
             ->setDuration(new Property\Duration(0, 1, 1, 1, 1))
             ->addAttachment(new Property\Attachment())//*
             ->addAttendee(new Property\Attendee('nicolas.cadeaux@gmail.com'))
-            ->addCategories(new Property\Categories())//*
+            ->addCategories($categories)
             ->addComment(new Property\Comment('Hi there!'))
             ->addContact(new Property\Contact("John Wayne"))
             ->addExceptionDateTimes($exDateTime1)
             ->addExceptionDateTimes($exDateTime2)
-            ->addRequestStatus(new Property\RequestStatus('Success', Property\RequestStatus::SUCCESFUL))//*
+            ->addRequestStatus(new Property\RequestStatus('Success', Property\RequestStatus::SUCCESFUL))
             ->addRelatedTo(new Property\RelatedTo($todo))
             ->addResources(new Property\Resources())//*
             ->addRecurrenceDateTimes(new Property\RecurrenceDateTimes());//*
@@ -81,7 +84,7 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
             ->setDuration(new Property\Duration())
             ->addAttachment(new Property\Attachment())
             ->addAttendee(new Property\Attendee('nicolas.cadeaux@gmail.com'))
-            ->addCategories(new Property\Categories())
+            ->addCategories($categories)
             ->addComment(new Property\Comment('Yo!'))
             ->addContact(new Property\Contact('John Mcnroe'))
             ->addExceptionDateTimes($exDateTime1)
@@ -105,7 +108,7 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
             //TODO rrule
             ->addAttachment(new Property\Attachment())
             ->addAttendee(new Property\Attendee('nicolas.cadeaux@gmail.com'))
-            ->addCategories(new Property\Categories())
+            ->addCategories($categories)
             ->addComment(new Property\Comment('Hello'))
             ->addContact(new Property\Contact('John Doe'))
             ->addDescription(new Property\Description('New Description on the journal front'))

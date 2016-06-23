@@ -28,8 +28,9 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
         $dt->setDate(2018, 12, 6);
         $exDateTime2->addValue($dt);
         $categories = new Property\Categories();
-        $categories->addValue('APPOINTMENT');
-        $categories->addValue('EDUCATION');
+        $categories->addValue('APPOINTMENT')
+                    ->addValue('EDUCATION');
+        $resources = new Property\Resources(array('EASEL', 'PROJECTOR', 'VCR'));
 
         $event
             ->setDateTimeStart(new Property\DateTimeStart(new \DateTime()))
@@ -59,7 +60,7 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
             ->addExceptionDateTimes($exDateTime2)
             ->addRequestStatus(new Property\RequestStatus('Success', Property\RequestStatus::SUCCESFUL))
             ->addRelatedTo(new Property\RelatedTo($todo))
-            ->addResources(new Property\Resources())//*
+            ->addResources($resources)
             ->addRecurrenceDateTimes(new Property\RecurrenceDateTimes());//*
 
         $todo
@@ -91,7 +92,7 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
             ->addExceptionDateTimes($exDateTime2)
             ->addRequestStatus(new Property\RequestStatus('Success', Property\RequestStatus::SUCCESFUL))
             ->addRelatedTo(new Property\RelatedTo($event))
-            ->addResources(new Property\Resources())
+            ->addResources($resources)
             ->addRecurrenceDateTimes(new Property\RecurrenceDateTimes());
 
         $journal

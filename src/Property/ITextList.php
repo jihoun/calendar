@@ -38,4 +38,11 @@ abstract class ITextList extends IProperty
         }
         return $this;
     }
+
+    public function &addValues(array $values)
+    {
+        foreach ($values as $value) {
+            $this->addValue($value);
+        }
+    }
 }

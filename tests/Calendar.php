@@ -54,7 +54,7 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
             ->addContact(new Property\Contact("John Wayne"))
             ->addExceptionDateTimes($exDateTime1)
             ->addExceptionDateTimes($exDateTime2)
-            ->addRequestStatus(new Property\RequestStatus())//*
+            ->addRequestStatus(new Property\RequestStatus('Success', Property\RequestStatus::SUCCESFUL))//*
             ->addRelatedTo(new Property\RelatedTo($todo))
             ->addResources(new Property\Resources())//*
             ->addRecurrenceDateTimes(new Property\RecurrenceDateTimes());//*
@@ -86,7 +86,7 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
             ->addContact(new Property\Contact('John Mcnroe'))
             ->addExceptionDateTimes($exDateTime1)
             ->addExceptionDateTimes($exDateTime2)
-            ->addRequestStatus(new Property\RequestStatus())
+            ->addRequestStatus(new Property\RequestStatus('Success', Property\RequestStatus::SUCCESFUL))
             ->addRelatedTo(new Property\RelatedTo($event))
             ->addResources(new Property\Resources())
             ->addRecurrenceDateTimes(new Property\RecurrenceDateTimes());
@@ -113,7 +113,7 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
             ->addExceptionDateTimes($exDateTime2)
             ->addRelatedTo(new Property\RelatedTo($event))
             ->addRecurrenceDateTimes(new Property\RecurrenceDateTimes())
-            ->addRequestStatus(new Property\RequestStatus());
+            ->addRequestStatus(new Property\RequestStatus('Success', Property\RequestStatus::SUCCESFUL));
 
         $freeBusy = new Component\FreeBusy();
         $freeBusy
@@ -125,13 +125,13 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
             ->addAttendee(new Property\Attendee('nicolas.cadeaux@gmail.com'))
             ->addComment(new Property\Comment('Bonjour'))
             ->addFreeBusy(new Property\FreeBusyTime())
-            ->addRequestStatus(new Property\RequestStatus());
+            ->addRequestStatus(new Property\RequestStatus('Success', Property\RequestStatus::SUCCESFUL));
 
         $cal = new \Triedge\Calendar\Calendar();
-        // $cal->addComponent($event);
-        // $cal->addComponent($todo);
-        // $cal->addComponent($journal);
-        // $cal->addComponent($freeBusy);
+        $cal->addComponent($event);
+        $cal->addComponent($todo);
+        $cal->addComponent($journal);
+        $cal->addComponent($freeBusy);
         
         // ->addComponent(new Component\TimeZone())
 

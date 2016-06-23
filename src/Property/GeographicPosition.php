@@ -22,6 +22,8 @@ class GeographicPosition extends IProperty
         if (is_numeric($lat) && is_numeric($lon)) {
             $this->lat_ = (double)$lat;
             $this->lon_ = (double)$lon;
+        } else {
+            throw new \Exception('Invlid params for GeographicPosition::__construct');
         }
     }
 

@@ -31,6 +31,7 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
         $categories->addValue('APPOINTMENT')
                     ->addValue('EDUCATION');
         $resources = new Property\Resources(array('EASEL', 'PROJECTOR', 'VCR'));
+        $rrule = new Property\RecurrenceRule();
 
         $event
             ->setDateTimeStart(new Property\DateTimeStart(new \DateTime()))
@@ -48,8 +49,8 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
             ->setTimeTransparency(new Property\TimeTransparency())
             ->setUrl(new Property\Url('http://coaching.triedgeteam.com'))
             ->setRecurrenceId(new Property\RecurrenceId())
-            //TODO rrule
-            ->setDateTimeEnd(new Property\DateTimeEnd(new \DateTime()))
+            ->setRecurrenceRule($rrule)//*
+            //->setDateTimeEnd(new Property\DateTimeEnd(new \DateTime()))
             ->setDuration(new Property\Duration(0, 1, 1, 1, 1))
             ->addAttachment(new Property\Attachment())//*
             ->addAttendee(new Property\Attendee('nicolas.cadeaux@gmail.com'))
@@ -80,7 +81,7 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
             ->setStatus(Property\Status::NEEDS_ACTION())
             ->setSummary(new Property\Summary('TODO do the summary'))
             ->setUrl(new Property\Url('http://coaching.triedgeteam.com'))
-            //TODO rrule
+            ->setRecurrenceRule($rrule)
             ->setDateTimeDue(new Property\DateTimeDue(new \DateTime()))
             ->setDuration(new Property\Duration())
             ->addAttachment(new Property\Attachment())
@@ -106,7 +107,7 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
             ->setStatus(Property\Status::DRAFT())
             ->setSummary(new Property\Summary('Summary of my journal'))
             ->setUrl(new Property\Url('http://coaching.triedgeteam.com'))
-            //TODO rrule
+            ->setRecurrenceRule($rrule)
             ->addAttachment(new Property\Attachment())
             ->addAttendee(new Property\Attendee('nicolas.cadeaux@gmail.com'))
             ->addCategories($categories)
@@ -131,13 +132,19 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
             ->addFreeBusy(new Property\FreeBusyTime())
             ->addRequestStatus(new Property\RequestStatus('Success', Property\RequestStatus::SUCCESFUL));
 
+        $tz = new Component\TimeZone();
+        $tz->setLastModified(new Property\LastModified(new \DateTime()))
+            ->setTimeZoneUrl(new Property\TimeZoneUrl('http://coaching.triedgeteam.com'))
+            ->addStandardc(new Property\TimeZoneProperty(new Property\DateTimeStart(new \DateTime())))
+            ->addDaylightc(new Property\TimeZoneProperty(new Property\DateTimeStart(new \DateTime())));
+
         $cal = new \Triedge\Calendar\Calendar();
-        $cal->addComponent($event);
-        $cal->addComponent($todo);
-        $cal->addComponent($journal);
-        $cal->addComponent($freeBusy);
+        // $cal->addComponent($event);
+        // $cal->addComponent($todo);
+        // $cal->addComponent($journal);
+        // $cal->addComponent($freeBusy);
         
-        // ->addComponent(new Component\TimeZone())
+        $cal->addTimeZone($tz);
 
         file_put_contents('/Users/nicolaslagier/workspace/triedge/calendar/test.ics', $cal->toString());
     }

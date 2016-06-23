@@ -8,51 +8,51 @@ class ToDo extends IComponent
 {
     // The following are REQUIRED,
     // but MUST NOT occur more than once.
-    public $dtstamp_;
-    public $uid_;
+    protected $dtstamp_;
+    protected $uid_;
     // The following are OPTIONAL,
     // but MUST NOT occur more than once.
-    public $class_ = null;
-    public $completed_ = null;
-    public $created_ = null;
-    public $description_ = null;
-    public $dtstart_ = null;
-    public $geo_ = null;
-    public $last_mod_ = null;
-    public $location_ = null;
-    public $organizer_ = null;
-    public $percent_ = null;
-    public $priority_ = null;
-    public $recurid_ = null;
-    public $seq_ = null;
-    public $status_ = null;
-    public $summary_ = null;
-    public $url_ = null;
+    protected $class_ = null;
+    protected $completed_ = null;
+    protected $created_ = null;
+    protected $description_ = null;
+    protected $dtstart_ = null;
+    protected $geo_ = null;
+    protected $last_mod_ = null;
+    protected $location_ = null;
+    protected $organizer_ = null;
+    protected $percent_ = null;
+    protected $priority_ = null;
+    protected $recurid_ = null;
+    protected $seq_ = null;
+    protected $status_ = null;
+    protected $summary_ = null;
+    protected $url_ = null;
     // The following is OPTIONAL,
     // but SHOULD NOT occur more than once.
-    public $rrule_ = null;
+    protected $rrule_ = null;
     // Either 'due' or 'duration' MAY appear in
     // a 'todoprop', but 'due' and 'duration'
     // MUST NOT occur in the same 'todoprop'.
     // If 'duration' appear in a 'todoprop',
     // then 'dtstart' MUST also appear in
     // the same 'todoprop'.
-    public $due_;
-    public $duration_;
+    protected $due_;
+    protected $duration_;
     // The following are OPTIONAL,
     // and MAY occur more than once.
-    public $attachList_ = array();
-    public $attendeeList_ = array();
-    public $categoriesList_ = array();
-    public $commentList_ = array();
-    public $contactList_ = array();
-    public $exdateList_ = array();
-    public $rstatusList_ = array();
-    public $relatedList_ = array();
-    public $resourcesList_ = array();
-    public $rdateList_ = array();
-    public $x_propList_ = array();
-    public $iana_propList_ = array();
+    protected $attachList_ = array();
+    protected $attendeeList_ = array();
+    protected $categoriesList_ = array();
+    protected $commentList_ = array();
+    protected $contactList_ = array();
+    protected $exdateList_ = array();
+    protected $rstatusList_ = array();
+    protected $relatedList_ = array();
+    protected $resourcesList_ = array();
+    protected $rdateList_ = array();
+    protected $x_propList_ = array();
+    protected $iana_propList_ = array();
 
     public function __construct()
     {
@@ -219,6 +219,12 @@ class ToDo extends IComponent
     public function &setUrl(\Triedge\Calendar\Property\Url $url)
     {
         $this->url_ = $url;
+        return $this;
+    }
+
+    public function &setRecurrenceRule(\Triedge\Calendar\Property\RecurrenceRule $rrule)
+    {
+        $this->rrule_ = $rrule;
         return $this;
     }
 

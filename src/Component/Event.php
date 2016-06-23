@@ -8,57 +8,57 @@ class Event extends IComponent
 {
     // The following are REQUIRED,
     // but MUST NOT occur more than once.
-    public $dtstamp_;
-    public $uid_;
+    protected $dtstamp_;
+    protected $uid_;
 
     // The following is REQUIRED if the component
     // appears in an iCalendar object that doesn't
     // specify the "METHOD" property; otherwise, it
     // is OPTIONAL; in any case, it MUST NOT occur
     // more than once.
-    public $dtstart_;
+    protected $dtstart_;
 
     // The following are OPTIONAL,
     // but MUST NOT occur more than once.
-    public $class_ = null;
-    public $created_ = null;
-    public $description_ = null;
-    public $geo_ = null;
-    public $lastMod_ = null;
-    public $location_ = null;
-    public $organizer_ = null;
-    public $priority_ = null;
-    public $seq_ = null;
-    public $status_ = null;
-    public $summary_ = null;
-    public $transp_ = null;
-    public $url_ = null;
-    public $recurid_ = null;
+    protected $class_ = null;
+    protected $created_ = null;
+    protected $description_ = null;
+    protected $geo_ = null;
+    protected $lastMod_ = null;
+    protected $location_ = null;
+    protected $organizer_ = null;
+    protected $priority_ = null;
+    protected $seq_ = null;
+    protected $status_ = null;
+    protected $summary_ = null;
+    protected $transp_ = null;
+    protected $url_ = null;
+    protected $recurid_ = null;
 
     // The following is OPTIONAL,
     // but SHOULD NOT occur more than once.
-    public $rrule_ = null;
+    protected $rrule_ = null;
 
     // Either 'dtend' or 'duration' MAY appear in
     // a 'eventprop', but 'dtend' and 'duration'
     // MUST NOT occur in the same 'eventprop'.
-    public $dtend_ = null;
-    public $duration_ = null;
+    protected $dtend_ = null;
+    protected $duration_ = null;
 
     // The following are OPTIONAL,
     // and MAY occur more than once.
-    public $attachList_ = array();
-    public $attendeeList_ = array();
-    public $categoriesList_ = array();
-    public $commentList_ = array();
-    public $contactList_ = array();
-    public $exdateList_ = array();
-    public $rstatusList_ = array();
-    public $relatedList_ = array();
-    public $resourcesList_ = array();
-    public $rdateList_ = array();
-    public $xPropList_ = array();
-    public $ianaPropList_ = array();
+    protected $attachList_ = array();
+    protected $attendeeList_ = array();
+    protected $categoriesList_ = array();
+    protected $commentList_ = array();
+    protected $contactList_ = array();
+    protected $exdateList_ = array();
+    protected $rstatusList_ = array();
+    protected $relatedList_ = array();
+    protected $resourcesList_ = array();
+    protected $rdateList_ = array();
+    protected $xPropList_ = array();
+    protected $ianaPropList_ = array();
 
     public function __construct()
     {
@@ -219,8 +219,11 @@ class Event extends IComponent
         return $this;
     }
 
-    //TODO
-    // public $rrule_ = null;
+    public function &setRecurrenceRule(\Triedge\Calendar\Property\RecurrenceRule $rrule)
+    {
+        $this->rrule_ = $rrule;
+        return $this;
+    }
 
     public function &setDateTimeEnd(\Triedge\Calendar\Property\DateTimeEnd $dtend)
     {

@@ -22,6 +22,12 @@ class Calendar
         return $this;
     }
 
+    public function &addTimeZone(\Triedge\Calendar\Component\TimeZone $tz)
+    {
+        $this->componentList_[] = $tz;
+        return $this;
+    }
+
     public function toString()
     {
         $res = "BEGIN:VCALENDAR\n";

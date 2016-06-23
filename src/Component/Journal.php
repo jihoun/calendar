@@ -10,37 +10,37 @@ class Journal extends IComponent
 {
     // The following are REQUIRED,
     // but MUST NOT occur more than once.
-    public $dtstamp_;
-    public $uid_;
+    protected $dtstamp_;
+    protected $uid_;
     // The following are OPTIONAL,
     // but MUST NOT occur more than once.
-    public $class_ = null;
-    public $created_ = null;
-    public $dtstart_ = null;
-    public $last_mod_ = null;
-    public $organizer_ = null;
-    public $recurid_ = null;
-    public $seq_ = null;
-    public $status_ = null;
-    public $summary_ = null;
-    public $url_ = null;
+    protected $class_ = null;
+    protected $created_ = null;
+    protected $dtstart_ = null;
+    protected $last_mod_ = null;
+    protected $organizer_ = null;
+    protected $recurid_ = null;
+    protected $seq_ = null;
+    protected $status_ = null;
+    protected $summary_ = null;
+    protected $url_ = null;
     // The following is OPTIONAL,
     // but SHOULD NOT occur more than once.
-    public $rrule_ = null;
+    protected $rrule_ = null;
     // The following are OPTIONAL,
     // and MAY occur more than once.
-    public $attachList_ = array();
-    public $attendeeList_ = array();
-    public $categoriesList_ = array();
-    public $commentList_ = array();
-    public $contactList_ = array();
-    public $descriptionList_ = array();
-    public $exdateList_ = array();
-    public $relatedList_ = array();
-    public $rdateList_ = array();
-    public $rstatusList_ = array();
-    public $x_propList_ = array();
-    public $iana_propList_ = array();
+    protected $attachList_ = array();
+    protected $attendeeList_ = array();
+    protected $categoriesList_ = array();
+    protected $commentList_ = array();
+    protected $contactList_ = array();
+    protected $descriptionList_ = array();
+    protected $exdateList_ = array();
+    protected $relatedList_ = array();
+    protected $rdateList_ = array();
+    protected $rstatusList_ = array();
+    protected $x_propList_ = array();
+    protected $iana_propList_ = array();
 
     public function __construct()
     {
@@ -99,70 +99,85 @@ class Journal extends IComponent
     {
         return $this->uid_;
     }
+
     public function &setClassification(\Triedge\Calendar\Property\Classification $class)
     {
         $this->class_ = $class;
         return $this;
     }
+
     public function &setDateTimeCreated(\Triedge\Calendar\Property\DateTimeCreated $created)
     {
         $this->created_ = $created;
         return $this;
     }
+
     public function &setDateTimestart(\Triedge\Calendar\Property\DateTimeStart $dtStart)
     {
         $this->dtstart_ = $dtStart;
         return $this;
     }
+
     public function &setLastModified(\Triedge\Calendar\Property\LastModified $last_mod)
     {
         $this->last_mod_ = $last_mod;
         return $this;
     }
+
     public function &setOrganizer(\Triedge\Calendar\Property\Organizer $organizer)
     {
         $this->organizer_ = $organizer;
         return $this;
     }
+
     public function &setRecurrenceId(\Triedge\Calendar\Property\RecurrenceId $recurid)
     {
         $this->recurid_ = $recurid;
         return $this;
     }
+
     public function &setSequenceNumber(\Triedge\Calendar\Property\SequenceNumber $seq)
     {
         $this->seq_ = $seq;
         return $this;
     }
+
     public function &setStatus(\Triedge\Calendar\Property\Status $status)
     {
         $this->status_ = $status;
         return $this;
     }
+
     public function &setSummary(\Triedge\Calendar\Property\Summary $summary)
     {
         $this->summary_ = $summary;
         return $this;
     }
+
     public function &setUrl(\Triedge\Calendar\Property\Url $url)
     {
         $this->url_ = $url;
         return $this;
     }
-    // The following is OPTIONAL,
-    // but SHOULD NOT occur more than once.
-    // public function &setrrule_ = null;
+
+    public function &setRecurrenceRule(\Triedge\Calendar\Property\RecurrenceRule $rrule)
+    {
+        $this->rrule_ = $rrule;
+        return $this;
+    }
 
     public function &addAttachment(\Triedge\Calendar\Property\Attachment $attach)
     {
         $this->attachList_[] = $attach;
         return $this;
     }
+    
     public function &addAttendee(\Triedge\Calendar\Property\Attendee $attendee)
     {
         $this->attendeeList_[] = $attendee;
         return $this;
     }
+
     public function &addCategories(\Triedge\Calendar\Property\Categories $categories)
     {
         $this->categoriesList_[] = $categories;
@@ -174,6 +189,7 @@ class Journal extends IComponent
         $this->commentList_[] = $comment;
         return $this;
     }
+
     public function &addContact(\Triedge\Calendar\Property\Contact $contact)
     {
         $this->contactList_[] = $contact;
@@ -191,21 +207,25 @@ class Journal extends IComponent
         $this->exdateList_[] = $exdate;
         return $this;
     }
+
     public function &addRelatedTo(\Triedge\Calendar\Property\RelatedTo $related)
     {
         $this->relatedList_[] = $related;
         return $this;
     }
+
     public function &addRecurrenceDateTimes(\Triedge\Calendar\Property\RecurrenceDateTimes $rdate)
     {
         $this->rdateList_[] = $rdate;
         return $this;
     }
+
     public function &addRequestStatus(\Triedge\Calendar\Property\RequestStatus $rstatus)
     {
         $this->rstatusList_[] = $rstatus;
         return $this;
     }
+
     // public $x_propList_ = array();
     // public $iana_propList_ = array();
 }

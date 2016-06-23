@@ -6,7 +6,7 @@ namespace Triedge\Calendar\Property;
  * network location that can be used to retrieve an up-to-date version of
  * itself.
  */
-class TimeZoneUrl
+class TimeZoneUrl extends Url
 {
     const NAME = 'TZURL';
     //TODO

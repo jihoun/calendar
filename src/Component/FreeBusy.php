@@ -9,23 +9,23 @@ class FreeBusy extends IComponent
 {
     // The following are REQUIRED,
     // but MUST NOT occur more than once.
-    public $dtstamp_;
-    public $uid_;
+    protected $dtstamp_;
+    protected $uid_;
     // The following are OPTIONAL,
     // but MUST NOT occur more than once.
-    public $contact_ = null;
-    public $dtstart_ = null;
-    public $dtend_ = null;
-    public $organizer_ = null;
-    public $url_ = null;
+    protected $contact_ = null;
+    protected $dtstart_ = null;
+    protected $dtend_ = null;
+    protected $organizer_ = null;
+    protected $url_ = null;
     // The following are OPTIONAL,
     // and MAY occur more than once.
-    public $attendeeList_ = array();
-    public $commentList_ = array();
-    public $freebusyList_ = array();
-    public $rstatusList_ = array();
-    public $x_propList_ = array();
-    public $iana_propList_ = array();
+    protected $attendeeList_ = array();
+    protected $commentList_ = array();
+    protected $freebusyList_ = array();
+    protected $rstatusList_ = array();
+    protected $x_propList_ = array();
+    protected $iana_propList_ = array();
 
     public function __construct()
     {

@@ -204,7 +204,7 @@ class ToDo extends IComponent
         return $this;
     }
 
-    public function &setStatus(\Triedge\Calendar\Property\Status $status)
+    public function &setStatus(\Triedge\Calendar\Property\ToDoStatus $status)
     {
         $this->status_ = $status;
         return $this;

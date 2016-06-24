@@ -24,19 +24,19 @@ class Classification extends IProperty
         return $this->text_;
     }
 
-    public static function PUBLIC_()
+    public static function publicP()
     {
         $res = new static();
         $res->text_ = static::PUBLIC_;
         return $res;
     }
-    public static function PRIVATE_()
+    public static function privateP()
     {
         $res = new static();
         $res->text_ = static::PRIVATE_;
         return $res;
     }
-    public static function CONFIDENTIAL_()
+    public static function confidential()
     {
         $res = new static();
         $res->text_ = static::CONFIDENTIAL_;

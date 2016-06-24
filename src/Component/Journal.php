@@ -142,7 +142,7 @@ class Journal extends IComponent
         return $this;
     }
 
-    public function &setStatus(\Triedge\Calendar\Property\Status $status)
+    public function &setStatus(\Triedge\Calendar\Property\JournalStatus $status)
     {
         $this->status_ = $status;
         return $this;

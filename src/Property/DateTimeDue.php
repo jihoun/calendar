@@ -20,9 +20,9 @@ class DateTimeDue extends IDateTime
         parent::__construct($dt);
         $this->fullDay_ = boolval($fullDay);
         if ($fullDay) {
-            $this->valueparam_ = \Triedge\Calendar\Parameter\ValueDataTypes::DATE();
+            $this->valueparam_ = \Triedge\Calendar\Parameter\ValueDataTypes::date();
         } else {
-            $this->valueparam_ = \Triedge\Calendar\Parameter\ValueDataTypes::DATE_TIME();
+            $this->valueparam_ = \Triedge\Calendar\Parameter\ValueDataTypes::DateTime();
         }
     }
 

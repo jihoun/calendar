@@ -19,9 +19,9 @@ class ExceptionDateTimes extends IProperty
     {
         $this->fullDay_ = boolval($fullDay);
         if ($this->fullDay_) {
-            $this->valueparam_ = \Triedge\Calendar\Parameter\ValueDataTypes::DATE();
+            $this->valueparam_ = \Triedge\Calendar\Parameter\ValueDataTypes::date();
         } else {
-            $this->valueparam_ = \Triedge\Calendar\Parameter\ValueDataTypes::DATE_TIME();
+            $this->valueparam_ = \Triedge\Calendar\Parameter\ValueDataTypes::dateTime();
         }
     }
 

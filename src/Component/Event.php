@@ -189,7 +189,7 @@ class Event extends IComponent
         return $this;
     }
     
-    public function &setStatus(\Triedge\Calendar\Property\Status $status)
+    public function &setStatus(\Triedge\Calendar\Property\EventStatus $status)
     {
         $this->status_ = $status;
         return $this;

@@ -37,59 +37,59 @@ class ValueDataTypes extends IParameter
         $this->value_ = $value;
     }
 
-    public static function BINARY()
+    public static function binary()
     {
         return new static(static::BINARY);
     }
-    public static function BOOLEAN()
+    public static function boolean()
     {
         return new static(static::BOOLEAN_);
     }
-    public static function CAL_ADDRESS()
+    public static function calAddress()
     {
-        return new static(static::CAL-ADDRESS);
+        return new static(static::CAL_ADDRESS);
     }
-    public static function DATE()
+    public static function date()
     {
         return new static(static::DATE);
     }
-    public static function DATE_TIME()
+    public static function dateTime()
     {
         return new static(static::DATE_TIME);
     }
-    public static function DURATION()
+    public static function duration()
     {
         return new static(static::DURATION);
     }
-    public static function FLOAT()
+    public static function float()
     {
         return new static(static::FLOAT_);
     }
-    public static function INTEGER()
+    public static function integer()
     {
         return new static(static::INTEGER_);
     }
-    public static function PERIOD()
+    public static function period()
     {
         return new static(static::PERIOD);
     }
-    public static function RECUR()
+    public static function recur()
     {
         return new static(static::RECUR);
     }
-    public static function TEXT()
+    public static function text()
     {
         return new static(static::TEXT);
     }
-    public static function TIME()
+    public static function time()
     {
         return new static(static::TIME);
     }
-    public static function URI()
+    public static function uri()
     {
         return new static(static::URI);
     }
-    public static function UTC_OFFSET()
+    public static function utcOffest()
     {
         return new static(static::UTC_OFFSET);
     }

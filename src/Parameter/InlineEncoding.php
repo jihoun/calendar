@@ -4,10 +4,28 @@ namespace Triedge\Calendar\Parameter;
 class InlineEncoding extends IParameter
 {
     const NAME = 'ENCODING';
-    //TODO
+
+    const ENC_8BIT = '8BIT';
+    const ENC_BASE64 = 'BASE64';
+
+    protected $value_;
+
     public function getValue()
     {
-        //TODO
-        return null;
+        return $this->value_;
+    }
+    protected function __construct($value)
+    {
+        $this->value_ = $value;
+    }
+
+    public static function eightbits()
+    {
+        return new static(static::ENC_8BIT);
+    }
+
+    public static function base64()
+    {
+        return new static(static::ENC_BASE64);
     }
 }

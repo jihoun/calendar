@@ -20,7 +20,7 @@ class Attachment extends IProperty
         if ($this->type_==='uri') {
             return $this->data_;
         } else {
-            if($this->encoding_->getValue() === \Triedge\Calendar\Parameter\InlineEncoding::ENC_BASE64) {
+            if ($this->encoding_->getValue() === \Triedge\Calendar\Parameter\InlineEncoding::ENC_BASE64) {
                 return base64_encode($this->data_);
             } else {
                 //TODO 8-bit encode
@@ -41,7 +41,8 @@ class Attachment extends IProperty
     }
 
     protected function __construct()
-    {}
+    {
+    }
 
     public static function uri($uri)
     {

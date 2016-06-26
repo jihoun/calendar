@@ -47,7 +47,7 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
             ->setSequenceNumber(new Property\SequenceNumber())
             ->setStatus(Property\EventStatus::confirmed())
             ->setSummary(new Property\Summary('new test event'))
-            ->setTimeTransparency(new Property\TimeTransparency())
+            ->setTimeTransparency(Property\TimeTransparency::TRANSPARENT())
             ->setUrl(new Property\Url('http://coaching.triedgeteam.com'))
             ->setRecurrenceId(new Property\RecurrenceId())
             ->setRecurrenceRule($rrule)//*

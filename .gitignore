@@ -15,3 +15,5 @@ composer.phar
 
 #
 cache.properties
+
+/tmp/

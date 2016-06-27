@@ -51,9 +51,9 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
             ->setUrl(new Property\Url('http://coaching.triedgeteam.com'))
             ->setRecurrenceId(new Property\RecurrenceId())
             ->setRecurrenceRule($rrule)//*
-            //->setDateTimeEnd(new Property\DateTimeEnd(new \DateTime()))
-            ->setDuration(new Property\Duration(0, 1, 1, 1, 1))
-            ->addAttachment($attachment)//*
+            ->setDateTimeEnd(new Property\DateTimeEnd(new \DateTime()))
+            // ->setDuration(new Property\Duration(0, 1, 1, 1, 1))
+            ->addAttachment($attachment)
             ->addAttendee(new Property\Attendee('nicolas.cadeaux@gmail.com'))
             ->addCategories($categories)
             ->addComment(new Property\Comment('Hi there!'))
@@ -64,6 +64,7 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
             ->addRelatedTo(new Property\RelatedTo($todo))
             ->addResources($resources)
             ->addRecurrenceDateTimes(new Property\RecurrenceDateTimes());//*
+        $event->getUid()->setValue('123456789');
 
         $todo
             ->setClassification(new Property\Classification())
@@ -147,6 +148,6 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
         
         // $cal->addTimeZone($tz);
 
-        file_put_contents('/Users/nicolaslagier/workspace/triedge/calendar/test.ics', $cal->toString());
+        file_put_contents('/Users/nicolaslagier/workspace/triedge/calendar/tmp/test.ics', $cal->toString());
     }
 }

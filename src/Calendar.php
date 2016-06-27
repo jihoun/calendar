@@ -10,9 +10,9 @@ class Calendar
     
     private $componentList_ = array();
 
-    public function __construct()
+    public function __construct($company = 'triedge', $product = 'calendar', $lang = 'en')
     {
-        $this->prodid_ = new \Triedge\Calendar\Property\ProductIdentifier();
+        $this->prodid_ = new \Triedge\Calendar\Property\ProductIdentifier($company, $product, $lang);
         $this->version_ = new \Triedge\Calendar\Property\Version();
     }
 

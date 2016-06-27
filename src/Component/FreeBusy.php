@@ -68,7 +68,7 @@ class FreeBusy extends IComponent
         return $res;
     }
 
-    public function getUid()
+    public function &getUid()
     {
         return $this->uid_;
     }

@@ -11,10 +11,16 @@ class Uid extends IText
 
     public function __construct($text = null)
     {
-        if (is_null($text)) {
+        if (!is_string($text)) {
             $text = md5(uniqid(mt_rand(), true));
         }
         parent::__construct($text);
-        
+    }
+
+    public function setValue($text)
+    {
+        if (is_string($text)) {
+            $this->text_ = $text;
+        }
     }
 }

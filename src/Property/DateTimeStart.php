@@ -8,19 +8,8 @@ class DateTimeStart extends IDateTime
 {
     const NAME = 'DTSTART';
 
-    protected $fullDay_;
-
-    public function __construct(\DateTime $dt, $fullDay = false)
+    public function getParams()
     {
-        parent::__construct($dt);
-        $this->fullDay_ = boolval($fullDay);
-    }
-
-    public function toString()
-    {
-        if (!$this->fullDay_) {
-            return parent::toString();
-        }
-        return static::NAME.':'.$this->dateTime_->format('Ymd')."\n";
+        return array($this->valueparam_, $this->tzidparam_);
     }
 }

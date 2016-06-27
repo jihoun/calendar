@@ -1,10 +1,13 @@
 <?php
 namespace Triedge\Calendar\Parameter;
 
+/**
+ * @todo  implement
+ */
 class Delegators extends IParameter
 {
     const NAME = 'DELEGATED-FROM';
-    //TODO
+
     public function getValue()
     {
         //TODO

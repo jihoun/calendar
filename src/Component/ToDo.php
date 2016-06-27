@@ -297,8 +297,14 @@ class ToDo extends IComponent
         $this->rdateList_[] = $rdate;
         return $this;
     }
-    
-    //TODO
-    // public $x_propList_ = array();
-    // public $iana_propList_ = array();
+    public function &addXProperty(\Triedge\Calendar\Property\XProperty $xProp)
+    {
+        $this->x_propList_[] = $xProp;
+        return $this;
+    }
+    public function &addIanaProperty(\Triedge\Calendar\Property\IanaProperty $ianaProp)
+    {
+        $this->iana_propList_[] = $ianaProp;
+        return $this;
+    }
 }

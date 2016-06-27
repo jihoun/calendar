@@ -1,10 +1,13 @@
 <?php
 namespace Triedge\Calendar\Parameter;
 
+/**
+ * @todo  implement
+ */
 class Language extends IParameter
 {
     const NAME = 'LANGUAGE';
-    //TODO
+
     public function getValue()
     {
         //TODO

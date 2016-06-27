@@ -3,15 +3,18 @@ namespace Triedge\Calendar\Component;
 
 /**
  * Provide a grouping of component properties that define an alarm.
+ * @todo  implement
  */
 class Alarm
 {
-    //TODO
-    
+	/**
+	 * @todo implement
+	 * @return string|null
+	 */
     public function toString()
     {
         $res = "BEGIN:VALARM\n";
-        //TODO
+
         $res .= "END:VALARM\n";
         return $res;
     }

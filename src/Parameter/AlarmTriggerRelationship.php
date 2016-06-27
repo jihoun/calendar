@@ -1,13 +1,19 @@
 <?php
 namespace Triedge\Calendar\Parameter;
 
+/**
+ * @todo  implement
+ */
 class AlarmTriggerRelationship extends IParameter
 {
     const NAME = 'RELATED';
-    //TODO
+
+    /**
+     * @todo implement
+     * @return string|null
+     */
     public function getValue()
     {
-        //TODO
         return null;
     }
 }

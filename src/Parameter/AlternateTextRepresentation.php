@@ -1,13 +1,19 @@
 <?php
 namespace Triedge\Calendar\Parameter;
 
+/**
+ * @todo  implement
+ */
 class AlternateTextRepresentation extends IParameter
 {
     const NAME = 'ALTREP';
-    //TODO
+
+    /**
+     * @todo  implement
+     * @return string|null
+     */
     public function getValue()
     {
-        //TODO
         return null;
     }
 }

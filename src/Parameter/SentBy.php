@@ -1,10 +1,13 @@
 <?php
 namespace Triedge\Calendar\Parameter;
 
+/**
+ * @todo  implement
+ */
 class SentBy extends IParameter
 {
     const NAME = 'SENT-BY';
-    //TODO
+
     public function getValue()
     {
         //TODO

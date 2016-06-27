@@ -1,10 +1,13 @@
 <?php
 namespace Triedge\Calendar\Parameter;
 
+/**
+ * @todo  implement
+ */
 class ParticipationStatus extends IParameter
 {
     const NAME = 'PARTSTAT';
-    //TODO
+
     public function getValue()
     {
         //TODO

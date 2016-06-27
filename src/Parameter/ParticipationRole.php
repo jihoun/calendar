@@ -1,10 +1,13 @@
 <?php
 namespace Triedge\Calendar\Parameter;
 
+/**
+ * @todo  implement
+ */
 class ParticipationRole extends IParameter
 {
     const NAME = 'ROLE';
-    //TODO
+
     public function getValue()
     {
         //TODO

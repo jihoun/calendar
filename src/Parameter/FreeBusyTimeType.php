@@ -1,10 +1,13 @@
 <?php
 namespace Triedge\Calendar\Parameter;
 
+/**
+ * @todo  implement
+ */
 class FreeBusyTimeType extends IParameter
 {
     const NAME = 'FBTYPE';
-    //TODO
+
     public function getValue()
     {
         //TODO

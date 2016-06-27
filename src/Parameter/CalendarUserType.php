@@ -1,13 +1,19 @@
 <?php
 namespace Triedge\Calendar\Parameter;
 
+/**
+ * @todo  implement
+ */
 class CalendarUserType extends IParameter
 {
     const NAME = 'CUTYPE';
-    //TODO
+
+    /**
+     * @todo implement
+     * @return string|null
+     */
     public function getValue()
     {
-        //TODO
         return null;
     }
 }

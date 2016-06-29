@@ -7,10 +7,10 @@ namespace Triedge\Calendar\Component;
  */
 class Alarm
 {
-	/**
-	 * @todo implement
-	 * @return string|null
-	 */
+    /**
+     * @todo implement
+     * @return string|null
+     */
     public function toString()
     {
         $res = "BEGIN:VALARM\n";

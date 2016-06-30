@@ -7,8 +7,8 @@ use \Triedge\Calendar\Property as Property;
 
 class Event extends \PHPUnit_Framework_TestCase
 {
-	public function testEvent()
-	{
+    public function testEvent()
+    {
         $event = new Component\Event();
         $rrule = new Property\RecurrenceRule();
         $attachment = Property\Attachment::binary('<html><body>Hello my friend!</body></html>');
@@ -19,7 +19,7 @@ class Event extends \PHPUnit_Framework_TestCase
         $resources = new Property\Resources(array('EASEL', 'PROJECTOR', 'VCR'));
         $categories = new Property\Categories(array('TEST'));
 
-	    $event
+        $event
             ->setDateTimeStart(new Property\DateTimeStart(new \DateTime()))
             ->setClassification(new Property\Classification())
             ->setDateTimeCreated(new Property\DateTimeCreated())
@@ -52,5 +52,5 @@ class Event extends \PHPUnit_Framework_TestCase
 
         $eventStr = $event->toString();
         $this->assertTrue(is_string($eventStr));
-	}
+    }
 }

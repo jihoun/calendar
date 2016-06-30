@@ -7,8 +7,8 @@ use \Triedge\Calendar\Property as Property;
 
 class TimeZone extends \PHPUnit_Framework_TestCase
 {
-	public function testTimeZone()
-	{
+    public function testTimeZone()
+    {
         $tz = new Component\TimeZone();
         $tz->setLastModified(new Property\LastModified(new \DateTime()))
             ->setTimeZoneUrl(new Property\TimeZoneUrl('http://coaching.triedgeteam.com'))
@@ -17,5 +17,5 @@ class TimeZone extends \PHPUnit_Framework_TestCase
 
         $tzStr = $tz->toString();
         $this->assertTrue(is_string($tzStr));
-	}
+    }
 }

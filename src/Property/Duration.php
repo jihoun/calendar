@@ -9,7 +9,7 @@ class Duration extends IProperty
 {
     const NAME = 'DURATION';
 
-    protected $positive;
+    // protected $positive;
     protected $weeks;
     protected $days;
     protected $hours;
@@ -19,7 +19,7 @@ class Duration extends IProperty
     public function __construct(
         $weeks = 0,
         $days = 0,
-        $hours = 1,
+        $hours = 0,
         $minutes = 0,
         $seconds = 0
     ) {

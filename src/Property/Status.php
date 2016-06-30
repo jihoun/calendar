@@ -13,16 +13,16 @@ abstract class Status extends IProperty
     const CANCELLED     = 'CANCELLED';      //Indicates journal is removed.
                                             //Indicates event was cancelled.
                                             //Indicates to-do was cancelled.
-    protected $value_;
+    protected $value;
 
     protected function __construct($value)
     {
-        $this->value_ = $value;
+        $this->value = $value;
     }
 
     public function getValue()
     {
-        return $this->value_;
+        return $this->value;
     }
 
     public static function cancelled()

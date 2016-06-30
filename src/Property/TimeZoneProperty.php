@@ -5,42 +5,42 @@ class TimeZoneProperty
 {
     // The following are REQUIRED,
     // but MUST NOT occur more than once.
-    protected $dtstart_;
-    protected $tzoffsetto_;
-    protected $tzoffsetfrom_;
+    protected $dtstart;
+    protected $tzoffsetto;
+    protected $tzoffsetfrom;
     // The following is OPTIONAL,
     // but SHOULD NOT occur more than once.
-    protected $rrule_ = null;
+    protected $rrule = null;
     // The following are OPTIONAL,
     // and MAY occur more than once.
-    protected $commentList_ = array();
-    protected $rdateList_ = array();
-    protected $tznameList_ = array();
-    protected $x_propList_ = array();
-    protected $iana_propList_ = array();
+    protected $commentList = array();
+    protected $rdateList = array();
+    protected $tznameList = array();
+    protected $xPropList = array();
+    protected $ianaPropList = array();
 
     public function __construct(\Triedge\Calendar\Property\DateTimeStart $dtstart)
     {
-        $this->dtstart_ = $dtstart;
-        $this->tzoffsetto_ = new \Triedge\Calendar\Property\TimezoneOffsetTo();
-        $this->tzoffsetfrom_ = new \Triedge\Calendar\Property\TimezoneOffsetFrom();
+        $this->dtstart = $dtstart;
+        $this->tzoffsetto = new \Triedge\Calendar\Property\TimezoneOffsetTo();
+        $this->tzoffsetfrom = new \Triedge\Calendar\Property\TimezoneOffsetFrom();
     }
 
     private function getProperties()
     {
         $res = array(
-            $this->dtstart_,
-            $this->tzoffsetto_,
-            $this->tzoffsetfrom_,
-            $this->rrule_
+            $this->dtstart,
+            $this->tzoffsetto,
+            $this->tzoffsetfrom,
+            $this->rrule
         );
         $res = array_merge(
             $res,
-            $this->commentList_,
-            $this->rdateList_,
-            $this->tznameList_,
-            $this->x_propList_,
-            $this->iana_propList_
+            $this->commentList,
+            $this->rdateList,
+            $this->tznameList,
+            $this->xPropList,
+            $this->ianaPropList
         );
         return $res;
     }

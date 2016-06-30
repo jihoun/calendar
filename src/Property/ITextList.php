@@ -3,7 +3,7 @@ namespace Triedge\Calendar\Property;
 
 abstract class ITextList extends IProperty
 {
-    protected $texts_ = array();
+    protected $texts = array();
 
     public function __construct(array $values = array())
     {
@@ -14,12 +14,12 @@ abstract class ITextList extends IProperty
 
     public function getValue()
     {
-        if (empty($this->texts_)) {
+        if (empty($this->texts)) {
             return null;
         }
         
         $res = '';
-        foreach ($this->texts_ as $value) {
+        foreach ($this->texts as $value) {
             //TODO sanitize text
             $res .= $value .',';
         }
@@ -34,7 +34,7 @@ abstract class ITextList extends IProperty
     public function &addValue($value)
     {
         if (is_string($value)) {
-            $this->texts_[] = $value;
+            $this->texts[] = $value;
         }
         return $this;
     }

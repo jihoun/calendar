@@ -14,6 +14,6 @@ class DateTimeCreated extends IDateTime
     
     public function __construct(\DateTime $dt = null)
     {
-        $this->dateTime_ = (is_null($dt) ? new \DateTime() : $dt);
+        $this->dateTime = (is_null($dt) ? new \DateTime() : $dt);
     }
 }

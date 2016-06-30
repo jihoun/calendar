@@ -9,5 +9,5 @@ class CalendarScale extends IText
 {
     const NAME = 'CALSCALE';
 
-    protected $text_ = 'GREGORIAN';
+    protected $text = 'GREGORIAN';
 }

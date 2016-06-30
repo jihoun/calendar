@@ -8,18 +8,18 @@ class Organizer extends Attendee
 {
     const NAME = 'ORGANIZER';
 
-    protected $cnparam_ = null;
-    protected $dirparam_ = null;
-    protected $sentbyparam_ = null;
-    protected $languageparam_ = null;
+    protected $cnparam = null;
+    protected $dirparam = null;
+    protected $sentbyparam = null;
+    protected $languageparam = null;
 
     public function getParams()
     {
         return array(
-            $this->cnparam_,
-            $this->dirparam_,
-            $this->sentbyparam_,
-            $this->languageparam_
+            $this->cnparam,
+            $this->dirparam,
+            $this->sentbyparam,
+            $this->languageparam
         );
     }
 }

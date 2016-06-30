@@ -10,6 +10,6 @@ class DateTimeStart extends IDateTime
 
     public function getParams()
     {
-        return array($this->valueparam_, $this->tzidparam_);
+        return array($this->valueparam, $this->tzidparam);
     }
 }

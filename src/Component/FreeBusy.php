@@ -9,49 +9,49 @@ class FreeBusy extends IComponent
 {
     // The following are REQUIRED,
     // but MUST NOT occur more than once.
-    protected $dtstamp_;
-    protected $uid_;
+    protected $dtstamp;
+    protected $uid;
     // The following are OPTIONAL,
     // but MUST NOT occur more than once.
-    protected $contact_ = null;
-    protected $dtstart_ = null;
-    protected $dtend_ = null;
-    protected $organizer_ = null;
-    protected $url_ = null;
+    protected $contact = null;
+    protected $dtstart = null;
+    protected $dtend = null;
+    protected $organizer = null;
+    protected $url = null;
     // The following are OPTIONAL,
     // and MAY occur more than once.
-    protected $attendeeList_ = array();
-    protected $commentList_ = array();
-    protected $freebusyList_ = array();
-    protected $rstatusList_ = array();
-    protected $x_propList_ = array();
-    protected $iana_propList_ = array();
+    protected $attendeeList = array();
+    protected $commentList = array();
+    protected $freebusyList = array();
+    protected $rstatusList = array();
+    protected $xPropList = array();
+    protected $ianaPropList = array();
 
     public function __construct()
     {
-        $this->dtstamp_ = new \Triedge\Calendar\Property\DateTimeStamp();
-        $this->uid_ = new \Triedge\Calendar\Property\Uid();
+        $this->dtstamp = new \Triedge\Calendar\Property\DateTimeStamp();
+        $this->uid = new \Triedge\Calendar\Property\Uid();
     }
 
     private function getProperties()
     {
         $res = array(
-            $this->dtstamp_,
-            $this->uid_,
-            $this->contact_,
-            $this->dtstart_,
-            $this->dtend_,
-            $this->organizer_,
-            $this->url_,
+            $this->dtstamp,
+            $this->uid,
+            $this->contact,
+            $this->dtstart,
+            $this->dtend,
+            $this->organizer,
+            $this->url,
         );
         $res = array_merge(
             $res,
-            $this->attendeeList_,
-            $this->commentList_,
-            $this->freebusyList_,
-            $this->rstatusList_,
-            $this->x_propList_,
-            $this->iana_propList_
+            $this->attendeeList,
+            $this->commentList,
+            $this->freebusyList,
+            $this->rstatusList,
+            $this->xPropList,
+            $this->ianaPropList
         );
         return $res;
     }
@@ -70,63 +70,63 @@ class FreeBusy extends IComponent
 
     public function &getUid()
     {
-        return $this->uid_;
+        return $this->uid;
     }
 
     public function &setContact(\Triedge\Calendar\Property\Contact $contact)
     {
-        $this->contact_ = $contact;
+        $this->contact = $contact;
         return $this;
     }
     public function &setDateTimeStart(\Triedge\Calendar\Property\DateTimeStart $dtstart)
     {
-        $this->dtstart_ = $dtstart;
+        $this->dtstart = $dtstart;
         return $this;
     }
     public function &setDateTimeEnd(\Triedge\Calendar\Property\DateTimeEnd $dtend)
     {
-        $this->dtend_ = $dtend;
+        $this->dtend = $dtend;
         return $this;
     }
     public function &setOrganizer(\Triedge\Calendar\Property\Organizer $organizer)
     {
-        $this->organizer_ = $organizer;
+        $this->organizer = $organizer;
         return $this;
     }
     public function &setUrl(\Triedge\Calendar\Property\Url $url)
     {
-        $this->url_ = $url;
+        $this->url = $url;
         return $this;
     }
 
     public function &addAttendee(\Triedge\Calendar\Property\Attendee $attendee)
     {
-        $this->attendeeList_[] = $attendee;
+        $this->attendeeList[] = $attendee;
         return $this;
     }
     public function &addComment(\Triedge\Calendar\Property\Comment $comment)
     {
-        $this->commentList_[] = $comment;
+        $this->commentList[] = $comment;
         return $this;
     }
     public function &addFreeBusy(\Triedge\Calendar\Property\FreeBusyTime $freeBusy)
     {
-        $this->freebusyList_[] = $freeBusy;
+        $this->freebusyList[] = $freeBusy;
         return $this;
     }
     public function &addRequestStatus(\Triedge\Calendar\Property\RequestStatus $rstatus)
     {
-        $this->rstatusList_[] = $rstatus;
+        $this->rstatusList[] = $rstatus;
         return $this;
     }
     public function &addXProperty(\Triedge\Calendar\Property\XProperty $xProp)
     {
-        $this->x_propList_[] = $xProp;
+        $this->xPropList[] = $xProp;
         return $this;
     }
     public function &addIanaProperty(\Triedge\Calendar\Property\IanaProperty $ianaProp)
     {
-        $this->iana_propList_[] = $ianaProp;
+        $this->ianaPropList[] = $ianaProp;
         return $this;
     }
 }

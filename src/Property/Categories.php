@@ -9,10 +9,10 @@ class Categories extends ITextList
 {
     const NAME = 'CATEGORIES';
 
-    protected $languageparam_ = null;
+    protected $languageparam = null;
     
     public function getParams()
     {
-        return array($this->languageparam_);
+        return array($this->languageparam);
     }
 }

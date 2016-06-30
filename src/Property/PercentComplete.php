@@ -9,16 +9,16 @@ namespace Triedge\Calendar\Property;
 class PercentComplete extends IProperty
 {
     const NAME = 'PERCENT-COMPLETE';
-    public $integer_;
+    public $integer;
 
     public function __construct($value)
     {
-        $this->integer_ = $this->normalize($value);
+        $this->integer = $this->normalize($value);
     }
 
     public function getValue()
     {
-        return $this->integer_;
+        return $this->integer;
     }
 
     private function normalize($value)

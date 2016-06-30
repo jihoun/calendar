@@ -9,19 +9,19 @@ class Attachment extends IProperty
 {
     const NAME = 'ATTACH';
 
-    protected $fmttypeparam_ = null;
+    protected $fmttypeparam = null;
 
-    private $type_;
-    private $data_ = null;
-    private $encoding_ = null;
+    private $type;
+    private $data = null;
+    private $encoding = null;
 
     public function getValue()
     {
-        if ($this->type_==='uri') {
-            return $this->data_;
+        if ($this->type==='uri') {
+            return $this->data;
         } else {
-            if ($this->encoding_->getValue() === \Triedge\Calendar\Parameter\InlineEncoding::ENC_BASE64) {
-                return base64_encode($this->data_);
+            if ($this->encoding->getValue() === \Triedge\Calendar\Parameter\InlineEncoding::ENC_BASE64) {
+                return base64_encode($this->data);
             } else {
                 //TODO 8-bit encode
                 //
@@ -32,9 +32,9 @@ class Attachment extends IProperty
 
     public function getParams()
     {
-        $res = array($this->fmttypeparam_);
-        if ($this->type_==='binary') {
-            $res[] = $this->encoding_;
+        $res = array($this->fmttypeparam);
+        if ($this->type==='binary') {
+            $res[] = $this->encoding;
             $res[] = \Triedge\Calendar\Parameter\ValueDataTypes::binary();
         }
         return $res;
@@ -47,20 +47,20 @@ class Attachment extends IProperty
     public static function uri($uri)
     {
         $res = new static();
-        $res->data_ = $uri;
-        $res->type_ = 'uri';
+        $res->data = $uri;
+        $res->type = 'uri';
         return $res;
     }
 
     public static function binary($text, \Triedge\Calendar\Parameter\InlineEncoding $encoding = null)
     {
         $res = new static();
-        $res->data_ = $text;
-        $res->type_ = 'binary';
+        $res->data = $text;
+        $res->type = 'binary';
         if (is_null($encoding)) {
             $encoding = \Triedge\Calendar\Parameter\InlineEncoding::base64();
         }
-        $res->encoding_ = $encoding;
+        $res->encoding = $encoding;
         return $res;
     }
 }

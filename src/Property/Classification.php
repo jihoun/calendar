@@ -12,34 +12,34 @@ class Classification extends IProperty
     const PRIVATE_ = 'PRIVATE';
     const CONFIDENTIAL_ = 'CONFIDENTIAL';
 
-    protected $text_;
+    protected $text;
 
     public function __construct()
     {
-        $this->text_ = static::PUBLIC_;
+        $this->text = static::PUBLIC_;
     }
 
     public function getValue()
     {
-        return $this->text_;
+        return $this->text;
     }
 
     public static function publicP()
     {
         $res = new static();
-        $res->text_ = static::PUBLIC_;
+        $res->text = static::PUBLIC_;
         return $res;
     }
     public static function privateP()
     {
         $res = new static();
-        $res->text_ = static::PRIVATE_;
+        $res->text = static::PRIVATE_;
         return $res;
     }
     public static function confidential()
     {
         $res = new static();
-        $res->text_ = static::CONFIDENTIAL_;
+        $res->text = static::CONFIDENTIAL_;
         return $res;
     }
 }

@@ -20,7 +20,7 @@ class Uid extends IText
     public function setValue($text)
     {
         if (is_string($text)) {
-            $this->text_ = $text;
+            $this->text = $text;
         }
     }
 }

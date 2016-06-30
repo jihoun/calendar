@@ -12,9 +12,9 @@ class RecurrenceId extends IProperty
 {
     const NAME = 'RECURRENCE-ID';
 
-    protected $tzidparam_ = null;
-    protected $rangeparam_ = null;
-    protected $valueparam_ = null;    //"VALUE" "=" ("DATE-TIME" / "DATE"))
+    protected $tzidparam = null;
+    protected $rangeparam = null;
+    protected $valueparam = null;    //"VALUE" "=" ("DATE-TIME" / "DATE"))
     
     public function getValue()
     {
@@ -25,9 +25,9 @@ class RecurrenceId extends IProperty
     public function getParams()
     {
         return array(
-            $this->tzidparam_,
-            $this->rangeparam_,
-            $this->valueparam_
+            $this->tzidparam,
+            $this->rangeparam,
+            $this->valueparam
         );
     }
 }

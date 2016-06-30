@@ -9,12 +9,12 @@ class Duration extends IProperty
 {
     const NAME = 'DURATION';
 
-    protected $positive_;
-    protected $weeks_;
-    protected $days_;
-    protected $hours_;
-    protected $minutes_;
-    protected $seconds_;
+    protected $positive;
+    protected $weeks;
+    protected $days;
+    protected $hours;
+    protected $minutes;
+    protected $seconds;
 
     public function __construct(
         $weeks = 0,
@@ -23,34 +23,34 @@ class Duration extends IProperty
         $minutes = 0,
         $seconds = 0
     ) {
-        $this->weeks_ = intval($weeks);
-        $this->days_ = intval($days);
-        $this->hours_ = intval($hours);
-        $this->minutes_ = intval($minutes);
-        $this->seconds_ = intval($seconds);
+        $this->weeks = intval($weeks);
+        $this->days = intval($days);
+        $this->hours = intval($hours);
+        $this->minutes = intval($minutes);
+        $this->seconds = intval($seconds);
     }
 
     public function getValue()
     {
         $res = null;
-        if ($this->weeks_!==0) {
-            $res = $this->weeks_.'W';
+        if ($this->weeks!==0) {
+            $res = $this->weeks.'W';
         } else {
-            if ($this->days_!=0) {
-                $res = $this->days_.'D';
+            if ($this->days!=0) {
+                $res = $this->days.'D';
             }
-            if ($this->seconds_!=0) {
+            if ($this->seconds!=0) {
                 $res = (is_null($res) ? '' : $res);
-                $res .= 'T'.$this->hours_.'H';
-                $res .= $this->minutes_.'M';
-                $res .= $this->seconds_.'S';
-            } elseif ($this->minutes_!=0) {
+                $res .= 'T'.$this->hours.'H';
+                $res .= $this->minutes.'M';
+                $res .= $this->seconds.'S';
+            } elseif ($this->minutes!=0) {
                 $res = (is_null($res) ? '' : $res);
-                $res .= 'T'.$this->hours_.'H';
-                $res .= $this->minutes_.'M';
-            } elseif ($this->hours_!==0) {
+                $res .= 'T'.$this->hours.'H';
+                $res .= $this->minutes.'M';
+            } elseif ($this->hours!==0) {
                 $res = (is_null($res) ? '' : $res);
-                $res .= 'T'.$this->hours_.'H';
+                $res .= 'T'.$this->hours.'H';
             }
         }
         return $res;

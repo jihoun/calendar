@@ -20,11 +20,11 @@ class ValueDataTypes extends IParameter
     const URI = "URI";
     const UTC_OFFSET = "UTC-OFFSET";
 
-    protected $value_;
+    protected $value;
 
     public function getValue()
     {
-        return $this->value_;
+        return $this->value;
     }
 
     /**
@@ -34,7 +34,7 @@ class ValueDataTypes extends IParameter
      */
     protected function __construct($value)
     {
-        $this->value_ = $value;
+        $this->value = $value;
     }
 
     public static function binary()

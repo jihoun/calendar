@@ -13,40 +13,40 @@ class RequestStatus extends IProperty
     const CLIENT_ERROR = 3;
     const SCHEDULING_ERROR = 4;
 
-    protected $statcode1_;
-    protected $statcode2_ = 0;
-    protected $statcode3_ = null;
-    protected $statdesc_;
-    protected $extData_ = null;
+    protected $statcode1;
+    protected $statcode2 = 0;
+    protected $statcode3 = null;
+    protected $statdesc;
+    protected $extData = null;
 
-    protected $languageparam_ = null;
+    protected $languageparam = null;
 
     public function __construct($statdesc, $code1, $code2 = 0, $code3 = null, $extData = null)
     {
-        $this->statdesc_ = $statdesc;
-        $this->statcode1_ = $code1;
-        $this->statcode2_ = $code2;
-        $this->statcode3_ = $code3;
-        $this->extData_ = $extData;
+        $this->statdesc = $statdesc;
+        $this->statcode1 = $code1;
+        $this->statcode2 = $code2;
+        $this->statcode3 = $code3;
+        $this->extData = $extData;
         //TODO
     }
 
     public function getValue()
     {
-        $res = $this->statcode1_.'.'.$this->statcode2_;
-        if (!is_null($this->statcode3_)) {
-            $res .= '.'.$this->statcode3_;
+        $res = $this->statcode1.'.'.$this->statcode2;
+        if (!is_null($this->statcode3)) {
+            $res .= '.'.$this->statcode3;
         }
         //TODO escape text
-        $res .= ';'.$this->statdesc_;
-        if (!is_null($this->extData_)) {
-            $res .= ';'.$this->extData_;
+        $res .= ';'.$this->statdesc;
+        if (!is_null($this->extData)) {
+            $res .= ';'.$this->extData;
         }
         return $res;
     }
 
     public function getParams()
     {
-        return array($this->languageparam_);
+        return array($this->languageparam);
     }
 }

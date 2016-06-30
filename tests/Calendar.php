@@ -142,11 +142,11 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
 
         $cal = new \Triedge\Calendar\Calendar();
         $cal->addComponent($event);
-        // $cal->addComponent($todo);
-        // $cal->addComponent($journal);
-        // $cal->addComponent($freeBusy);
+        $cal->addComponent($todo);
+        $cal->addComponent($journal);
+        $cal->addComponent($freeBusy);
         
-        // $cal->addTimeZone($tz);
+        $cal->addTimeZone($tz);
 
         file_put_contents('/Users/nicolaslagier/workspace/triedge/calendar/tmp/test.ics', $cal->toString());
     }

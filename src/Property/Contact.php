@@ -9,11 +9,11 @@ class Contact extends IText
 {
     const NAME = 'CONTACT';
 
-    protected $altrepparam_ = null;
-    protected $languageparam_ = null;
+    protected $altrepparam = null;
+    protected $languageparam = null;
 
     public function getParams()
     {
-        return array($this->altrepparam_, $this->languageparam_);
+        return array($this->altrepparam, $this->languageparam);
     }
 }

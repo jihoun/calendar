@@ -9,9 +9,9 @@ class TimeZoneName extends IText
 {
     const NAME = 'TZNAME';
 
-    protected $languageparam_;
+    protected $languageparam;
     public function getParams()
     {
-        return array($this->languageparam_);
+        return array($this->languageparam);
     }
 }

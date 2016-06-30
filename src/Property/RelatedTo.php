@@ -9,14 +9,15 @@ class RelatedTo extends IProperty
 {
     const NAME = 'RELATED-TO';
 
-    protected $relatedTo_ = null;
+    protected $relatedTo = null;
+    
     public function __construct(\Triedge\Calendar\Component\IComponent $comp)
     {
-        $this->relatedTo_ = $comp;
+        $this->relatedTo = $comp;
     }
 
     public function getValue()
     {
-        return $this->relatedTo_->getUid()->getValue();
+        return $this->relatedTo->getUid()->getValue();
     }
 }

@@ -9,20 +9,20 @@ class ProductIdentifier extends IProperty
 {
     const NAME = 'PRODID';
 
-    protected $text_ = '-//Triedge//EN';
-    protected $company_;
-    protected $product_;
-    protected $lang_;
+    protected $text = '-//Triedge//EN';
+    protected $company;
+    protected $product;
+    protected $lang;
 
     public function __construct($company = 'triedge', $product = 'calendar', $lang = 'EN')
     {
-        $this->company_ = $company;
-        $this->product_ = $product;
-        $this->lang_ = $lang;
+        $this->company = $company;
+        $this->product = $product;
+        $this->lang = $lang;
     }
 
     public function getValue()
     {
-        return '-//'.$this->company_.'//'.$this->product_.'//'.$this->lang_;
+        return '-//'.$this->company.'//'.$this->product.'//'.$this->lang;
     }
 }

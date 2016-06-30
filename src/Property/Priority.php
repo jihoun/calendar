@@ -13,16 +13,16 @@ class Priority extends IProperty
     const MEDIUM = 5;
     const LOW = 9;
 
-    protected $integer_;
+    protected $integer;
 
     public function __construct($value = self::UNDEFINED)
     {
-        $this->integer_ = $this->normalize($value);
+        $this->integer = $this->normalize($value);
     }
 
     public function getValue()
     {
-        return $this->integer_;
+        return $this->integer;
     }
 
     private function normalize($value)

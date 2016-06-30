@@ -9,8 +9,8 @@ class GeographicPosition extends IProperty
 {
     const NAME = 'GEO';
 
-    public $lat_;
-    public $lon_;
+    public $lat;
+    public $lon;
 
     /**
      * Constructor
@@ -20,8 +20,8 @@ class GeographicPosition extends IProperty
     public function __construct($lat, $lon)
     {
         if (is_numeric($lat) && is_numeric($lon)) {
-            $this->lat_ = (double)$lat;
-            $this->lon_ = (double)$lon;
+            $this->lat = (double)$lat;
+            $this->lon = (double)$lon;
         } else {
             throw new \Exception('Invlid params for GeographicPosition::__construct');
         }
@@ -29,6 +29,6 @@ class GeographicPosition extends IProperty
 
     public function getValue()
     {
-        return $this->lat_.';'.$this->lon_;
+        return $this->lat.';'.$this->lon;
     }
 }

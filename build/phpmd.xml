@@ -6,15 +6,27 @@
   xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
   <description>Description of triedgeteam.com coding standard</description>
 
-   <!-- Import the entire unused code rule set -->
-    <rule ref="rulesets/unusedcode.xml" />
+  <!-- Import the entire Clean Code Rules -->
+  <!-- <rule ref="rulesets/cleancode.xml"/> -->
 
-    <!-- Import the entire cyclomatic complexity rule -->
-<!--     <rule ref="rulesets/codesize.xml/CyclomaticComplexity" /> -->
-	
- 	<rule ref="rulesets/controversial.xml/Superglobals"/> 
+  <!-- Import the entire cyclomatic complexity rule -->
+  <rule ref="rulesets/codesize.xml" />
 
-	<!-- Import the entire Design Rules -->
- 	<rule ref="rulesets/design.xml"/>
+  <!-- Import the entire Controversial Rules -->
+  <rule ref="rulesets/controversial.xml"/> 
+
+  <!-- Import the entire Design Rules -->
+  <rule ref="rulesets/design.xml"/>
+
+  <!-- Import the entire Naming Rules -->
+  <!-- <rule ref="rulesets/naming.xml/ShortVariable"/> -->
+  <rule ref="rulesets/naming.xml/LongVariable"/>
+  <rule ref="rulesets/naming.xml/ShortMethodName"/>
+  <rule ref="rulesets/naming.xml/ConstructorWithNameAsEnclosingClass"/>
+  <rule ref="rulesets/naming.xml/ConstantNamingConventions"/>
+  <rule ref="rulesets/naming.xml/BooleanGetMethodName"/>
+
+  <!-- Import the entire unused code rule set -->
+  <rule ref="rulesets/unusedcode.xml" />
 
 </ruleset>

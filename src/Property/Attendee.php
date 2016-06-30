@@ -8,31 +8,31 @@ class Attendee extends IProperty
 {
     const NAME = 'ATTENDEE';
     
-    protected $mail_;
+    protected $mail;
 
-    protected $cutypeparam_ = null;
-    protected $memberparam_ = null;
-    protected $roleparam_ = null;
-    protected $partstatparam_ = null;
-    protected $rsvpparam_ = null;
-    protected $deltoparam_ = null;
-    protected $delfromparam_ = null;
-    protected $sentbyparam_ = null;
-    protected $cnparam_ = null;
-    protected $dirparam_ = null;
-    protected $languageparam_ = null;
+    protected $cutypeparam = null;
+    protected $memberparam = null;
+    protected $roleparam = null;
+    protected $partstatparam = null;
+    protected $rsvpparam = null;
+    protected $deltoparam = null;
+    protected $delfromparam = null;
+    protected $sentbyparam = null;
+    protected $cnparam = null;
+    protected $dirparam = null;
+    protected $languageparam = null;
 
     public function __construct($email)
     {
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $this->email_ = $email;
+            $this->email = $email;
         }
     }
 
     public function getValue()
     {
-        if (filter_var($this->email_, FILTER_VALIDATE_EMAIL)) {
-            return 'mailto:'.$this->email_;
+        if (filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
+            return 'mailto:'.$this->email;
         } else {
             return null;
         }
@@ -41,17 +41,17 @@ class Attendee extends IProperty
     public function getParams()
     {
         return array(
-            $this->cutypeparam_,
-            $this->memberparam_,
-            $this->roleparam_,
-            $this->partstatparam_,
-            $this->rsvpparam_,
-            $this->deltoparam_,
-            $this->delfromparam_,
-            $this->sentbyparam_,
-            $this->cnparam_,
-            $this->dirparam_,
-            $this->languageparam_
+            $this->cutypeparam,
+            $this->memberparam,
+            $this->roleparam,
+            $this->partstatparam,
+            $this->rsvpparam,
+            $this->deltoparam,
+            $this->delfromparam,
+            $this->sentbyparam,
+            $this->cnparam,
+            $this->dirparam,
+            $this->languageparam
         );
     }
 }

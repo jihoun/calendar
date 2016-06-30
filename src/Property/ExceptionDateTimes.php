@@ -9,30 +9,30 @@ class ExceptionDateTimes extends IProperty
 {
     const NAME = 'EXDATE';
     
-    protected $valueparam_ = null; //"VALUE" "=" ("DATE-TIME" / "DATE")) /
-    protected $tzidparam_ = null;
+    protected $valueparam = null; //"VALUE" "=" ("DATE-TIME" / "DATE")) /
+    protected $tzidparam = null;
 
-    protected $values_ = array();
-    protected $fullDay_;
+    protected $values = array();
+    protected $fullDay;
 
     public function __construct($fullDay = false)
     {
-        $this->fullDay_ = boolval($fullDay);
-        if ($this->fullDay_) {
-            $this->valueparam_ = \Triedge\Calendar\Parameter\ValueDataTypes::date();
+        $this->fullDay = boolval($fullDay);
+        if ($this->fullDay) {
+            $this->valueparam = \Triedge\Calendar\Parameter\ValueDataTypes::date();
         } else {
-            $this->valueparam_ = \Triedge\Calendar\Parameter\ValueDataTypes::dateTime();
+            $this->valueparam = \Triedge\Calendar\Parameter\ValueDataTypes::dateTime();
         }
     }
 
     public function getValue()
     {
-        if (empty($this->values_)) {
+        if (empty($this->values)) {
             return null;
         } else {
             $res = '';
-            foreach ($this->values_ as $value) {
-                if ($this->fullDay_) {
+            foreach ($this->values as $value) {
+                if ($this->fullDay) {
                     $res .= $value->format('Ymd,');
                 } else {
                     $res .= $value->format('Ymd\THis\Z,');
@@ -45,11 +45,11 @@ class ExceptionDateTimes extends IProperty
 
     public function addValue(\DateTime $dt)
     {
-        $this->values_[] = $dt;
+        $this->values[] = $dt;
     }
 
     public function getParams()
     {
-        return array($this->valueparam_, $this->tzidparam_);
+        return array($this->valueparam, $this->tzidparam);
     }
 }

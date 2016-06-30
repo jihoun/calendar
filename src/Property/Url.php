@@ -8,17 +8,17 @@ namespace Triedge\Calendar\Property;
 class Url extends IProperty
 {
     const NAME = 'URL';
-    protected $url_;
+    protected $url;
 
     public function __construct($url)
     {
         if (filter_var($url, FILTER_VALIDATE_URL)) {
-            $this->url_ = $url;
+            $this->url = $url;
         }
     }
 
     public function getValue()
     {
-        return filter_var($this->url_, FILTER_VALIDATE_URL) ? $this->url_ : null;
+        return filter_var($this->url, FILTER_VALIDATE_URL) ? $this->url : null;
     }
 }

@@ -12,24 +12,24 @@ class TimeTransparency extends IProperty
     const OPAQUE = 'OPAQUE';
     const TRANSPARENT = 'TRANSPARENT';
 
-    protected $text_ = self::OPAQUE;
+    protected $text = self::OPAQUE;
 
     protected function __construct($text)
     {
-        $this->text_ = $text;
+        $this->text = $text;
     }
 
     public function getValue()
     {
-        return $this->text_;
+        return $this->text;
     }
 
-    public static function OPAQUE()
+    public static function opaque()
     {
         return new static(static::OPAQUE);
     }
 
-    public static function TRANSPARENT()
+    public static function transparent()
     {
         return new static(static::TRANSPARENT);
     }

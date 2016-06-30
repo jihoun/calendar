@@ -10,32 +10,32 @@ class DateTimeDue extends IDateTime
 {
     const NAME = 'DUE';
 
-    protected $fullDay_;
+    protected $fullDay;
 
-    protected $valueparam_ = null; //"VALUE" "=" ("DATE-TIME" / "DATE")) /
-    protected $tzidparam_ = null;
+    protected $valueparam = null; //"VALUE" "=" ("DATE-TIME" / "DATE")) /
+    protected $tzidparam = null;
 
     public function __construct(\DateTime $dt, $fullDay = false)
     {
         parent::__construct($dt);
-        $this->fullDay_ = boolval($fullDay);
+        $this->fullDay = boolval($fullDay);
         if ($fullDay) {
-            $this->valueparam_ = \Triedge\Calendar\Parameter\ValueDataTypes::date();
+            $this->valueparam = \Triedge\Calendar\Parameter\ValueDataTypes::date();
         } else {
-            $this->valueparam_ = \Triedge\Calendar\Parameter\ValueDataTypes::DateTime();
+            $this->valueparam = \Triedge\Calendar\Parameter\ValueDataTypes::DateTime();
         }
     }
 
     public function getValue()
     {
-        if (!$this->fullDay_) {
+        if (!$this->fullDay) {
             return parent::getValue();
         }
-        return $this->dateTime_->format('Ymd');
+        return $this->dateTime->format('Ymd');
     }
 
     public function getParams()
     {
-        return array($this->valueparam_, $this->tzidparam_);
+        return array($this->valueparam, $this->tzidparam);
     }
 }

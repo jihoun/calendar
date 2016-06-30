@@ -8,15 +8,15 @@ class InlineEncoding extends IParameter
     const ENC_8BIT = '8BIT';
     const ENC_BASE64 = 'BASE64';
 
-    protected $value_;
+    protected $value;
 
     public function getValue()
     {
-        return $this->value_;
+        return $this->value;
     }
     protected function __construct($value)
     {
-        $this->value_ = $value;
+        $this->value = $value;
     }
 
     public static function eightbits()

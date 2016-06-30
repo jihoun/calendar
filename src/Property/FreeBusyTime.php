@@ -5,11 +5,11 @@ class FreeBusyTime extends IProperty
 {
     const NAME = 'FREEBUSY';
 
-    protected $fmttypeparam_ = null;
+    protected $fmttypeparam = null;
 
     public function getParams()
     {
-        return array($this->fmttypeparam_);
+        return array($this->fmttypeparam);
     }
     public function getValue()
     {

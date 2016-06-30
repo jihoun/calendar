@@ -3,43 +3,43 @@ namespace Triedge\Calendar;
 
 class Calendar
 {
-    protected $prodid_;
-    protected $version_;
-    public $calscale_ = null;
-    public $method_ = null;
+    protected $prodid;
+    protected $version;
+    public $calscale = null;
+    public $method = null;
     
-    private $componentList_ = array();
+    private $componentList = array();
 
     public function __construct($company = 'triedge', $product = 'calendar', $lang = 'en')
     {
-        $this->prodid_ = new \Triedge\Calendar\Property\ProductIdentifier($company, $product, $lang);
-        $this->version_ = new \Triedge\Calendar\Property\Version();
+        $this->prodid = new \Triedge\Calendar\Property\ProductIdentifier($company, $product, $lang);
+        $this->version = new \Triedge\Calendar\Property\Version();
     }
 
     public function &addComponent(\Triedge\Calendar\Component\IComponent $component)
     {
-        $this->componentList_[] = $component;
+        $this->componentList[] = $component;
         return $this;
     }
 
     public function &addTimeZone(\Triedge\Calendar\Component\TimeZone $tz)
     {
-        $this->componentList_[] = $tz;
+        $this->componentList[] = $tz;
         return $this;
     }
 
     public function toString()
     {
         $res = "BEGIN:VCALENDAR\n";
-        $res .= $this->version_->toString();
-        $res .= $this->prodid_->toString();
-        if (!is_null($this->calscale_)) {
-            $res .= $this->calscale_->toString();
+        $res .= $this->version->toString();
+        $res .= $this->prodid->toString();
+        if (!is_null($this->calscale)) {
+            $res .= $this->calscale->toString();
         }
-        if (!is_null($this->method_)) {
-            $res .= 'METHOD:'.$this->method_."\n";
+        if (!is_null($this->method)) {
+            $res .= 'METHOD:'.$this->method."\n";
         }
-        foreach ($this->componentList_ as $component) {
+        foreach ($this->componentList as $component) {
             $res .= $component->toString();
         }
         $res .= "END:VCALENDAR";

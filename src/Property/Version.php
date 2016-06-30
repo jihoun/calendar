@@ -9,7 +9,7 @@ namespace Triedge\Calendar\Property;
 class Version extends IText
 {
     const NAME = 'VERSION';
-    protected $text_ = '2.0';
+    protected $text = '2.0';
 
     public function __construct()
     {

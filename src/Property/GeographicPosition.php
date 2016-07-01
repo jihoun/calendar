@@ -14,8 +14,8 @@ class GeographicPosition extends IProperty
 
     /**
      * Constructor
-     * @param double $lat [description]
-     * @param double $lon [description]
+     * @param double $lat latitude
+     * @param double $lon longitude
      */
     public function __construct($lat, $lon)
     {
@@ -27,6 +27,9 @@ class GeographicPosition extends IProperty
         }
     }
 
+    /**
+     * @inheritDoc
+     */
     public function getValue()
     {
         return $this->lat.';'.$this->lon;

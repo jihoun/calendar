@@ -12,6 +12,9 @@ abstract class ITextList extends IProperty
         }
     }
 
+    /**
+     * @inheritDoc
+     */
     public function getValue()
     {
         if (empty($this->texts)) {
@@ -28,7 +31,7 @@ abstract class ITextList extends IProperty
     }
 
     /**
-     * @param string $value [description]
+     * @param string $value
      * @return ITextList
      */
     public function &addValue($value)
@@ -39,10 +42,15 @@ abstract class ITextList extends IProperty
         return $this;
     }
 
+    /**
+     * @param array $values
+     * @return  ITextList
+     */
     public function &addValues(array $values)
     {
         foreach ($values as $value) {
             $this->addValue($value);
         }
+        return $this;
     }
 }

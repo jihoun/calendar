@@ -1,5 +1,5 @@
 <?php
-namespace Triedge\Calendar\Property;
+namespace Jihoun\Calendar\Property;
 
 /**
 * This property provides a more complete description of the calendar component

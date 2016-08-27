@@ -1,5 +1,5 @@
 <?php
-namespace Triedge\Calendar\Property;
+namespace Jihoun\Calendar\Property;
 
 /**
  * This property defines the date and time that a to-do is expected to be
@@ -20,9 +20,9 @@ class DateTimeDue extends IDateTime
         parent::__construct($dt);
         $this->fullDay = boolval($fullDay);
         if ($fullDay) {
-            $this->valueparam = \Triedge\Calendar\Parameter\ValueDataTypes::date();
+            $this->valueparam = \Jihoun\Calendar\Parameter\ValueDataTypes::date();
         } else {
-            $this->valueparam = \Triedge\Calendar\Parameter\ValueDataTypes::DateTime();
+            $this->valueparam = \Jihoun\Calendar\Parameter\ValueDataTypes::DateTime();
         }
     }
 

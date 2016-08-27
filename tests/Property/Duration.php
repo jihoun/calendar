@@ -1,9 +1,9 @@
 <?php
 
-namespace Test\Triedge\Calendar\Property;
+namespace Test\Jihoun\Calendar\Property;
 
-use \Triedge\Calendar\Component as Component;
-use \Triedge\Calendar\Property as Property;
+use \Jihoun\Calendar\Component as Component;
+use \Jihoun\Calendar\Property as Property;
 
 class Duration extends \PHPUnit_Framework_TestCase
 {

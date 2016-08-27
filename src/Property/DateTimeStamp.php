@@ -1,5 +1,5 @@
 <?php
-namespace Triedge\Calendar\Property;
+namespace Jihoun\Calendar\Property;
 
 /**
  * In the case of an iCalendar object that specifies a "METHOD" property, this

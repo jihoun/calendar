@@ -1,9 +1,9 @@
 <?php
 
-namespace Test\Triedge\Calendar;
+namespace Test\Jihoun\Calendar;
 
-use \Triedge\Calendar\Component as Component;
-use \Triedge\Calendar\Property as Property;
+use \Jihoun\Calendar\Component as Component;
+use \Jihoun\Calendar\Property as Property;
 
 class CalendarTest extends \PHPUnit_Framework_TestCase
 {
@@ -140,7 +140,7 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
             ->addStandardc(new Property\TimeZoneProperty(new Property\DateTimeStart(new \DateTime())))
             ->addDaylightc(new Property\TimeZoneProperty(new Property\DateTimeStart(new \DateTime())));
 
-        $cal = new \Triedge\Calendar\Calendar();
+        $cal = new \Jihoun\Calendar\Calendar();
         $cal->addComponent($event);
         $cal->addComponent($todo);
         $cal->addComponent($journal);

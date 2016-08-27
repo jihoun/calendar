@@ -1,5 +1,5 @@
 <?php
-namespace Triedge\Calendar\Property;
+namespace Jihoun\Calendar\Property;
 
 /**
  * This property defines the calendar scale used for the calendar information

@@ -1,9 +1,9 @@
 <?php
 
-namespace Test\Triedge\Calendar\Component;
+namespace Test\Jihoun\Calendar\Component;
 
-use \Triedge\Calendar\Component as Component;
-use \Triedge\Calendar\Property as Property;
+use \Jihoun\Calendar\Component as Component;
+use \Jihoun\Calendar\Property as Property;
 
 class Alarm extends \PHPUnit_Framework_TestCase
 {

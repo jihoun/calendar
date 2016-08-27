@@ -1,5 +1,5 @@
 <?php
-namespace Triedge\Calendar\Property;
+namespace Jihoun\Calendar\Property;
 
 /**
  * This property is used to represent contact information or alternately a

@@ -1,5 +1,5 @@
 <?php
-namespace Triedge\Calendar\Property;
+namespace Jihoun\Calendar\Property;
 
 /**
  * This property is used to represent a relationship or reference between one
@@ -11,7 +11,7 @@ class RelatedTo extends IProperty
 
     protected $relatedTo = null;
     
-    public function __construct(\Triedge\Calendar\Component\IComponent $comp)
+    public function __construct(\Jihoun\Calendar\Component\IComponent $comp)
     {
         $this->relatedTo = $comp;
     }

@@ -1,7 +1,7 @@
 <?php
-namespace Triedge\Calendar\Component;
+namespace Jihoun\Calendar\Component;
 
-use \Triedge\Calendar\Property as Property;
+use \Jihoun\Calendar\Property as Property;
 
 /**
  * Provide a grouping of component properties that describe a journal entry.
@@ -100,139 +100,139 @@ class Journal extends IComponent
         return $this->uid;
     }
 
-    public function &setClassification(\Triedge\Calendar\Property\Classification $class)
+    public function &setClassification(\Jihoun\Calendar\Property\Classification $class)
     {
         $this->class = $class;
         return $this;
     }
 
-    public function &setDateTimeCreated(\Triedge\Calendar\Property\DateTimeCreated $created)
+    public function &setDateTimeCreated(\Jihoun\Calendar\Property\DateTimeCreated $created)
     {
         $this->created = $created;
         return $this;
     }
 
-    public function &setDateTimestart(\Triedge\Calendar\Property\DateTimeStart $dtStart)
+    public function &setDateTimestart(\Jihoun\Calendar\Property\DateTimeStart $dtStart)
     {
         $this->dtstart = $dtStart;
         return $this;
     }
 
-    public function &setLastModified(\Triedge\Calendar\Property\LastModified $lastMod)
+    public function &setLastModified(\Jihoun\Calendar\Property\LastModified $lastMod)
     {
         $this->lastMod = $lastMod;
         return $this;
     }
 
-    public function &setOrganizer(\Triedge\Calendar\Property\Organizer $organizer)
+    public function &setOrganizer(\Jihoun\Calendar\Property\Organizer $organizer)
     {
         $this->organizer = $organizer;
         return $this;
     }
 
-    public function &setRecurrenceId(\Triedge\Calendar\Property\RecurrenceId $recurid)
+    public function &setRecurrenceId(\Jihoun\Calendar\Property\RecurrenceId $recurid)
     {
         $this->recurid = $recurid;
         return $this;
     }
 
-    public function &setSequenceNumber(\Triedge\Calendar\Property\SequenceNumber $seq)
+    public function &setSequenceNumber(\Jihoun\Calendar\Property\SequenceNumber $seq)
     {
         $this->seq = $seq;
         return $this;
     }
 
-    public function &setStatus(\Triedge\Calendar\Property\JournalStatus $status)
+    public function &setStatus(\Jihoun\Calendar\Property\JournalStatus $status)
     {
         $this->status = $status;
         return $this;
     }
 
-    public function &setSummary(\Triedge\Calendar\Property\Summary $summary)
+    public function &setSummary(\Jihoun\Calendar\Property\Summary $summary)
     {
         $this->summary = $summary;
         return $this;
     }
 
-    public function &setUrl(\Triedge\Calendar\Property\Url $url)
+    public function &setUrl(\Jihoun\Calendar\Property\Url $url)
     {
         $this->url = $url;
         return $this;
     }
 
-    public function &setRecurrenceRule(\Triedge\Calendar\Property\RecurrenceRule $rrule)
+    public function &setRecurrenceRule(\Jihoun\Calendar\Property\RecurrenceRule $rrule)
     {
         $this->rrule = $rrule;
         return $this;
     }
 
-    public function &addAttachment(\Triedge\Calendar\Property\Attachment $attach)
+    public function &addAttachment(\Jihoun\Calendar\Property\Attachment $attach)
     {
         $this->attachList[] = $attach;
         return $this;
     }
     
-    public function &addAttendee(\Triedge\Calendar\Property\Attendee $attendee)
+    public function &addAttendee(\Jihoun\Calendar\Property\Attendee $attendee)
     {
         $this->attendeeList[] = $attendee;
         return $this;
     }
 
-    public function &addCategories(\Triedge\Calendar\Property\Categories $categories)
+    public function &addCategories(\Jihoun\Calendar\Property\Categories $categories)
     {
         $this->categoriesList[] = $categories;
         return $this;
     }
     
-    public function &addComment(\Triedge\Calendar\Property\Comment $comment)
+    public function &addComment(\Jihoun\Calendar\Property\Comment $comment)
     {
         $this->commentList[] = $comment;
         return $this;
     }
 
-    public function &addContact(\Triedge\Calendar\Property\Contact $contact)
+    public function &addContact(\Jihoun\Calendar\Property\Contact $contact)
     {
         $this->contactList[] = $contact;
         return $this;
     }
 
-    public function &addDescription(\Triedge\Calendar\Property\Description $description)
+    public function &addDescription(\Jihoun\Calendar\Property\Description $description)
     {
         $this->descriptionList[] = $description;
         return $this;
     }
 
-    public function &addExceptionDateTimes(\Triedge\Calendar\Property\ExceptionDateTimes $exdate)
+    public function &addExceptionDateTimes(\Jihoun\Calendar\Property\ExceptionDateTimes $exdate)
     {
         $this->exdateList[] = $exdate;
         return $this;
     }
 
-    public function &addRelatedTo(\Triedge\Calendar\Property\RelatedTo $related)
+    public function &addRelatedTo(\Jihoun\Calendar\Property\RelatedTo $related)
     {
         $this->relatedList[] = $related;
         return $this;
     }
 
-    public function &addRecurrenceDateTimes(\Triedge\Calendar\Property\RecurrenceDateTimes $rdate)
+    public function &addRecurrenceDateTimes(\Jihoun\Calendar\Property\RecurrenceDateTimes $rdate)
     {
         $this->rdateList[] = $rdate;
         return $this;
     }
 
-    public function &addRequestStatus(\Triedge\Calendar\Property\RequestStatus $rstatus)
+    public function &addRequestStatus(\Jihoun\Calendar\Property\RequestStatus $rstatus)
     {
         $this->rstatusList[] = $rstatus;
         return $this;
     }
 
-    public function &addXProperty(\Triedge\Calendar\Property\XProperty $xProp)
+    public function &addXProperty(\Jihoun\Calendar\Property\XProperty $xProp)
     {
         $this->xPropList[] = $xProp;
         return $this;
     }
  
-    public function &addIanaProperty(\Triedge\Calendar\Property\IanaProperty $ianaProp)
+    public function &addIanaProperty(\Jihoun\Calendar\Property\IanaProperty $ianaProp)
     {
         $this->ianaPropList[] = $ianaProp;
         return $this;

@@ -1,5 +1,5 @@
 {
-    "name": "triedge/calendar",
+    "name": "jihoun/calendar",
     "type": "library",
     "authors": [
         {
@@ -21,6 +21,6 @@
     },
     "minimum-stability": "stable",
     "autoload": {
-        "psr-4": { "Triedge\\Calendar\\": "src/" }
+        "psr-4": { "Jihoun\\Calendar\\": "src/" }
     }
 }

@@ -1,5 +1,5 @@
 <?php
-namespace Triedge\Calendar\Component;
+namespace Jihoun\Calendar\Component;
 
 /**
  * Provide a grouping of component properties that describe either a request for free/busy time, describe a response to
@@ -29,8 +29,8 @@ class FreeBusy extends IComponent
 
     public function __construct()
     {
-        $this->dtstamp = new \Triedge\Calendar\Property\DateTimeStamp();
-        $this->uid = new \Triedge\Calendar\Property\Uid();
+        $this->dtstamp = new \Jihoun\Calendar\Property\DateTimeStamp();
+        $this->uid = new \Jihoun\Calendar\Property\Uid();
     }
 
     private function getProperties()
@@ -73,58 +73,58 @@ class FreeBusy extends IComponent
         return $this->uid;
     }
 
-    public function &setContact(\Triedge\Calendar\Property\Contact $contact)
+    public function &setContact(\Jihoun\Calendar\Property\Contact $contact)
     {
         $this->contact = $contact;
         return $this;
     }
-    public function &setDateTimeStart(\Triedge\Calendar\Property\DateTimeStart $dtstart)
+    public function &setDateTimeStart(\Jihoun\Calendar\Property\DateTimeStart $dtstart)
     {
         $this->dtstart = $dtstart;
         return $this;
     }
-    public function &setDateTimeEnd(\Triedge\Calendar\Property\DateTimeEnd $dtend)
+    public function &setDateTimeEnd(\Jihoun\Calendar\Property\DateTimeEnd $dtend)
     {
         $this->dtend = $dtend;
         return $this;
     }
-    public function &setOrganizer(\Triedge\Calendar\Property\Organizer $organizer)
+    public function &setOrganizer(\Jihoun\Calendar\Property\Organizer $organizer)
     {
         $this->organizer = $organizer;
         return $this;
     }
-    public function &setUrl(\Triedge\Calendar\Property\Url $url)
+    public function &setUrl(\Jihoun\Calendar\Property\Url $url)
     {
         $this->url = $url;
         return $this;
     }
 
-    public function &addAttendee(\Triedge\Calendar\Property\Attendee $attendee)
+    public function &addAttendee(\Jihoun\Calendar\Property\Attendee $attendee)
     {
         $this->attendeeList[] = $attendee;
         return $this;
     }
-    public function &addComment(\Triedge\Calendar\Property\Comment $comment)
+    public function &addComment(\Jihoun\Calendar\Property\Comment $comment)
     {
         $this->commentList[] = $comment;
         return $this;
     }
-    public function &addFreeBusy(\Triedge\Calendar\Property\FreeBusyTime $freeBusy)
+    public function &addFreeBusy(\Jihoun\Calendar\Property\FreeBusyTime $freeBusy)
     {
         $this->freebusyList[] = $freeBusy;
         return $this;
     }
-    public function &addRequestStatus(\Triedge\Calendar\Property\RequestStatus $rstatus)
+    public function &addRequestStatus(\Jihoun\Calendar\Property\RequestStatus $rstatus)
     {
         $this->rstatusList[] = $rstatus;
         return $this;
     }
-    public function &addXProperty(\Triedge\Calendar\Property\XProperty $xProp)
+    public function &addXProperty(\Jihoun\Calendar\Property\XProperty $xProp)
     {
         $this->xPropList[] = $xProp;
         return $this;
     }
-    public function &addIanaProperty(\Triedge\Calendar\Property\IanaProperty $ianaProp)
+    public function &addIanaProperty(\Jihoun\Calendar\Property\IanaProperty $ianaProp)
     {
         $this->ianaPropList[] = $ianaProp;
         return $this;

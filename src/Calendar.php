@@ -1,5 +1,5 @@
 <?php
-namespace Triedge\Calendar;
+namespace Jihoun\Calendar;
 
 class Calendar
 {
@@ -12,17 +12,17 @@ class Calendar
 
     public function __construct($company = 'triedge', $product = 'calendar', $lang = 'en')
     {
-        $this->prodid = new \Triedge\Calendar\Property\ProductIdentifier($company, $product, $lang);
-        $this->version = new \Triedge\Calendar\Property\Version();
+        $this->prodid = new \Jihoun\Calendar\Property\ProductIdentifier($company, $product, $lang);
+        $this->version = new \Jihoun\Calendar\Property\Version();
     }
 
-    public function &addComponent(\Triedge\Calendar\Component\IComponent $component)
+    public function &addComponent(\Jihoun\Calendar\Component\IComponent $component)
     {
         $this->componentList[] = $component;
         return $this;
     }
 
-    public function &addTimeZone(\Triedge\Calendar\Component\TimeZone $tz)
+    public function &addTimeZone(\Jihoun\Calendar\Component\TimeZone $tz)
     {
         $this->componentList[] = $tz;
         return $this;

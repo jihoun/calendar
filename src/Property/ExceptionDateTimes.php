@@ -1,5 +1,5 @@
 <?php
-namespace Triedge\Calendar\Property;
+namespace Jihoun\Calendar\Property;
 
 /**
  * This property defines the list of DATE-TIME exceptions for recurring events,
@@ -19,9 +19,9 @@ class ExceptionDateTimes extends IProperty
     {
         $this->fullDay = boolval($fullDay);
         if ($this->fullDay) {
-            $this->valueparam = \Triedge\Calendar\Parameter\ValueDataTypes::date();
+            $this->valueparam = \Jihoun\Calendar\Parameter\ValueDataTypes::date();
         } else {
-            $this->valueparam = \Triedge\Calendar\Parameter\ValueDataTypes::dateTime();
+            $this->valueparam = \Jihoun\Calendar\Parameter\ValueDataTypes::dateTime();
         }
     }
 

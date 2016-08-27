@@ -1,5 +1,5 @@
 <?php
-namespace Triedge\Calendar\Parameter;
+namespace Jihoun\Calendar\Parameter;
 
 class ValueDataTypes extends IParameter
 {

@@ -1,5 +1,5 @@
 <?php
-namespace Triedge\Calendar\Component;
+namespace Jihoun\Calendar\Component;
 
 /**
  * Provide a grouping of component properties that defines a time zone.
@@ -24,7 +24,7 @@ class TimeZone
 
     public function __construct()
     {
-        $this->tzid = new \Triedge\Calendar\Parameter\TimeZoneIdentifier();
+        $this->tzid = new \Jihoun\Calendar\Parameter\TimeZoneIdentifier();
     }
 
     public function toString()
@@ -55,36 +55,36 @@ class TimeZone
         return $res;
     }
 
-    public function &setLastModified(\Triedge\Calendar\Property\LastModified $lastMod)
+    public function &setLastModified(\Jihoun\Calendar\Property\LastModified $lastMod)
     {
         $this->lastMod = $lastMod;
         return $this;
     }
 
-    public function &setTimeZoneUrl(\Triedge\Calendar\Property\TimeZoneUrl $tzurl)
+    public function &setTimeZoneUrl(\Jihoun\Calendar\Property\TimeZoneUrl $tzurl)
     {
         $this->tzurl = $tzurl;
         return $this;
     }
 
-    public function addStandardc(\Triedge\Calendar\Property\TimeZoneProperty $tzprop)
+    public function addStandardc(\Jihoun\Calendar\Property\TimeZoneProperty $tzprop)
     {
         $this->standardcList[] = $tzprop;
         return $this;
     }
 
-    public function &addDaylightc(\Triedge\Calendar\Property\TimeZoneProperty $tzprop)
+    public function &addDaylightc(\Jihoun\Calendar\Property\TimeZoneProperty $tzprop)
     {
         $this->daylightcList[] = $tzprop;
         return $this;
     }
 
-    public function &addXProperty(\Triedge\Calendar\Property\XProperty $xProp)
+    public function &addXProperty(\Jihoun\Calendar\Property\XProperty $xProp)
     {
         $this->xPropList[] = $xProp;
         return $this;
     }
-    public function &addIanaProperty(\Triedge\Calendar\Property\IanaProperty $ianaProp)
+    public function &addIanaProperty(\Jihoun\Calendar\Property\IanaProperty $ianaProp)
     {
         $this->ianaPropList[] = $ianaProp;
         return $this;

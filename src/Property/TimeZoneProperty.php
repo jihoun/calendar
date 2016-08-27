@@ -1,5 +1,5 @@
 <?php
-namespace Triedge\Calendar\Property;
+namespace Jihoun\Calendar\Property;
 
 class TimeZoneProperty
 {
@@ -19,11 +19,11 @@ class TimeZoneProperty
     protected $xPropList = array();
     protected $ianaPropList = array();
 
-    public function __construct(\Triedge\Calendar\Property\DateTimeStart $dtstart)
+    public function __construct(\Jihoun\Calendar\Property\DateTimeStart $dtstart)
     {
         $this->dtstart = $dtstart;
-        $this->tzoffsetto = new \Triedge\Calendar\Property\TimezoneOffsetTo();
-        $this->tzoffsetfrom = new \Triedge\Calendar\Property\TimezoneOffsetFrom();
+        $this->tzoffsetto = new \Jihoun\Calendar\Property\TimezoneOffsetTo();
+        $this->tzoffsetfrom = new \Jihoun\Calendar\Property\TimezoneOffsetFrom();
     }
 
     private function getProperties()

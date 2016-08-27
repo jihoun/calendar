@@ -1,5 +1,5 @@
 <?php
-namespace Triedge\Calendar\Component;
+namespace Jihoun\Calendar\Component;
 
 abstract class IComponent
 {

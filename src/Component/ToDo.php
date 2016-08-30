@@ -156,7 +156,7 @@ class ToDo extends IComponent
         return $this;
     }
 
-    public function &setGeographicPosition(\Jihoun\Calendar\Property\GeographicPosition& $geo)
+    public function &setGeographicPosition(\Jihoun\Calendar\Property\GeographicPosition $geo)
     {
         $this->geo = $geo;
         return $this;

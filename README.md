@@ -6,9 +6,6 @@ But currently, not every single bit of the standard is implemented.
 You can load this library in your project using composer:
 ```json
 {
-   "repositories": [
-       { "type": "vcs", "url": "git@github.com:jihoun/calendar.git" }
-   ],
    "require": {
        "jihoun/calendar": "dev-master"
    },

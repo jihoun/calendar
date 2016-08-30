@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/jihoun/calendar.svg?branch=master)](https://travis-ci.org/jihoun/calendar)
+[![Build Status](https://travis-ci.org/jihoun/calendar.svg?branch=master)](https://travis-ci.org/jihoun/calendar) [![Code Climate](https://codeclimate.com/github/jihoun/calendar/badges/gpa.svg)](https://codeclimate.com/github/jihoun/calendar)
 # Build calendar (.ics) file in php
 This library allows quickly generating ics files in php.
 Outputs should be compatible with the standard https://tools.ietf.org/html/rfc5545.

@@ -22,8 +22,8 @@ class TimeZoneProperty
     public function __construct(\Jihoun\Calendar\Property\DateTimeStart $dtstart)
     {
         $this->dtstart = $dtstart;
-        $this->tzoffsetto = new \Jihoun\Calendar\Property\TimezoneOffsetTo();
-        $this->tzoffsetfrom = new \Jihoun\Calendar\Property\TimezoneOffsetFrom();
+        $this->tzoffsetto = new \Jihoun\Calendar\Property\TimeZoneOffsetTo();
+        $this->tzoffsetfrom = new \Jihoun\Calendar\Property\TimeZoneOffsetFrom();
     }
 
     private function getProperties()

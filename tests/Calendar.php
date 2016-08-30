@@ -148,6 +148,6 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
         
         $cal->addTimeZone($tz);
 
-        file_put_contents('/Users/nicolaslagier/workspace/triedge/calendar/tmp/test.ics', $cal->toString());
+        // file_put_contents('/Users/nicolaslagier/workspace/triedge/calendar/tmp/test.ics', $cal->toString());
     }
 }

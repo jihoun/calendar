@@ -8,7 +8,8 @@
         }
     ],
     "require": {
-        "php": ">=5.3.3"
+        "php": ">=5.3.3",
+        "symfony/polyfill-php55":"dev-master"
     },
     "require-dev":{
         "pdepend/pdepend" : "2.0.4",
@@ -17,8 +18,7 @@
         "phpmd/phpmd" : "@stable",
         "sami/sami": "3.0.*",
         "sebastian/phpcpd": "*",
-        "squizlabs/php_codesniffer":"2.*",
-        "symfony/polyfill-php55":"dev-master"
+        "squizlabs/php_codesniffer":"2.*"
     },
     "minimum-stability": "stable",
     "autoload": {

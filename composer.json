@@ -1,5 +1,6 @@
 {
     "name": "jihoun/calendar",
+    "description":"Build calendar (.ics) files.",
     "type": "library",
     "authors": [
         {

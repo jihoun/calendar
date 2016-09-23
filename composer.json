@@ -19,7 +19,8 @@
         "phpmd/phpmd" : "@stable",
         "sami/sami": "3.0.*",
         "sebastian/phpcpd": "*",
-        "squizlabs/php_codesniffer":"2.*"
+        "squizlabs/php_codesniffer":"2.*",
+        "codeclimate/php-test-reporter": "dev-master"
     },
     "minimum-stability": "stable",
     "autoload": {

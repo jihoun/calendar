@@ -10,17 +10,17 @@
     ],
     "require": {
         "php": ">=5.3.3",
-        "symfony/polyfill-php55":"dev-master"
+        "symfony/polyfill-php55":"^1.0.0"
     },
     "require-dev":{
-        "pdepend/pdepend" : "2.0.4",
-        "phpunit/phpunit": "4.8.*",
+        "pdepend/pdepend" : "^2.0.4",
+        "phpunit/phpunit": "^4.8.0",
         "phploc/phploc": "*",
         "phpmd/phpmd" : "@stable",
-        "sami/sami": "3.0.*",
+        "sami/sami": "^3.0.0",
         "sebastian/phpcpd": "*",
-        "squizlabs/php_codesniffer":"2.*",
-        "codeclimate/php-test-reporter": "dev-master"
+        "squizlabs/php_codesniffer":"^2.0.0",
+        "codeclimate/php-test-reporter": "^0.3.2"
     },
     "minimum-stability": "stable",
     "autoload": {

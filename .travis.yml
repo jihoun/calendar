@@ -8,4 +8,7 @@ php:
   - '7.1'
   - hhvm
 install: composer update
-script: phpunit --configuration build/phpunit.xml
+script: phpunit --configuration build/phpunit.xml --coverage-clover build/logs/clover.xml
+addons:
+  code_climate:
+    repo_token: 7b3cb37701f2bb881220972cb7d01cd40f6992b4e12c8e48f39d946929e3a0b9

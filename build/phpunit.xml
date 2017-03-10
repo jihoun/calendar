@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit 
+<phpunit
     backupGlobals="false"
      backupStaticAttributes="false"
      bootstrap="../vendor/autoload.php"
@@ -31,18 +31,6 @@
         <log type="junit" target="logs/junit.xml" logIncompleteSkipped="false"/>
     </logging>
     <listeners>
-        <listener class="JohnKary\PHPUnit\Listener\SpeedTrapListener">
-            <arguments>
-                <array>
-                    <element key="slowThreshold">
-                        <integer>1000</integer>
-                    </element>
-                    <element key="reportLength">
-                        <integer>60</integer>
-                    </element>
-                </array>
-            </arguments>
-        </listener>
     </listeners>
     <filter>
         <whitelist>

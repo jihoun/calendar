@@ -127,7 +127,7 @@ class Event extends IComponent
     }
 
     /**
-     * @return string
+     * @return \Jihoun\Calendar\Property\Uid
      */
     public function &getUid()
     {

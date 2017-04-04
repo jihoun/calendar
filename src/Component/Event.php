@@ -1,6 +1,8 @@
 <?php
 namespace Jihoun\Calendar\Component;
 
+use \Jihoun\Calendar\Property as Property;
+
 /**
  * Provide a grouping of component properties that describe an event.
  */
@@ -62,8 +64,8 @@ class Event extends IComponent
 
     public function __construct()
     {
-        $this->dtstamp = new \Jihoun\Calendar\Property\DateTimeStamp();
-        $this->uid = new \Jihoun\Calendar\Property\Uid();
+        $this->dtstamp = new Property\DateTimeStamp();
+        $this->uid = new Property\Uid();
     }
 
     private function getProperties()
@@ -124,186 +126,309 @@ class Event extends IComponent
         return $res;
     }
 
+    /**
+     * @return string
+     */
     public function &getUid()
     {
         return $this->uid;
     }
 
-    public function &setDateTimeStart(\Jihoun\Calendar\Property\DateTimeStart $dtstart)
+    /**
+     * @param \Jihoun\Calendar\Property\DateTimeStart $dtstart
+     * @return $this
+     */
+    public function &setDateTimeStart(Property\DateTimeStart $dtstart)
     {
         $this->dtstart = $dtstart;
         return $this;
     }
 
-    public function &setClassification(\Jihoun\Calendar\Property\Classification $class)
+    /**
+     * @param \Jihoun\Calendar\Property\Classification $class
+     * @return $this
+     */
+    public function &setClassification(Property\Classification $class)
     {
         $this->class = $class;
         return $this;
     }
 
-    public function &setDateTimeCreated(\Jihoun\Calendar\Property\DateTimeCreated $created)
+    /**
+     * @param \Jihoun\Calendar\Property\DateTimeCreated $created
+     * @return $this
+     */
+    public function &setDateTimeCreated(Property\DateTimeCreated $created)
     {
         $this->created = $created;
         return $this;
     }
 
-    public function &setDescription(\Jihoun\Calendar\Property\Description $description)
+    /**
+     * @param \Jihoun\Calendar\Property\Description $description
+     * @return $this
+     */
+    public function &setDescription(Property\Description $description)
     {
         $this->description = $description;
         return $this;
     }
 
-    public function &setGeographicPosition(\Jihoun\Calendar\Property\GeographicPosition $geo)
+    /**
+     * @param \Jihoun\Calendar\Property\GeographicPosition $geo
+     * @return $this
+     */
+    public function &setGeographicPosition(Property\GeographicPosition $geo)
     {
         $this->geo = $geo;
         return $this;
     }
-    
-    public function &setLastModified(\Jihoun\Calendar\Property\LastModified $lastMod)
+
+    /**
+     * @param \Jihoun\Calendar\Property\LastModified $lastMod
+     * @return $this
+     */
+    public function &setLastModified(Property\LastModified $lastMod)
     {
         $this->lastMod = $lastMod;
         return $this;
     }
 
-    public function &setLocation(\Jihoun\Calendar\Property\Location $location)
+    /**
+     * @param \Jihoun\Calendar\Property\Location $location
+     * @return $this
+     */
+    public function &setLocation(Property\Location $location)
     {
         $this->location = $location;
         return $this;
     }
-    
-    public function &setOrganizer(\Jihoun\Calendar\Property\Organizer $organizer)
+
+    /**
+     * @param \Jihoun\Calendar\Property\Organizer $organizer
+     * @return $this
+     */
+    public function &setOrganizer(Property\Organizer $organizer)
     {
         $this->organizer = $organizer;
         return $this;
     }
 
-    public function &setPriority(\Jihoun\Calendar\Property\Priority $priority)
+    /**
+     * @param \Jihoun\Calendar\Property\Priority $priority
+     * @return $this
+     */
+    public function &setPriority(Property\Priority $priority)
     {
         $this->priority = $priority;
         return $this;
     }
 
-    public function &setSequenceNumber(\Jihoun\Calendar\Property\SequenceNumber $seq)
+    /**
+     * @param \Jihoun\Calendar\Property\SequenceNumber $seq
+     * @return $this
+     */
+    public function &setSequenceNumber(Property\SequenceNumber $seq)
     {
         $this->seq = $seq;
         return $this;
     }
-    
-    public function &setStatus(\Jihoun\Calendar\Property\EventStatus $status)
+
+    /**
+     * @param \Jihoun\Calendar\Property\EventStatus $status
+     * @return $this
+     */
+    public function &setStatus(Property\EventStatus $status)
     {
         $this->status = $status;
         return $this;
     }
-    
-    public function &setSummary(\Jihoun\Calendar\Property\Summary $summary)
+
+    /**
+     * @param \Jihoun\Calendar\Property\Summary $summary
+     * @return $this
+     */
+    public function &setSummary(Property\Summary $summary)
     {
         $this->summary = $summary;
         return $this;
     }
 
-    public function &setTimeTransparency(\Jihoun\Calendar\Property\TimeTransparency $transp)
+    /**
+     * @param \Jihoun\Calendar\Property\TimeTransparency $transp
+     * @return $this
+     */
+    public function &setTimeTransparency(Property\TimeTransparency $transp)
     {
         $this->transp = $transp;
         return $this;
     }
-    
-    public function &setUrl(\Jihoun\Calendar\Property\Url $url)
+
+    /**
+     * @param \Jihoun\Calendar\Property\Url $url
+     * @return $this
+     */
+    public function &setUrl(Property\Url $url)
     {
         $this->url = $url;
         return $this;
     }
-    
-    public function &setRecurrenceId(\Jihoun\Calendar\Property\RecurrenceId $recurid)
+
+    /**
+     * @param \Jihoun\Calendar\Property\RecurrenceId $recurid
+     * @return $this
+     */
+    public function &setRecurrenceId(Property\RecurrenceId $recurid)
     {
         $this->recurid = $recurid;
         return $this;
     }
 
-    public function &setRecurrenceRule(\Jihoun\Calendar\Property\RecurrenceRule $rrule)
+    /**
+     * @param Property\RecurrenceRule $rrule
+     * @return $this
+     */
+    public function &setRecurrenceRule(Property\RecurrenceRule $rrule)
     {
         $this->rrule = $rrule;
         return $this;
     }
 
-    public function &setDateTimeEnd(\Jihoun\Calendar\Property\DateTimeEnd $dtend)
+    /**
+     * @param Property\DateTimeEnd $dtend
+     * @return $this
+     */
+    public function &setDateTimeEnd(Property\DateTimeEnd $dtend)
     {
         $this->dtend = $dtend;
         return $this;
     }
 
-    public function &setDuration(\Jihoun\Calendar\Property\Duration $duration)
+    /**
+     * @param Property\Duration $duration
+     * @return $this
+     */
+    public function &setDuration(Property\Duration $duration)
     {
         $this->duration = $duration;
         return $this;
     }
 
-    public function &addAttachment(\Jihoun\Calendar\Property\Attachment $attach)
+    /**
+     * @param Property\Attachment $attach
+     * @return $this
+     */
+    public function &addAttachment(Property\Attachment $attach)
     {
         $this->attachList[] = $attach;
         return $this;
     }
 
-    public function &addAttendee(\Jihoun\Calendar\Property\Attendee $attendee)
+    /**
+     * @param Property\Attendee $attendee
+     * @return $this
+     */
+    public function &addAttendee(Property\Attendee $attendee)
     {
         $this->attendeeList[] = $attendee;
         return $this;
     }
 
-    public function &addCategories(\Jihoun\Calendar\Property\Categories $categories)
+    /**
+     * @param Property\Categories $categories
+     * @return $this
+     */
+    public function &addCategories(Property\Categories $categories)
     {
         $this->categoriesList[] = $categories;
         return $this;
     }
 
-    public function &addComment(\Jihoun\Calendar\Property\Comment $comment)
+    /**
+     * @param Property\Comment $comment
+     * @return $this
+     */
+    public function &addComment(Property\Comment $comment)
     {
         $this->commentList[] = $comment;
         return $this;
     }
 
-    public function &addContact(\Jihoun\Calendar\Property\Contact $contact)
+    /**
+     * @param Property\Contact $contact
+     * @return $this
+     */
+    public function &addContact(Property\Contact $contact)
     {
         $this->contactList[] = $contact;
         return $this;
     }
 
-    public function &addExceptionDateTimes(\Jihoun\Calendar\Property\ExceptionDateTimes $exDate)
+    /**
+     * @param Property\ExceptionDateTimes $exDate
+     * @return $this
+     */
+    public function &addExceptionDateTimes(Property\ExceptionDateTimes $exDate)
     {
         $this->exdateList[] = $exDate;
         return $this;
     }
 
-    public function &addRequestStatus(\Jihoun\Calendar\Property\RequestStatus $rstatus)
+    /**
+     * @param Property\RequestStatus $rstatus
+     * @return $this
+     */
+    public function &addRequestStatus(Property\RequestStatus $rstatus)
     {
         $this->rstatusList[] = $rstatus;
         return $this;
     }
-    
-    public function &addRelatedTo(\Jihoun\Calendar\Property\RelatedTo $related)
+
+    /**
+     * @param Property\RelatedTo $related
+     * @return $this
+     */
+    public function &addRelatedTo(Property\RelatedTo $related)
     {
         $this->relatedList[] = $related;
         return $this;
     }
-    
-    public function &addResources(\Jihoun\Calendar\Property\Resources $resources)
+
+    /**
+     * @param Property\Resources $resources
+     * @return $this
+     */
+    public function &addResources(Property\Resources $resources)
     {
         $this->resourcesList[] = $resources;
         return $this;
     }
-    
-    public function &addRecurrenceDateTimes(\Jihoun\Calendar\Property\RecurrenceDateTimes $rDate)
+
+    /**
+     * @param Property\RecurrenceDateTimes $rDate
+     * @return $this
+     */
+    public function &addRecurrenceDateTimes(Property\RecurrenceDateTimes $rDate)
     {
         $this->rdateList[] = $rDate;
         return $this;
     }
-    
-    public function &addXProperty(\Jihoun\Calendar\Property\XProperty $xProp)
+
+    /**
+     * @param Property\XProperty $xProp
+     * @return $this
+     */
+    public function &addXProperty(Property\XProperty $xProp)
     {
         $this->xPropList[] = $xProp;
         return $this;
     }
 
-    public function &addIanaProperty(\Jihoun\Calendar\Property\IanaProperty $ianaProp)
+    /**
+     * @param Property\IanaProperty $ianaProp
+     * @return $this
+     */
+    public function &addIanaProperty(Property\IanaProperty $ianaProp)
     {
         $this->ianaPropList[] = $ianaProp;
         return $this;

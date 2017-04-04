@@ -1,6 +1,9 @@
 <?php
 namespace Jihoun\Calendar;
 
+use Jihoun\Calendar\Property as Property;
+use Jihoun\Calendar\Component as Component;
+
 class Calendar
 {
     protected $prodid;
@@ -10,24 +13,41 @@ class Calendar
     
     private $componentList = array();
 
+    /**
+     * Calendar constructor.
+     * @param string $company
+     * @param string $product
+     * @param string $lang
+     */
     public function __construct($company = 'triedge', $product = 'calendar', $lang = 'en')
     {
-        $this->prodid = new \Jihoun\Calendar\Property\ProductIdentifier($company, $product, $lang);
-        $this->version = new \Jihoun\Calendar\Property\Version();
+        $this->prodid = new Property\ProductIdentifier($company, $product, $lang);
+        $this->version = new Property\Version();
     }
 
-    public function &addComponent(\Jihoun\Calendar\Component\IComponent $component)
+    /**
+     * @param Component\IComponent $component
+     * @return $this
+     */
+    public function &addComponent(Component\IComponent $component)
     {
         $this->componentList[] = $component;
         return $this;
     }
 
-    public function &addTimeZone(\Jihoun\Calendar\Component\TimeZone $tz)
+    /**
+     * @param Component\TimeZone $tz
+     * @return $this
+     */
+    public function &addTimeZone(Component\TimeZone $tz)
     {
         $this->componentList[] = $tz;
         return $this;
     }
 
+    /**
+     * @return string
+     */
     public function toString()
     {
         $res = "BEGIN:VCALENDAR\n";

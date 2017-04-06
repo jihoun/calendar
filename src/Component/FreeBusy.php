@@ -1,6 +1,8 @@
 <?php
 namespace Jihoun\Calendar\Component;
 
+use \Jihoun\Calendar\Property as Property;
+
 /**
  * Provide a grouping of component properties that describe either a request for free/busy time, describe a response to
  * a request for free/busy time, or describe a published set of busy time.
@@ -27,12 +29,18 @@ class FreeBusy extends IComponent
     protected $xPropList = array();
     protected $ianaPropList = array();
 
+    /**
+     * FreeBusy constructor.
+     */
     public function __construct()
     {
-        $this->dtstamp = new \Jihoun\Calendar\Property\DateTimeStamp();
-        $this->uid = new \Jihoun\Calendar\Property\Uid();
+        $this->dtstamp = new Property\DateTimeStamp();
+        $this->uid = new Property\Uid();
     }
 
+    /**
+     * @return array
+     */
     private function getProperties()
     {
         $res = array(
@@ -56,6 +64,9 @@ class FreeBusy extends IComponent
         return $res;
     }
 
+    /**
+     * @return string
+     */
     public function toString()
     {
         $res = "BEGIN:VFREEBUSY\n";
@@ -68,63 +79,119 @@ class FreeBusy extends IComponent
         return $res;
     }
 
+    /**
+     * @return \Jihoun\Calendar\Property\Uid
+     */
     public function &getUid()
     {
         return $this->uid;
     }
 
-    public function &setContact(\Jihoun\Calendar\Property\Contact $contact)
+    /**
+     * @param \Jihoun\Calendar\Property\Contact $contact
+     * @return $this
+     */
+    public function &setContact(Property\Contact $contact)
     {
         $this->contact = $contact;
         return $this;
     }
-    public function &setDateTimeStart(\Jihoun\Calendar\Property\DateTimeStart $dtstart)
+
+    /**
+     * @param \Jihoun\Calendar\Property\DateTimeStart $dtstart
+     * @return $this
+     */
+    public function &setDateTimeStart(Property\DateTimeStart $dtstart)
     {
         $this->dtstart = $dtstart;
         return $this;
     }
-    public function &setDateTimeEnd(\Jihoun\Calendar\Property\DateTimeEnd $dtend)
+
+    /**
+     * @param \Jihoun\Calendar\Property\DateTimeEnd $dtend
+     * @return $this
+     */
+    public function &setDateTimeEnd(Property\DateTimeEnd $dtend)
     {
         $this->dtend = $dtend;
         return $this;
     }
-    public function &setOrganizer(\Jihoun\Calendar\Property\Organizer $organizer)
+
+    /**
+     * @param \Jihoun\Calendar\Property\Organizer $organizer
+     * @return $this
+     */
+    public function &setOrganizer(Property\Organizer $organizer)
     {
         $this->organizer = $organizer;
         return $this;
     }
-    public function &setUrl(\Jihoun\Calendar\Property\Url $url)
+
+    /**
+     * @param \Jihoun\Calendar\Property\Url $url
+     * @return $this
+     */
+    public function &setUrl(Property\Url $url)
     {
         $this->url = $url;
         return $this;
     }
 
-    public function &addAttendee(\Jihoun\Calendar\Property\Attendee $attendee)
+    /**
+     * @param \Jihoun\Calendar\Property\Attendee $attendee
+     * @return $this
+     */
+    public function &addAttendee(Property\Attendee $attendee)
     {
         $this->attendeeList[] = $attendee;
         return $this;
     }
-    public function &addComment(\Jihoun\Calendar\Property\Comment $comment)
+
+    /**
+     * @param \Jihoun\Calendar\Property\Comment $comment
+     * @return $this
+     */
+    public function &addComment(Property\Comment $comment)
     {
         $this->commentList[] = $comment;
         return $this;
     }
-    public function &addFreeBusy(\Jihoun\Calendar\Property\FreeBusyTime $freeBusy)
+
+    /**
+     * @param \Jihoun\Calendar\Property\FreeBusyTime $freeBusy
+     * @return $this
+     */
+    public function &addFreeBusy(Property\FreeBusyTime $freeBusy)
     {
         $this->freebusyList[] = $freeBusy;
         return $this;
     }
-    public function &addRequestStatus(\Jihoun\Calendar\Property\RequestStatus $rstatus)
+
+    /**
+     * @param \Jihoun\Calendar\Property\RequestStatus $rstatus
+     * @return $this
+     */
+    public function &addRequestStatus(Property\RequestStatus $rstatus)
     {
         $this->rstatusList[] = $rstatus;
         return $this;
     }
-    public function &addXProperty(\Jihoun\Calendar\Property\XProperty $xProp)
+
+    /**
+     * @param \Jihoun\Calendar\Property\XProperty $xProp
+     * @return $this
+     */
+    public function &addXProperty(Property\XProperty $xProp)
     {
         $this->xPropList[] = $xProp;
         return $this;
     }
-    public function &addIanaProperty(\Jihoun\Calendar\Property\IanaProperty $ianaProp)
+
+    /**
+     * @param \Jihoun\Calendar\Property\IanaProperty $ianaProp
+     * @return $this
+     */
+    public function &addIanaProperty(Property\IanaProperty $ianaProp)
     {
         $this->ianaPropList[] = $ianaProp;
         return $this;

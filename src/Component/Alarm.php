@@ -9,7 +9,7 @@ class Alarm
 {
     /**
      * @todo implement
-     * @return string|null
+     * @return string
      */
     public function toString()
     {

@@ -62,12 +62,18 @@ class Event extends IComponent
     protected $xPropList = array();
     protected $ianaPropList = array();
 
+    /**
+     * Event constructor.
+     */
     public function __construct()
     {
         $this->dtstamp = new Property\DateTimeStamp();
         $this->uid = new Property\Uid();
     }
 
+    /**
+     * @return array
+     */
     private function getProperties()
     {
         $res = array (
@@ -114,6 +120,9 @@ class Event extends IComponent
         return $res;
     }
 
+    /**
+     * @return string
+     */
     public function toString()
     {
         $res = "BEGIN:VEVENT\n";

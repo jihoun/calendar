@@ -1,6 +1,10 @@
 <?php
 namespace Jihoun\Calendar\Property;
 
+/**
+ * Class TimeZoneProperty
+ * @package Jihoun\Calendar\Property
+ */
 class TimeZoneProperty
 {
     // The following are REQUIRED,
@@ -19,13 +23,20 @@ class TimeZoneProperty
     protected $xPropList = array();
     protected $ianaPropList = array();
 
-    public function __construct(\Jihoun\Calendar\Property\DateTimeStart $dtstart)
+    /**
+     * TimeZoneProperty constructor.
+     * @param DateTimeStart $dtstart
+     */
+    public function __construct(DateTimeStart $dtstart)
     {
         $this->dtstart = $dtstart;
-        $this->tzoffsetto = new \Jihoun\Calendar\Property\TimeZoneOffsetTo();
-        $this->tzoffsetfrom = new \Jihoun\Calendar\Property\TimeZoneOffsetFrom();
+        $this->tzoffsetto = new TimeZoneOffsetTo();
+        $this->tzoffsetfrom = new TimeZoneOffsetFrom();
     }
 
+    /**
+     * @return IProperty[]
+     */
     private function getProperties()
     {
         $res = array(
@@ -45,6 +56,9 @@ class TimeZoneProperty
         return $res;
     }
 
+    /**
+     * @return string
+     */
     public function toString()
     {
         $res = '';

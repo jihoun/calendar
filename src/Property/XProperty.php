@@ -8,7 +8,6 @@
 
 namespace Jihoun\Calendar\Property;
 
-
 class XProperty extends IProperty
 {
     public function getValue()

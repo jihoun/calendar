@@ -14,7 +14,8 @@ abstract class IText extends IProperty
 
     public function getValue()
     {
-        //TODO sanitize text
-        return $this->text;
+        $text = $this->text;
+        $text = str_replace("\n", '\n', $text);
+        return $text;
     }
 }

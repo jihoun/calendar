@@ -38,7 +38,9 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
             ->setDateTimeStart(new Property\DateTimeStart(new \DateTime()))
             ->setClassification(new Property\Classification())
             ->setDateTimeCreated(new Property\DateTimeCreated())
-            ->setDescription(new Property\Description('Very very lengthy description'))
+            ->setDescription(new Property\Description('Very very lengthy description
+            with a line break and some other 
+            one'))
             ->setGeographicPosition(new Property\GeographicPosition(1.5, 101))
             ->setLastModified(new Property\LastModified(new \DateTime()))
             ->setLocation(new Property\Location('in the office'))

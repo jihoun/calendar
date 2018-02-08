@@ -1,7 +1,9 @@
 <?php
 namespace Jihoun\Calendar\Component;
 
+use Jihoun\Calendar\Parameter\TimeZoneIdentifier;
 use \Jihoun\Calendar\Property as Property;
+
 /**
  * Provide a grouping of component properties that defines a time zone.
  */
@@ -40,7 +42,7 @@ class TimeZone
      */
     public function __construct()
     {
-        $this->tzid = new \Jihoun\Calendar\Parameter\TimeZoneIdentifier();
+        $this->tzid = new TimeZoneIdentifier();
     }
 
     /**

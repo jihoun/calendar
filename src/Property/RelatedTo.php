@@ -1,6 +1,8 @@
 <?php
 namespace Jihoun\Calendar\Property;
 
+use Jihoun\Calendar\Component\IComponent;
+
 /**
  * This property is used to represent a relationship or reference between one
  * calendar component and another.
@@ -11,12 +13,12 @@ class RelatedTo extends IProperty
 
     protected $relatedTo = null;
     
-    public function __construct(\Jihoun\Calendar\Component\IComponent $comp)
+    public function __construct(IComponent $comp)
     {
         $this->relatedTo = $comp;
     }
 
-    public function getValue()
+    public function getValue(): ?string
     {
         return $this->relatedTo->getUid()->getValue();
     }

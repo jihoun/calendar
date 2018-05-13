@@ -1,6 +1,8 @@
 <?php
 namespace Jihoun\Calendar\Property;
 
+use Jihoun\Calendar\Parameter\ValueDataTypes;
+
 /**
  * This property defines the date and time that a to-do is expected to be
  * completed.
@@ -15,18 +17,18 @@ class DateTimeDue extends IDateTime
     protected $valueparam = null; //"VALUE" "=" ("DATE-TIME" / "DATE")) /
     protected $tzidparam = null;
 
-    public function __construct(\DateTime $dt, $fullDay = false)
+    public function __construct(\DateTimeInterface $dt, bool $fullDay = false)
     {
         parent::__construct($dt);
         $this->fullDay = boolval($fullDay);
         if ($fullDay) {
-            $this->valueparam = \Jihoun\Calendar\Parameter\ValueDataTypes::date();
+            $this->valueparam = ValueDataTypes::date();
         } else {
-            $this->valueparam = \Jihoun\Calendar\Parameter\ValueDataTypes::DateTime();
+            $this->valueparam = ValueDataTypes::DateTime();
         }
     }
 
-    public function getValue()
+    public function getValue(): ?string
     {
         if (!$this->fullDay) {
             return parent::getValue();
@@ -34,8 +36,8 @@ class DateTimeDue extends IDateTime
         return $this->dateTime->format('Ymd');
     }
 
-    public function getParams()
+    public function getParams(): array
     {
-        return array($this->valueparam, $this->tzidparam);
+        return [$this->valueparam, $this->tzidparam];
     }
 }

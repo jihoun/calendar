@@ -1,28 +1,25 @@
 {
-    "name": "jihoun/calendar",
-    "description":"Build calendar (.ics) files.",
-    "type": "library",
-    "authors": [
-        {
-            "name": "Nicolas Lagier",
-            "email": "nicolas.lagier@gmail.com"
-        }
-    ],
-    "require": {
-        "php": ">=5.3.3",
-        "symfony/polyfill-php55":"^1.3.0"
-    },
-    "require-dev":{
-        "pdepend/pdepend" : "^2.0.4",
-        "phpunit/phpunit": "^4.8.0",
-        "phploc/phploc": "^2.1.5",
-        "phpmd/phpmd" : "@stable",
-        "sami/sami": "^3.0.0",
-        "sebastian/phpcpd": "^2.0.1",
-        "squizlabs/php_codesniffer":"^2.8.1",
-        "codeclimate/php-test-reporter": "^0.3.2"
-    },
-    "autoload": {
-        "psr-4": { "Jihoun\\Calendar\\": "src/" }
+  "name": "jihoun/calendar",
+  "description": "Build calendar (.ics) files.",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Nicolas Lagier",
+      "email": "nicolas.lagier@gmail.com"
     }
+  ],
+  "require": {
+    "php": ">=7.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.1.5",
+    "phpmd/phpmd": "^2.6.0",
+    "squizlabs/php_codesniffer": "^3.2.3",
+    "codeclimate/php-test-reporter": "^0.4.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Jihoun\\Calendar\\": "src/"
+    }
+  }
 }

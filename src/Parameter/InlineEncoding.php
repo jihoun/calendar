@@ -10,21 +10,21 @@ class InlineEncoding extends IParameter
 
     protected $value;
 
-    public function getValue()
+    public function getValue(): ?string
     {
         return $this->value;
     }
-    protected function __construct($value)
+    protected function __construct(string $value)
     {
         $this->value = $value;
     }
 
-    public static function eightbits()
+    public static function eightbits(): InlineEncoding
     {
         return new static(static::ENC_8BIT);
     }
 
-    public static function base64()
+    public static function base64(): InlineEncoding
     {
         return new static(static::ENC_BASE64);
     }

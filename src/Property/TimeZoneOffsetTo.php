@@ -9,7 +9,7 @@ class TimeZoneOffsetTo extends IProperty
 {
     const NAME = 'TZOFFSETTO';
     //TODO
-    public function getValue()
+    public function getValue(): ?string
     {
         //TODO
         return null;

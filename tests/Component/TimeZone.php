@@ -4,8 +4,9 @@ namespace Test\Jihoun\Calendar\Component;
 
 use \Jihoun\Calendar\Component as Component;
 use \Jihoun\Calendar\Property as Property;
+use PHPUnit\Framework\TestCase;
 
-class TimeZone extends \PHPUnit_Framework_TestCase
+class TimeZone extends TestCase
 {
     public function testTimeZone()
     {

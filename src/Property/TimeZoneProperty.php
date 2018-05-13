@@ -17,11 +17,11 @@ class TimeZoneProperty
     protected $rrule = null;
     // The following are OPTIONAL,
     // and MAY occur more than once.
-    protected $commentList = array();
-    protected $rdateList = array();
-    protected $tznameList = array();
-    protected $xPropList = array();
-    protected $ianaPropList = array();
+    protected $commentList = [];
+    protected $rdateList = [];
+    protected $tznameList = [];
+    protected $xPropList = [];
+    protected $ianaPropList = [];
 
     /**
      * TimeZoneProperty constructor.
@@ -39,12 +39,12 @@ class TimeZoneProperty
      */
     private function getProperties()
     {
-        $res = array(
+        $res = [
             $this->dtstart,
             $this->tzoffsetto,
             $this->tzoffsetfrom,
             $this->rrule
-        );
+        ];
         $res = array_merge(
             $res,
             $this->commentList,

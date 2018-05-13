@@ -9,8 +9,8 @@ class DateTimeEnd extends IDateTime
 {
     const NAME = 'DTEND';
 
-    public function getParams()
+    public function getParams(): array
     {
-        return array($this->valueparam, $this->tzidparam);
+        return [$this->valueparam, $this->tzidparam];
     }
 }

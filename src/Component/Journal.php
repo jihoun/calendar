@@ -29,18 +29,18 @@ class Journal extends IComponent
     protected $rrule = null;
     // The following are OPTIONAL,
     // and MAY occur more than once.
-    protected $attachList = array();
-    protected $attendeeList = array();
-    protected $categoriesList = array();
-    protected $commentList = array();
-    protected $contactList = array();
-    protected $descriptionList = array();
-    protected $exdateList = array();
-    protected $relatedList = array();
-    protected $rdateList = array();
-    protected $rstatusList = array();
-    protected $xPropList = array();
-    protected $ianaPropList = array();
+    protected $attachList = [];
+    protected $attendeeList = [];
+    protected $categoriesList = [];
+    protected $commentList = [];
+    protected $contactList = [];
+    protected $descriptionList = [];
+    protected $exdateList = [];
+    protected $relatedList = [];
+    protected $rdateList = [];
+    protected $rstatusList = [];
+    protected $xPropList = [];
+    protected $ianaPropList = [];
 
     /**
      * Journal constructor.
@@ -54,9 +54,9 @@ class Journal extends IComponent
     /**
      * @return array
      */
-    private function getProperties()
+    private function getProperties(): array
     {
-        $res = array(
+        $res = [
             $this->dtstamp,
             $this->uid,
             $this->class,
@@ -70,7 +70,7 @@ class Journal extends IComponent
             $this->summary,
             $this->url,
             $this->rrule
-        );
+        ];
         $res = array_merge(
             $res,
             $this->attachList,
@@ -92,7 +92,7 @@ class Journal extends IComponent
     /**
      * @return string
      */
-    public function toString()
+    public function toString(): string
     {
         $res = "BEGIN:VJOURNAL\n";
         foreach ($this->getProperties() as $property) {
@@ -107,7 +107,7 @@ class Journal extends IComponent
     /**
      * @return \Jihoun\Calendar\Property\Uid
      */
-    public function &getUid()
+    public function &getUid(): Property\Uid
     {
         return $this->uid;
     }
@@ -116,7 +116,7 @@ class Journal extends IComponent
      * @param \Jihoun\Calendar\Property\Classification $class
      * @return $this
      */
-    public function &setClassification(Property\Classification $class)
+    public function &setClassification(Property\Classification $class): Journal
     {
         $this->class = $class;
         return $this;
@@ -126,7 +126,7 @@ class Journal extends IComponent
      * @param \Jihoun\Calendar\Property\DateTimeCreated $created
      * @return $this
      */
-    public function &setDateTimeCreated(Property\DateTimeCreated $created)
+    public function &setDateTimeCreated(Property\DateTimeCreated $created): Journal
     {
         $this->created = $created;
         return $this;
@@ -136,7 +136,7 @@ class Journal extends IComponent
      * @param \Jihoun\Calendar\Property\DateTimeStart $dtStart
      * @return $this
      */
-    public function &setDateTimestart(Property\DateTimeStart $dtStart)
+    public function &setDateTimestart(Property\DateTimeStart $dtStart): Journal
     {
         $this->dtstart = $dtStart;
         return $this;
@@ -146,7 +146,7 @@ class Journal extends IComponent
      * @param \Jihoun\Calendar\Property\LastModified $lastMod
      * @return $this
      */
-    public function &setLastModified(Property\LastModified $lastMod)
+    public function &setLastModified(Property\LastModified $lastMod): Journal
     {
         $this->lastMod = $lastMod;
         return $this;
@@ -156,7 +156,7 @@ class Journal extends IComponent
      * @param \Jihoun\Calendar\Property\Organizer $organizer
      * @return $this
      */
-    public function &setOrganizer(Property\Organizer $organizer)
+    public function &setOrganizer(Property\Organizer $organizer): Journal
     {
         $this->organizer = $organizer;
         return $this;
@@ -166,7 +166,7 @@ class Journal extends IComponent
      * @param \Jihoun\Calendar\Property\RecurrenceId $recurid
      * @return $this
      */
-    public function &setRecurrenceId(Property\RecurrenceId $recurid)
+    public function &setRecurrenceId(Property\RecurrenceId $recurid): Journal
     {
         $this->recurid = $recurid;
         return $this;
@@ -176,7 +176,7 @@ class Journal extends IComponent
      * @param \Jihoun\Calendar\Property\SequenceNumber $seq
      * @return $this
      */
-    public function &setSequenceNumber(Property\SequenceNumber $seq)
+    public function &setSequenceNumber(Property\SequenceNumber $seq): Journal
     {
         $this->seq = $seq;
         return $this;
@@ -186,7 +186,7 @@ class Journal extends IComponent
      * @param \Jihoun\Calendar\Property\JournalStatus $status
      * @return $this
      */
-    public function &setStatus(Property\JournalStatus $status)
+    public function &setStatus(Property\JournalStatus $status): Journal
     {
         $this->status = $status;
         return $this;
@@ -196,7 +196,7 @@ class Journal extends IComponent
      * @param \Jihoun\Calendar\Property\Summary $summary
      * @return $this
      */
-    public function &setSummary(Property\Summary $summary)
+    public function &setSummary(Property\Summary $summary): Journal
     {
         $this->summary = $summary;
         return $this;
@@ -206,7 +206,7 @@ class Journal extends IComponent
      * @param \Jihoun\Calendar\Property\Url $url
      * @return $this
      */
-    public function &setUrl(Property\Url $url)
+    public function &setUrl(Property\Url $url): Journal
     {
         $this->url = $url;
         return $this;
@@ -216,7 +216,7 @@ class Journal extends IComponent
      * @param \Jihoun\Calendar\Property\RecurrenceRule $rrule
      * @return $this
      */
-    public function &setRecurrenceRule(Property\RecurrenceRule $rrule)
+    public function &setRecurrenceRule(Property\RecurrenceRule $rrule): Journal
     {
         $this->rrule = $rrule;
         return $this;
@@ -226,7 +226,7 @@ class Journal extends IComponent
      * @param \Jihoun\Calendar\Property\Attachment $attach
      * @return $this
      */
-    public function &addAttachment(Property\Attachment $attach)
+    public function &addAttachment(Property\Attachment $attach): Journal
     {
         $this->attachList[] = $attach;
         return $this;
@@ -236,7 +236,7 @@ class Journal extends IComponent
      * @param \Jihoun\Calendar\Property\Attendee $attendee
      * @return $this
      */
-    public function &addAttendee(Property\Attendee $attendee)
+    public function &addAttendee(Property\Attendee $attendee): Journal
     {
         $this->attendeeList[] = $attendee;
         return $this;
@@ -246,7 +246,7 @@ class Journal extends IComponent
      * @param \Jihoun\Calendar\Property\Categories $categories
      * @return $this
      */
-    public function &addCategories(Property\Categories $categories)
+    public function &addCategories(Property\Categories $categories): Journal
     {
         $this->categoriesList[] = $categories;
         return $this;
@@ -256,7 +256,7 @@ class Journal extends IComponent
      * @param \Jihoun\Calendar\Property\Comment $comment
      * @return $this
      */
-    public function &addComment(Property\Comment $comment)
+    public function &addComment(Property\Comment $comment): Journal
     {
         $this->commentList[] = $comment;
         return $this;
@@ -266,7 +266,7 @@ class Journal extends IComponent
      * @param Property\Contact $contact
      * @return $this
      */
-    public function &addContact(Property\Contact $contact)
+    public function &addContact(Property\Contact $contact): Journal
     {
         $this->contactList[] = $contact;
         return $this;
@@ -276,7 +276,7 @@ class Journal extends IComponent
      * @param \Jihoun\Calendar\Property\Description $description
      * @return $this
      */
-    public function &addDescription(Property\Description $description)
+    public function &addDescription(Property\Description $description): Journal
     {
         $this->descriptionList[] = $description;
         return $this;
@@ -286,7 +286,7 @@ class Journal extends IComponent
      * @param \Jihoun\Calendar\Property\ExceptionDateTimes $exdate
      * @return $this
      */
-    public function &addExceptionDateTimes(Property\ExceptionDateTimes $exdate)
+    public function &addExceptionDateTimes(Property\ExceptionDateTimes $exdate): Journal
     {
         $this->exdateList[] = $exdate;
         return $this;
@@ -296,7 +296,7 @@ class Journal extends IComponent
      * @param \Jihoun\Calendar\Property\RelatedTo $related
      * @return $this
      */
-    public function &addRelatedTo(Property\RelatedTo $related)
+    public function &addRelatedTo(Property\RelatedTo $related): Journal
     {
         $this->relatedList[] = $related;
         return $this;
@@ -306,7 +306,7 @@ class Journal extends IComponent
      * @param \Jihoun\Calendar\Property\RecurrenceDateTimes $rdate
      * @return $this
      */
-    public function &addRecurrenceDateTimes(Property\RecurrenceDateTimes $rdate)
+    public function &addRecurrenceDateTimes(Property\RecurrenceDateTimes $rdate): Journal
     {
         $this->rdateList[] = $rdate;
         return $this;
@@ -316,7 +316,7 @@ class Journal extends IComponent
      * @param \Jihoun\Calendar\Property\RequestStatus $rstatus
      * @return $this
      */
-    public function &addRequestStatus(Property\RequestStatus $rstatus)
+    public function &addRequestStatus(Property\RequestStatus $rstatus): Journal
     {
         $this->rstatusList[] = $rstatus;
         return $this;
@@ -326,7 +326,7 @@ class Journal extends IComponent
      * @param \Jihoun\Calendar\Property\XProperty $xProp
      * @return $this
      */
-    public function &addXProperty(Property\XProperty $xProp)
+    public function &addXProperty(Property\XProperty $xProp): Journal
     {
         $this->xPropList[] = $xProp;
         return $this;
@@ -336,7 +336,7 @@ class Journal extends IComponent
      * @param \Jihoun\Calendar\Property\IanaProperty $ianaProp
      * @return $this
      */
-    public function &addIanaProperty(Property\IanaProperty $ianaProp)
+    public function &addIanaProperty(Property\IanaProperty $ianaProp): Journal
     {
         $this->ianaPropList[] = $ianaProp;
         return $this;

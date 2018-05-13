@@ -17,7 +17,7 @@ class Url extends IProperty
         }
     }
 
-    public function getValue()
+    public function getValue(): ?string
     {
         return filter_var($this->url, FILTER_VALIDATE_URL) ? $this->url : null;
     }

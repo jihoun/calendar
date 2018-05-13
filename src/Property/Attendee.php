@@ -1,4 +1,5 @@
 <?php
+
 namespace Jihoun\Calendar\Property;
 
 /**
@@ -7,7 +8,7 @@ namespace Jihoun\Calendar\Property;
 class Attendee extends IProperty
 {
     const NAME = 'ATTENDEE';
-    
+
     protected $mail;
 
     protected $cutypeparam = null;
@@ -22,25 +23,25 @@ class Attendee extends IProperty
     protected $dirparam = null;
     protected $languageparam = null;
 
-    public function __construct($email)
+    public function __construct(string $email)
     {
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $this->email = $email;
+            $this->mail = $email;
         }
     }
 
-    public function getValue()
+    public function getValue(): ?string
     {
-        if (filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
-            return 'mailto:'.$this->email;
-        } else {
-            return null;
+        if (filter_var($this->mail, FILTER_VALIDATE_EMAIL)) {
+            return 'mailto:' . $this->mail;
         }
+
+        return null;
     }
 
-    public function getParams()
+    public function getParams(): array
     {
-        return array(
+        return [
             $this->cutypeparam,
             $this->memberparam,
             $this->roleparam,
@@ -52,6 +53,6 @@ class Attendee extends IProperty
             $this->cnparam,
             $this->dirparam,
             $this->languageparam
-        );
+        ];
     }
 }

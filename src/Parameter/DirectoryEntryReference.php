@@ -8,7 +8,7 @@ class DirectoryEntryReference extends IParameter
 {
     const NAME = 'DIR';
 
-    public function getValue()
+    public function getValue(): ?string
     {
         //TODO
         return null;

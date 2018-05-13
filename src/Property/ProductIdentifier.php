@@ -14,14 +14,14 @@ class ProductIdentifier extends IProperty
     protected $product;
     protected $lang;
 
-    public function __construct($company = 'triedge', $product = 'calendar', $lang = 'EN')
+    public function __construct(string $company = 'triedge', string $product = 'calendar', string $lang = 'EN')
     {
         $this->company = $company;
         $this->product = $product;
         $this->lang = $lang;
     }
 
-    public function getValue()
+    public function getValue(): ?string
     {
         return '-//'.$this->company.'//'.$this->product.'//'.$this->lang;
     }

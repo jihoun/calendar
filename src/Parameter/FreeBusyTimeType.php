@@ -8,7 +8,7 @@ class FreeBusyTimeType extends IParameter
 {
     const NAME = 'FBTYPE';
 
-    public function getValue()
+    public function getValue(): ?string
     {
         //TODO
         return null;

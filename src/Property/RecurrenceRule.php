@@ -24,7 +24,7 @@ class RecurrenceRule extends Iproperty
     // protected $BYSETPOS_ = null;
     // protected $WKST_ = null;
 
-    public function getValue()
+    public function getValue(): ?string
     {
         //TODO
         return null;

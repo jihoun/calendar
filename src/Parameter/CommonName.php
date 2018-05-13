@@ -8,7 +8,7 @@ class CommonName extends IParameter
 {
     const NAME = 'CN';
 
-    public function getValue()
+    public function getValue(): ?string
     {
         //TODO
         return null;

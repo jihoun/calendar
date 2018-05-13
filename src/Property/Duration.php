@@ -17,11 +17,11 @@ class Duration extends IProperty
     protected $seconds;
 
     public function __construct(
-        $weeks = 0,
-        $days = 0,
-        $hours = 0,
-        $minutes = 0,
-        $seconds = 0
+        int $weeks = 0,
+        int $days = 0,
+        int $hours = 0,
+        int $minutes = 0,
+        int $seconds = 0
     ) {
         $this->weeks = intval($weeks);
         $this->days = intval($days);
@@ -30,7 +30,7 @@ class Duration extends IProperty
         $this->seconds = intval($seconds);
     }
 
-    public function getValue()
+    public function getValue(): ?string
     {
         $res = null;
         if ($this->weeks!==0) {

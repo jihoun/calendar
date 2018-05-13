@@ -13,13 +13,13 @@ class Organizer extends Attendee
     protected $sentbyparam = null;
     protected $languageparam = null;
 
-    public function getParams()
+    public function getParams(): array
     {
-        return array(
+        return [
             $this->cnparam,
             $this->dirparam,
             $this->sentbyparam,
             $this->languageparam
-        );
+        ];
     }
 }

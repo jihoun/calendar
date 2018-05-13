@@ -8,7 +8,7 @@ class Language extends IParameter
 {
     const NAME = 'LANGUAGE';
 
-    public function getValue()
+    public function getValue(): ?string
     {
         //TODO
         return null;

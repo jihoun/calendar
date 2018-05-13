@@ -8,7 +8,7 @@ class RelationshipType extends IParameter
 {
     const NAME = 'RELTYPE';
 
-    public function getValue()
+    public function getValue(): ?string
     {
         //TODO
         return null;

@@ -10,7 +10,7 @@ namespace Jihoun\Calendar\Property;
 
 class IanaProperty extends IProperty
 {
-    public function getValue()
+    public function getValue(): ?string
     {
         return '';
     }

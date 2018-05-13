@@ -2,13 +2,89 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e2cb797-382f-4335-be7a-37120ad92068" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/calendar.iml" afterPath="$PROJECT_DIR$/.idea/calendar.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Component/TimeZone.php" afterPath="$PROJECT_DIR$/src/Component/TimeZone.php" />
-      <change beforePath="$PROJECT_DIR$/src/Property/IText.php" afterPath="$PROJECT_DIR$/src/Property/IText.php" />
-      <change beforePath="$PROJECT_DIR$/src/Property/IanaProperty.php" afterPath="$PROJECT_DIR$/src/Property/IanaProperty.php" />
-      <change beforePath="$PROJECT_DIR$/src/Property/XProperty.php" afterPath="$PROJECT_DIR$/src/Property/XProperty.php" />
-      <change beforePath="$PROJECT_DIR$/tests/Calendar.php" afterPath="$PROJECT_DIR$/tests/Calendar.php" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/calendar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/calendar.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calendar.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calendar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Alarm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Alarm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/FreeBusy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/FreeBusy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/IComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/IComponent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Journal.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Journal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/TimeZone.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/TimeZone.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/ToDo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/ToDo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parameter/AlarmTriggerRelationship.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/AlarmTriggerRelationship.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parameter/AlternateTextRepresentation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/AlternateTextRepresentation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parameter/CalendarUserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/CalendarUserType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parameter/CommonName.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/CommonName.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parameter/Delegatees.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/Delegatees.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parameter/Delegators.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/Delegators.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parameter/DirectoryEntryReference.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/DirectoryEntryReference.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parameter/FormatType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/FormatType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parameter/FreeBusyTimeType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/FreeBusyTimeType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parameter/GroupOfListMembership.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/GroupOfListMembership.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parameter/IParameter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/IParameter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parameter/InlineEncoding.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/InlineEncoding.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parameter/Language.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/Language.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parameter/ParticipationRole.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/ParticipationRole.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parameter/ParticipationStatus.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/ParticipationStatus.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parameter/RSVPExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/RSVPExpectation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parameter/RecurrenceIdentifierRange.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/RecurrenceIdentifierRange.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parameter/RelationshipType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/RelationshipType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parameter/SentBy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/SentBy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parameter/TimeZoneIdentifier.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/TimeZoneIdentifier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parameter/ValueDataTypes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/ValueDataTypes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/Attachment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Attachment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/Attendee.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Attendee.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/Categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Categories.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/Classification.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Classification.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/DateTimeCreated.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/DateTimeCreated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/DateTimeDue.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/DateTimeDue.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/DateTimeEnd.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/DateTimeEnd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/DateTimeStamp.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/DateTimeStamp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/DateTimeStart.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/DateTimeStart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/Description.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Description.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/Duration.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Duration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/EventStatus.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/EventStatus.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/ExceptionDateTimes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/ExceptionDateTimes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/FreeBusyTime.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/FreeBusyTime.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/GeographicPosition.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/GeographicPosition.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/IDateTime.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/IDateTime.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/IProperty.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/IProperty.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/IText.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/IText.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/ITextList.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/ITextList.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/IanaProperty.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/IanaProperty.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/Location.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Location.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/Organizer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Organizer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/PercentComplete.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/PercentComplete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/Priority.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Priority.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/ProductIdentifier.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/ProductIdentifier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/RecurrenceDateTimes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/RecurrenceDateTimes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/RecurrenceId.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/RecurrenceId.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/RecurrenceRule.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/RecurrenceRule.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/RelatedTo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/RelatedTo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/RequestStatus.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/RequestStatus.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/Resources.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Resources.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/SequenceNumber.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/SequenceNumber.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/Status.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Status.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/Summary.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Summary.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/TimeTransparency.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/TimeTransparency.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/TimeZoneName.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/TimeZoneName.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/TimeZoneOffsetFrom.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/TimeZoneOffsetFrom.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/TimeZoneOffsetTo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/TimeZoneOffsetTo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/TimeZoneProperty.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/TimeZoneProperty.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/Url.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Url.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Property/XProperty.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/XProperty.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Calendar.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Calendar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Component/Alarm.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Component/Alarm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Component/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Component/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Component/TimeZone.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Component/TimeZone.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Property/Duration.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Property/Duration.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,33 +101,60 @@
     <SUITE FILE_PATH="coverage/calendar$Duration.coverage" NAME="Duration Coverage Results" MODIFIED="1496713156733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file leaf-file-name="Calendar.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Calendar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="34" column="46" lean-forward="false" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
-              <folding />
+            <state relative-caret-position="424">
+              <caret line="154" column="47" selection-start-line="154" selection-start-column="47" selection-end-line="154" selection-end-column="47" />
+              <folding>
+                <element signature="e#40#69#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IText.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Property/IText.php">
+      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-              <folding />
+            <state relative-caret-position="170">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IanaProperty.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Property/IanaProperty.php">
+      <file leaf-file-name="Duration.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Property/Duration.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-              <folding />
+              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Alarm.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Component/Alarm.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Event.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Component/Event.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TimeZone.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Component/TimeZone.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -63,11 +166,17 @@
       <find>\Jihoun\Calendar\Property\</find>
       <find>\Jihoun\Calendar\Jihoun\Calendar\</find>
       <find>DESCRIPTION</find>
+      <find>\DateTime</find>
+      <find>calscale</find>
     </findStrings>
     <replaceStrings>
       <replace>Property\</replace>
       <replace>\Jihoun\Calendar\</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/Property</dir>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -75,19 +184,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Calendar.php" />
-        <option value="$PROJECT_DIR$/src/Component/Alarm.php" />
-        <option value="$PROJECT_DIR$/src/Component/Event.php" />
-        <option value="$PROJECT_DIR$/src/Component/FreeBusy.php" />
-        <option value="$PROJECT_DIR$/src/Component/IComponent.php" />
-        <option value="$PROJECT_DIR$/src/Component/Journal.php" />
-        <option value="$PROJECT_DIR$/src/Property/TimeZoneProperty.php" />
-        <option value="$PROJECT_DIR$/src/Property/XProperty.php" />
-        <option value="$PROJECT_DIR$/src/Component/TimeZone.php" />
-        <option value="$PROJECT_DIR$/tests/Calendar.php" />
-        <option value="$PROJECT_DIR$/src/Property/IText.php" />
-        <option value="$PROJECT_DIR$/tmp/sample.ics" />
+        <option value="$PROJECT_DIR$/src/Parameter/Language.php" />
+        <option value="$PROJECT_DIR$/src/Parameter/ParticipationRole.php" />
+        <option value="$PROJECT_DIR$/src/Parameter/ParticipationStatus.php" />
+        <option value="$PROJECT_DIR$/src/Parameter/RecurrenceIdentifierRange.php" />
+        <option value="$PROJECT_DIR$/src/Parameter/RelationshipType.php" />
+        <option value="$PROJECT_DIR$/src/Parameter/RSVPExpectation.php" />
+        <option value="$PROJECT_DIR$/src/Parameter/SentBy.php" />
+        <option value="$PROJECT_DIR$/src/Parameter/TimeZoneIdentifier.php" />
+        <option value="$PROJECT_DIR$/src/Parameter/ValueDataTypes.php" />
+        <option value="$PROJECT_DIR$/src/Property/GeographicPosition.php" />
         <option value="$PROJECT_DIR$/src/Property/IanaProperty.php" />
+        <option value="$PROJECT_DIR$/src/Property/XProperty.php" />
+        <option value="$PROJECT_DIR$/src/Property/Url.php" />
+        <option value="$PROJECT_DIR$/src/Property/TimeZoneOffsetTo.php" />
+        <option value="$PROJECT_DIR$/src/Property/TimeZoneOffsetFrom.php" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/src/Property/TimeZoneName.php" />
+        <option value="$PROJECT_DIR$/src/Property/TimeTransparency.php" />
+        <option value="$PROJECT_DIR$/src/Property/Summary.php" />
+        <option value="$PROJECT_DIR$/src/Property/Status.php" />
+        <option value="$PROJECT_DIR$/src/Property/SequenceNumber.php" />
+        <option value="$PROJECT_DIR$/src/Property/RelatedTo.php" />
+        <option value="$PROJECT_DIR$/src/Property/ExceptionDateTimes.php" />
+        <option value="$PROJECT_DIR$/src/Property/FreeBusyTime.php" />
+        <option value="$PROJECT_DIR$/src/Property/ITextList.php" />
+        <option value="$PROJECT_DIR$/src/Property/Location.php" />
+        <option value="$PROJECT_DIR$/src/Property/Organizer.php" />
+        <option value="$PROJECT_DIR$/src/Property/Priority.php" />
+        <option value="$PROJECT_DIR$/src/Property/ProductIdentifier.php" />
+        <option value="$PROJECT_DIR$/src/Property/RecurrenceDateTimes.php" />
+        <option value="$PROJECT_DIR$/src/Property/RecurrenceId.php" />
+        <option value="$PROJECT_DIR$/src/Property/RecurrenceRule.php" />
+        <option value="$PROJECT_DIR$/src/Property/RequestStatus.php" />
+        <option value="$PROJECT_DIR$/src/Property/Resources.php" />
+        <option value="$PROJECT_DIR$/src/Property/DateTimeCreated.php" />
+        <option value="$PROJECT_DIR$/src/Property/DateTimeStamp.php" />
+        <option value="$PROJECT_DIR$/src/Property/IDateTime.php" />
+        <option value="$PROJECT_DIR$/src/Property/IText.php" />
+        <option value="$PROJECT_DIR$/src/Calendar.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/src/Property/DateTimeDue.php" />
+        <option value="$PROJECT_DIR$/src/Property/PercentComplete.php" />
+        <option value="$PROJECT_DIR$/src/Property/Attachment.php" />
+        <option value="$PROJECT_DIR$/src/Component/ToDo.php" />
+        <option value="$PROJECT_DIR$/src/Parameter/IParameter.php" />
+        <option value="$PROJECT_DIR$/src/Property/IProperty.php" />
+        <option value="$PROJECT_DIR$/tests/Property/Duration.php" />
+        <option value="$PROJECT_DIR$/tests/Component/Alarm.php" />
+        <option value="$PROJECT_DIR$/tests/Component/Event.php" />
+        <option value="$PROJECT_DIR$/tests/Component/TimeZone.php" />
+        <option value="$PROJECT_DIR$/tests/Calendar.php" />
       </list>
     </option>
   </component>
@@ -97,40 +244,29 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/sebastian/phpcpd" />
       <path value="$PROJECT_DIR$/vendor/phpmd/phpmd" />
       <path value="$PROJECT_DIR$/vendor/guzzle/guzzle" />
       <path value="$PROJECT_DIR$/vendor/squizlabs/php_codesniffer" />
-      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
-      <path value="$PROJECT_DIR$/vendor/ircmaxell/password-compat" />
       <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
       <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
       <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
       <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/git" />
-      <path value="$PROJECT_DIR$/vendor/pimple/pimple" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/finder-facade" />
       <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
       <path value="$PROJECT_DIR$/vendor/sebastian/version" />
       <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/vendor/symfony/console" />
-      <path value="$PROJECT_DIR$/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/vendor/symfony/debug" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php55" />
       <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
-      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/vendor/symfony/config" />
       <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
       <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
-      <path value="$PROJECT_DIR$/vendor/michelf/php-markdown" />
-      <path value="$PROJECT_DIR$/vendor/twig/twig" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
@@ -138,42 +274,41 @@
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
       <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
-      <path value="$PROJECT_DIR$/vendor/blackfire/php-sdk" />
       <path value="$PROJECT_DIR$/vendor/psr/log" />
       <path value="$PROJECT_DIR$/vendor/codeclimate/php-test-reporter" />
       <path value="$PROJECT_DIR$/vendor/satooshi/php-coveralls" />
-      <path value="$PROJECT_DIR$/vendor/sami/sami" />
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
       <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
-      <path value="$PROJECT_DIR$/vendor/theseer/fdomdocument" />
       <path value="$PROJECT_DIR$/vendor/pdepend/pdepend" />
-      <path value="$PROJECT_DIR$/vendor/phploc/phploc" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/padraic/humbug_get_contents" />
+      <path value="$PROJECT_DIR$/vendor/padraic/phar-updater" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="254" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="39" />
     <option name="y" value="23" />
-    <option name="width" value="1426" />
+    <option name="width" value="1641" />
     <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
+    <navigator proportions="" version="1">
       <autoscrollFromSource ProjectPane="true" />
-      <sortByType />
-      <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -181,37 +316,18 @@
               <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
               <item name="calendar" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="calendar" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="calendar" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Property" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="calendar" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tests" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="calendar" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tmp" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="property/date&#9;FILE&#9;file:///Users/nicolaslagier/workspace/triedge/calendar/src/Property/DateTimeDue.php&#10;IDateT&#9;FILE&#9;file:///Users/nicolaslagier/workspace/triedge/calendar/src/Property/IDateTime.php&#10;component/time&#9;FILE&#9;file:///Users/nicolaslagier/workspace/triedge/calendar/src/Component/TimeZone.php&#10;iana&#9;FILE&#9;file:///Users/nicolaslagier/workspace/triedge/calendar/src/Property/IanaProperty.php&#10;xprop&#9;FILE&#9;file:///Users/nicolaslagier/workspace/triedge/calendar/src/Property/XProperty.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="component/time&#9;FILE&#9;file:///Users/nicolaslagier/workspace/triedge/calendar/src/Component/TimeZone.php&#10;iana&#9;FILE&#9;file:///Users/nicolaslagier/workspace/triedge/calendar/src/Property/IanaProperty.php&#10;xprop&#9;FILE&#9;file:///Users/nicolaslagier/workspace/triedge/calendar/src/Property/XProperty.php" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -298,19 +414,16 @@
       <arguments />
       <envs />
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="PHPUnit.CalendarTest" />
-      <item index="1" class="java.lang.String" itemvalue="PHPUnit.Duration" />
+    <list>
+      <item itemvalue="PHPUnit.CalendarTest" />
+      <item itemvalue="PHPUnit.Duration" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="PHPUnit.Duration" />
-        <item index="1" class="java.lang.String" itemvalue="PHPUnit.CalendarTest" />
+      <list>
+        <item itemvalue="PHPUnit.Duration" />
+        <item itemvalue="PHPUnit.CalendarTest" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -326,7 +439,8 @@
       <workItem from="1491438103312" duration="1452000" />
       <workItem from="1496712971036" duration="247000" />
       <workItem from="1517917486965" duration="2516000" />
-      <workItem from="1518133404440" duration="120000" />
+      <workItem from="1518133404440" duration="584000" />
+      <workItem from="1526222148055" duration="4164000" />
     </task>
     <servers />
   </component>
@@ -348,31 +462,33 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6219000" />
+    <option name="totallyTimeSpent" value="10847000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="40" y="23" width="1640" height="1027" extended-state="6" />
+    <frame x="39" y="23" width="1641" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18710889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4892704" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39924905" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329581" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32941177" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.36666667" />
+      <window_info anchor="right" id="Terminal" order="5" visible="true" weight="0.35209507" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18949343" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection Results" visible="true" weight="0.32903227" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32985386" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="4" side_tool="true" visible="true" weight="0.329581" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,396 +502,366 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/Property/IText.php</url>
-          <line>18</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="2" />
     </breakpoint-manager>
-    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Property/Description.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="28" lean-forward="false" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Property/IText.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Calendar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="34" column="46" lean-forward="false" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Property/Attachment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" column="27" lean-forward="false" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/test.ics">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/sample.ics">
+    <entry file="file://$PROJECT_DIR$/src/Parameter/ParticipationStatus.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-          <folding />
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Property/Duration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://PHP//Users/nicolaslagier/workspace/triedge/calendar/tests">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>PHP</ID>
-          <OriginalElement>$PROJECT_DIR$/tests</OriginalElement>
-          <nodes>
-            <node x="" y="">\PHPUnit_Framework_Assert</node>
-            <node x="" y="">\PHPUnit_Framework_Test</node>
-            <node x="" y="">$PROJECT_DIR$/tests/Component</node>
-            <node x="" y="">\PHPUnit_Framework_TestCase</node>
-            <node x="" y="">\Test\Jihoun\Calendar\CalendarTest</node>
-            <node x="" y="">\PHPUnit_Framework_SelfDescribing</node>
-            <node x="" y="">$PROJECT_DIR$/tests/Property</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="345.0" y="133.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Calendar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="41" column="33" lean-forward="false" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
-          <folding>
-            <element signature="e#34#75#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://PHP/\Jihoun\Calendar\Component\Alarm">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>PHP</ID>
-          <OriginalElement>\Jihoun\Calendar\Component\Alarm</OriginalElement>
-          <nodes>
-            <node x="0.0" y="0.0">\Jihoun\Calendar\Component\Alarm</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="-341.0" y="-196.0" />
-          <SelectedNodes>
-            <node>\Jihoun\Calendar\Component\Alarm</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://PHP/\Jihoun\Calendar\Component\Event">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>PHP</ID>
-          <OriginalElement>\Jihoun\Calendar\Component\Event</OriginalElement>
-          <nodes>
-            <node x="0.0" y="0.0">\Jihoun\Calendar\Component\IComponent</node>
-            <node x="20.0" y="80.0">\Jihoun\Calendar\Component\Event</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="\Jihoun\Calendar\Component\Event" target="\Jihoun\Calendar\Component\IComponent">
-              <point x="0.0" y="-15.0" />
-              <point x="0.0" y="15.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-321.0" y="-156.0" />
-          <SelectedNodes>
-            <node>\Jihoun\Calendar\Component\Event</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://PHP//Users/nicolaslagier/workspace/triedge/calendar/src/Component">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>PHP</ID>
-          <OriginalElement>$PROJECT_DIR$/src/Component</OriginalElement>
-          <nodes>
-            <node x="140.0" y="155.0">\Jihoun\Calendar\Component\Alarm</node>
-            <node x="189.0" y="80.0">\Jihoun\Calendar\Component\FreeBusy</node>
-            <node x="0.0" y="155.0">\Jihoun\Calendar\Component\TimeZone</node>
-            <node x="127.24999999999999" y="0.0">\Jihoun\Calendar\Component\IComponent</node>
-            <node x="88.99999999999999" y="80.0">\Jihoun\Calendar\Component\Journal</node>
-            <node x="300.0" y="80.0">\Jihoun\Calendar\Component\ToDo</node>
-            <node x="0.0" y="80.0">\Jihoun\Calendar\Component\Event</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="\Jihoun\Calendar\Component\ToDo" target="\Jihoun\Calendar\Component\IComponent">
-              <point x="0.0" y="-15.0" />
-              <point x="333.5" y="50.0" />
-              <point x="222.625" y="50.0" />
-              <point x="40.875" y="15.0" />
-            </edge>
-            <edge source="\Jihoun\Calendar\Component\Event" target="\Jihoun\Calendar\Component\IComponent">
-              <point x="0.0" y="-15.0" />
-              <point x="34.5" y="50.0" />
-              <point x="140.875" y="50.0" />
-              <point x="-40.875" y="15.0" />
-            </edge>
-            <edge source="\Jihoun\Calendar\Component\Journal" target="\Jihoun\Calendar\Component\IComponent">
-              <point x="0.0" y="-15.0" />
-              <point x="129.0" y="60.0" />
-              <point x="168.125" y="60.0" />
-              <point x="-13.625" y="15.0" />
-            </edge>
-            <edge source="\Jihoun\Calendar\Component\FreeBusy" target="\Jihoun\Calendar\Component\IComponent">
-              <point x="0.0" y="-15.0" />
-              <point x="234.5" y="60.0" />
-              <point x="195.375" y="60.0" />
-              <point x="13.625" y="15.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="184.0" y="93.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component/Alarm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component/Event.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4380">
-          <caret line="137" column="7" lean-forward="true" selection-start-line="137" selection-start-column="7" selection-end-line="137" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component/FreeBusy.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3230">
-          <caret line="190" column="31" lean-forward="false" selection-start-line="190" selection-start-column="31" selection-end-line="190" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component/IComponent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="44" lean-forward="false" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component/Journal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Property/IProperty.php">
+    <entry file="file://$PROJECT_DIR$/src/Parameter/RecurrenceIdentifierRange.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Property/TimeZoneUrl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Property/Version.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Property/Url.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Property/TimeZoneName.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Property/TimeZoneProperty.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Property/Duration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/logs/junit.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="102" column="44" lean-forward="true" selection-start-line="102" selection-start-column="44" selection-end-line="102" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Property/XProperty.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#93#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component/TimeZone.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding>
-            <element signature="e#44#93#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Property/Description.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="28" lean-forward="false" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Property/Attachment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" column="27" lean-forward="false" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/test.ics">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/sample.ics">
+    <entry file="file://$PROJECT_DIR$/src/Parameter/RelationshipType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-          <folding />
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Calendar.php">
+    <entry file="file://$PROJECT_DIR$/src/Parameter/RSVPExpectation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="34" column="46" lean-forward="false" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
-          <folding />
+        <state relative-caret-position="170">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Parameter/SentBy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Parameter/TimeZoneIdentifier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Parameter/ValueDataTypes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/Action.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/GeographicPosition.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Property/IanaProperty.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="85">
+          <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/XProperty.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/Url.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/TimeZoneOffsetTo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/TimeZoneOffsetFrom.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/TimeZoneName.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/TimeTransparency.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/Summary.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/Status.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/SequenceNumber.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/RelatedTo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/ExceptionDateTimes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/FreeBusyTime.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/ITextList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/Location.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/Organizer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/Priority.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/ProductIdentifier.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/RecurrenceDateTimes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/RecurrenceId.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/RecurrenceRule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/Resources.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/DateTimeCreated.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="33" lean-forward="true" selection-start-line="16" selection-end-line="17" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/DateTimeStamp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/IDateTime.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Property/IText.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-          <folding />
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/RequestStatus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="38" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Calendar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-494">
+          <caret line="15" column="4" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/Version.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/DateTimeDue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/PercentComplete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/Attachment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-35">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="e#44#89#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Component/ToDo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Parameter/IParameter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Property/IProperty.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Property/Duration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Component/Alarm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Component/Event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Component/TimeZone.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Calendar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="154" column="47" selection-start-line="154" selection-start-column="47" selection-end-line="154" selection-end-column="47" />
+          <folding>
+            <element signature="e#40#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>

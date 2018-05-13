@@ -8,7 +8,7 @@ class SentBy extends IParameter
 {
     const NAME = 'SENT-BY';
 
-    public function getValue()
+    public function getValue(): ?string
     {
         //TODO
         return null;

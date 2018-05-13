@@ -8,7 +8,7 @@ class FormatType extends IParameter
 {
     const NAME = 'FMTTYPE';
 
-    public function getValue()
+    public function getValue(): ?string
     {
         //TODO
         return null;

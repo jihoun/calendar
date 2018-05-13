@@ -12,8 +12,8 @@ class Description extends IText
     protected $altrepparam = null;
     protected $languageparam = null;
 
-    public function getParams()
+    public function getParams(): array
     {
-        return array($this->altrepparam, $this->languageparam);
+        return [$this->altrepparam, $this->languageparam];
     }
 }

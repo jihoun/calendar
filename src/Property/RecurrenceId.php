@@ -16,18 +16,18 @@ class RecurrenceId extends IProperty
     protected $rangeparam = null;
     protected $valueparam = null;    //"VALUE" "=" ("DATE-TIME" / "DATE"))
     
-    public function getValue()
+    public function getValue(): ?string
     {
         //TODO
         return null;
     }
 
-    public function getParams()
+    public function getParams(): array
     {
-        return array(
+        return [
             $this->tzidparam,
             $this->rangeparam,
             $this->valueparam
-        );
+        ];
     }
 }

@@ -31,7 +31,7 @@ class RequestStatus extends IProperty
         //TODO
     }
 
-    public function getValue()
+    public function getValue(): ?string
     {
         $res = $this->statcode1.'.'.$this->statcode2;
         if (!is_null($this->statcode3)) {
@@ -45,8 +45,8 @@ class RequestStatus extends IProperty
         return $res;
     }
 
-    public function getParams()
+    public function getParams(): array
     {
-        return array($this->languageparam);
+        return [$this->languageparam];
     }
 }

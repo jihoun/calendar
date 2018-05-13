@@ -20,7 +20,7 @@ class Priority extends IProperty
         $this->integer = $this->normalize($value);
     }
 
-    public function getValue()
+    public function getValue(): ?string
     {
         return $this->integer;
     }

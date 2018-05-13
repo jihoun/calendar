@@ -27,15 +27,15 @@ class TimeZone
     /**
      * @var \Jihoun\Calendar\Property\TimeZoneProperty[]
      */
-    protected $standardcList = array();
+    protected $standardcList = [];
     /**
      * @var \Jihoun\Calendar\Property\TimeZoneProperty[]
      */
-    protected $daylightcList = array();
+    protected $daylightcList = [];
     // The following are OPTIONAL,
     // and MAY occur more than once.
-    protected $xPropList = array();
-    protected $ianaPropList = array();
+    protected $xPropList = [];
+    protected $ianaPropList = [];
 
     /**
      * TimeZone constructor.
@@ -48,7 +48,7 @@ class TimeZone
     /**
      * @return string
      */
-    public function toString()
+    public function toString(): string
     {
         if (empty($this->standardcList) && empty($this->daylightcList)) {
             return '';
@@ -80,7 +80,7 @@ class TimeZone
      * @param \Jihoun\Calendar\Property\LastModified $lastMod
      * @return $this
      */
-    public function &setLastModified(Property\LastModified $lastMod)
+    public function &setLastModified(Property\LastModified $lastMod): TimeZone
     {
         $this->lastMod = $lastMod;
         return $this;
@@ -90,7 +90,7 @@ class TimeZone
      * @param \Jihoun\Calendar\Property\TimeZoneUrl $tzurl
      * @return $this
      */
-    public function &setTimeZoneUrl(Property\TimeZoneUrl $tzurl)
+    public function &setTimeZoneUrl(Property\TimeZoneUrl $tzurl): TimeZone
     {
         $this->tzurl = $tzurl;
         return $this;
@@ -100,7 +100,7 @@ class TimeZone
      * @param \Jihoun\Calendar\Property\TimeZoneProperty $tzprop
      * @return $this
      */
-    public function addStandardc(Property\TimeZoneProperty $tzprop)
+    public function addStandardc(Property\TimeZoneProperty $tzprop): TimeZone
     {
         $this->standardcList[] = $tzprop;
         return $this;
@@ -110,7 +110,7 @@ class TimeZone
      * @param \Jihoun\Calendar\Property\TimeZoneProperty $tzprop
      * @return $this
      */
-    public function &addDaylightc(Property\TimeZoneProperty $tzprop)
+    public function &addDaylightc(Property\TimeZoneProperty $tzprop): TimeZone
     {
         $this->daylightcList[] = $tzprop;
         return $this;
@@ -120,7 +120,7 @@ class TimeZone
      * @param \Jihoun\Calendar\Property\XProperty $xProp
      * @return $this
      */
-    public function &addXProperty(Property\XProperty $xProp)
+    public function &addXProperty(Property\XProperty $xProp): TimeZone
     {
         $this->xPropList[] = $xProp;
         return $this;
@@ -130,7 +130,7 @@ class TimeZone
      * @param \Jihoun\Calendar\Property\IanaProperty $ianaProp
      * @return $this
      */
-    public function &addIanaProperty(Property\IanaProperty $ianaProp)
+    public function &addIanaProperty(Property\IanaProperty $ianaProp): TimeZone
     {
         $this->ianaPropList[] = $ianaProp;
         return $this;

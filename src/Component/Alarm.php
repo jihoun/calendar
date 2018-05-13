@@ -11,7 +11,7 @@ class Alarm
      * @todo implement
      * @return string
      */
-    public function toString()
+    public function toString(): string
     {
         $res = "BEGIN:VALARM\n";
 

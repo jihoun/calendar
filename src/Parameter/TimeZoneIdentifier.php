@@ -8,7 +8,7 @@ class TimeZoneIdentifier extends IParameter
 {
     const NAME = 'TZID';
 
-    public function getValue()
+    public function getValue(): ?string
     {
         //TODO
         return null;

@@ -2,10 +2,12 @@
 
 namespace Test\Jihoun\Calendar;
 
+use Jihoun\Calendar\Calendar;
 use \Jihoun\Calendar\Component as Component;
 use \Jihoun\Calendar\Property as Property;
+use PHPUnit\Framework\TestCase;
 
-class CalendarTest extends \PHPUnit_Framework_TestCase
+class CalendarTest extends TestCase
 {
     public function testCalendar()
     {
@@ -142,13 +144,15 @@ class CalendarTest extends \PHPUnit_Framework_TestCase
             ->addStandardc(new Property\TimeZoneProperty(new Property\DateTimeStart(new \DateTime())))
             ->addDaylightc(new Property\TimeZoneProperty(new Property\DateTimeStart(new \DateTime())));
 
-        $cal = new \Jihoun\Calendar\Calendar();
+        $cal = new Calendar();
         $cal->addComponent($event);
         $cal->addComponent($todo);
         $cal->addComponent($journal);
         $cal->addComponent($freeBusy);
         
         $cal->addTimeZone($tz);
+
+        static::assertNotEmpty($cal->toString());
 
         // file_put_contents('/Users/nicolaslagier/workspace/triedge/calendar/tmp/test.ics', $cal->toString());
     }

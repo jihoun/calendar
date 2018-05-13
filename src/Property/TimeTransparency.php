@@ -14,22 +14,22 @@ class TimeTransparency extends IProperty
 
     protected $text = self::OPAQUE;
 
-    protected function __construct($text)
+    protected function __construct(string $text)
     {
         $this->text = $text;
     }
 
-    public function getValue()
+    public function getValue(): ?string
     {
         return $this->text;
     }
 
-    public static function opaque()
+    public static function opaque(): TimeTransparency
     {
         return new static(static::OPAQUE);
     }
 
-    public static function transparent()
+    public static function transparent(): TimeTransparency
     {
         return new static(static::TRANSPARENT);
     }

@@ -13,8 +13,9 @@ class DateTimeStamp extends IDateTime
 {
     const NAME = 'DTSTAMP';
     
-    public function __construct(\DateTime $dt = null)
+    public function __construct(\DateTimeInterface $dt = null)
     {
-        $this->dateTime = (is_null($dt) ? new \DateTime() : $dt);
+        $dt = is_null($dt) ? new \DateTime() : $dt;
+        parent::__construct($dt);
     }
 }

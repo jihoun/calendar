@@ -1,4 +1,5 @@
 <?php
+
 namespace Jihoun\Calendar\Property;
 
 /**
@@ -10,22 +11,22 @@ abstract class Status extends IProperty
 {
     const NAME = 'STATUS';
 
-    const CANCELLED     = 'CANCELLED';      //Indicates journal is removed.
-                                            //Indicates event was cancelled.
-                                            //Indicates to-do was cancelled.
+    const CANCELLED = 'CANCELLED';      //Indicates journal is removed.
+                                        //Indicates event was cancelled.
+                                        //Indicates to-do was cancelled.
     protected $value;
 
-    protected function __construct($value)
+    protected function __construct(string $value)
     {
         $this->value = $value;
     }
 
-    public function getValue()
+    public function getValue(): ?string
     {
         return $this->value;
     }
 
-    public static function cancelled()
+    public static function cancelled(): Status
     {
         return new static(static::CANCELLED);
     }

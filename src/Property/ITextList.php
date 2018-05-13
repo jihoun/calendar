@@ -3,9 +3,9 @@ namespace Jihoun\Calendar\Property;
 
 abstract class ITextList extends IProperty
 {
-    protected $texts = array();
+    protected $texts = [];
 
-    public function __construct(array $values = array())
+    public function __construct(array $values = [])
     {
         foreach ($values as $value) {
             $this->addValue($value);
@@ -15,7 +15,7 @@ abstract class ITextList extends IProperty
     /**
      * @inheritDoc
      */
-    public function getValue()
+    public function getValue(): ?string
     {
         if (empty($this->texts)) {
             return null;
@@ -34,11 +34,9 @@ abstract class ITextList extends IProperty
      * @param string $value
      * @return ITextList
      */
-    public function &addValue($value)
+    public function &addValue(string $value): ITextList
     {
-        if (is_string($value)) {
-            $this->texts[] = $value;
-        }
+        $this->texts[] = $value;
         return $this;
     }
 
@@ -46,7 +44,7 @@ abstract class ITextList extends IProperty
      * @param array $values
      * @return  ITextList
      */
-    public function &addValues(array $values)
+    public function &addValues(array $values): ITextList
     {
         foreach ($values as $value) {
             $this->addValue($value);

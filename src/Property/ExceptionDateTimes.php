@@ -1,6 +1,8 @@
 <?php
 namespace Jihoun\Calendar\Property;
 
+use Jihoun\Calendar\Parameter\ValueDataTypes;
+
 /**
  * This property defines the list of DATE-TIME exceptions for recurring events,
  * to-dos, journal entries, or time zone definitions.
@@ -12,20 +14,20 @@ class ExceptionDateTimes extends IProperty
     protected $valueparam = null; //"VALUE" "=" ("DATE-TIME" / "DATE")) /
     protected $tzidparam = null;
 
-    protected $values = array();
+    protected $values = [];
     protected $fullDay;
 
-    public function __construct($fullDay = false)
+    public function __construct(bool $fullDay = false)
     {
-        $this->fullDay = boolval($fullDay);
+        $this->fullDay = $fullDay;
         if ($this->fullDay) {
-            $this->valueparam = \Jihoun\Calendar\Parameter\ValueDataTypes::date();
+            $this->valueparam = ValueDataTypes::date();
         } else {
-            $this->valueparam = \Jihoun\Calendar\Parameter\ValueDataTypes::dateTime();
+            $this->valueparam = ValueDataTypes::dateTime();
         }
     }
 
-    public function getValue()
+    public function getValue(): ?string
     {
         if (empty($this->values)) {
             return null;
@@ -43,13 +45,14 @@ class ExceptionDateTimes extends IProperty
         }
     }
 
-    public function addValue(\DateTime $dt)
+    public function addValue(\DateTimeInterface $dt): ExceptionDateTimes
     {
         $this->values[] = $dt;
+        return $this;
     }
 
-    public function getParams()
+    public function getParams(): array
     {
-        return array($this->valueparam, $this->tzidparam);
+        return [$this->valueparam, $this->tzidparam];
     }
 }

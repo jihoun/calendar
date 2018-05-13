@@ -8,7 +8,7 @@ class ParticipationRole extends IParameter
 {
     const NAME = 'ROLE';
 
-    public function getValue()
+    public function getValue(): ?string
     {
         //TODO
         return null;

@@ -8,7 +8,7 @@ class GroupOfListMembership extends IParameter
 {
     const NAME = 'MEMBER';
 
-    public function getValue()
+    public function getValue(): ?string
     {
         //TODO
         return null;

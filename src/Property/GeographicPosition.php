@@ -1,4 +1,5 @@
 <?php
+
 namespace Jihoun\Calendar\Property;
 
 /**
@@ -14,24 +15,21 @@ class GeographicPosition extends IProperty
 
     /**
      * Constructor
-     * @param double $lat latitude
-     * @param double $lon longitude
+     * @param float $lat latitude
+     * @param float $lon longitude
+     * @throws \Exception
      */
-    public function __construct($lat, $lon)
+    public function __construct(float $lat, float $lon)
     {
-        if (is_numeric($lat) && is_numeric($lon)) {
-            $this->lat = (double)$lat;
-            $this->lon = (double)$lon;
-        } else {
-            throw new \Exception('Invlid params for GeographicPosition::__construct');
-        }
+        $this->lat = $lat;
+        $this->lon = $lon;
     }
 
     /**
      * @inheritDoc
      */
-    public function getValue()
+    public function getValue(): ?string
     {
-        return $this->lat.';'.$this->lon;
+        return $this->lat . ';' . $this->lon;
     }
 }

@@ -11,8 +11,8 @@ class Categories extends ITextList
 
     protected $languageparam = null;
     
-    public function getParams()
+    public function getParams(): array
     {
-        return array($this->languageparam);
+        return [$this->languageparam];
     }
 }

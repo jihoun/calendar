@@ -1,20 +1,23 @@
 <?php
+
 namespace Jihoun\Calendar\Parameter;
 
 abstract class IParameter
 {
+    const NAME = '';
+
     /**
      * @return string|null
      */
-    abstract public function getValue();
+    abstract public function getValue(): ?string;
 
-    public function toString()
+    final public function toString(): string
     {
         $value = $this->getValue();
         if (is_null($value)) {
             return '';
-        } else {
-            return ';'.static::NAME.'='.$value;
         }
+
+        return ';' . static::NAME . '=' . $value;
     }
 }

@@ -12,7 +12,7 @@ class AlternateTextRepresentation extends IParameter
      * @todo  implement
      * @return string|null
      */
-    public function getValue()
+    public function getValue(): ?string
     {
         return null;
     }

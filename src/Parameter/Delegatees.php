@@ -8,7 +8,7 @@ class Delegatees extends IParameter
 {
     const NAME = 'DELEGATED-TO';
 
-    public function getValue()
+    public function getValue(): ?string
     {
         //TODO
         return null;

@@ -8,8 +8,8 @@ class DateTimeStart extends IDateTime
 {
     const NAME = 'DTSTART';
 
-    public function getParams()
+    public function getParams(): array
     {
-        return array($this->valueparam, $this->tzidparam);
+        return [$this->valueparam, $this->tzidparam];
     }
 }

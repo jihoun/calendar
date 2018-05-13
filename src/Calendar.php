@@ -6,12 +6,15 @@ use Jihoun\Calendar\Component as Component;
 
 class Calendar
 {
+    /** @var \Jihoun\Calendar\Property\ProductIdentifier  */
     protected $prodid;
+    /** @var \Jihoun\Calendar\Property\Version  */
     protected $version;
+    /** @var \Jihoun\Calendar\Property\CalendarScale */
     public $calscale = null;
     public $method = null;
     
-    private $componentList = array();
+    private $componentList = [];
 
     /**
      * Calendar constructor.
@@ -29,7 +32,7 @@ class Calendar
      * @param Component\IComponent $component
      * @return $this
      */
-    public function &addComponent(Component\IComponent $component)
+    public function &addComponent(Component\IComponent $component): Calendar
     {
         $this->componentList[] = $component;
         return $this;
@@ -39,7 +42,7 @@ class Calendar
      * @param Component\TimeZone $tz
      * @return $this
      */
-    public function &addTimeZone(Component\TimeZone $tz)
+    public function &addTimeZone(Component\TimeZone $tz): Calendar
     {
         $this->componentList[] = $tz;
         return $this;
@@ -48,7 +51,7 @@ class Calendar
     /**
      * @return string
      */
-    public function toString()
+    public function toString(): string
     {
         $res = "BEGIN:VCALENDAR\n";
         $res .= $this->version->toString();

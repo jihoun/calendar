@@ -22,7 +22,7 @@ class ValueDataTypes extends IParameter
 
     protected $value;
 
-    public function getValue()
+    public function getValue(): ?string
     {
         return $this->value;
     }
@@ -32,64 +32,64 @@ class ValueDataTypes extends IParameter
      * classes
      * @param string $value
      */
-    protected function __construct($value)
+    protected function __construct(string $value)
     {
         $this->value = $value;
     }
 
-    public static function binary()
+    public static function binary(): ValueDataTypes
     {
         return new static(static::BINARY);
     }
-    public static function boolean()
+    public static function boolean(): ValueDataTypes
     {
         return new static(static::BOOLEAN_);
     }
-    public static function calAddress()
+    public static function calAddress(): ValueDataTypes
     {
         return new static(static::CAL_ADDRESS);
     }
-    public static function date()
+    public static function date(): ValueDataTypes
     {
         return new static(static::DATE);
     }
-    public static function dateTime()
+    public static function dateTime(): ValueDataTypes
     {
         return new static(static::DATE_TIME);
     }
-    public static function duration()
+    public static function duration(): ValueDataTypes
     {
         return new static(static::DURATION);
     }
-    public static function float()
+    public static function float(): ValueDataTypes
     {
         return new static(static::FLOAT_);
     }
-    public static function integer()
+    public static function integer(): ValueDataTypes
     {
         return new static(static::INTEGER_);
     }
-    public static function period()
+    public static function period(): ValueDataTypes
     {
         return new static(static::PERIOD);
     }
-    public static function recur()
+    public static function recur(): ValueDataTypes
     {
         return new static(static::RECUR);
     }
-    public static function text()
+    public static function text(): ValueDataTypes
     {
         return new static(static::TEXT);
     }
-    public static function time()
+    public static function time(): ValueDataTypes
     {
         return new static(static::TIME);
     }
-    public static function uri()
+    public static function uri(): ValueDataTypes
     {
         return new static(static::URI);
     }
-    public static function utcOffest()
+    public static function utcOffest(): ValueDataTypes
     {
         return new static(static::UTC_OFFSET);
     }

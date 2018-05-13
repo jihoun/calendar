@@ -8,7 +8,7 @@ class ParticipationStatus extends IParameter
 {
     const NAME = 'PARTSTAT';
 
-    public function getValue()
+    public function getValue(): ?string
     {
         //TODO
         return null;

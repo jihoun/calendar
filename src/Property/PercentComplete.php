@@ -1,4 +1,5 @@
 <?php
+
 namespace Jihoun\Calendar\Property;
 
 /**
@@ -16,7 +17,7 @@ class PercentComplete extends IProperty
         $this->integer = $this->normalize($value);
     }
 
-    public function getValue()
+    public function getValue(): ?string
     {
         return $this->integer;
     }
@@ -26,12 +27,13 @@ class PercentComplete extends IProperty
         $val = 0;
         if (is_numeric($value)) {
             $val = (int)$value;
-            if ($val>100) {
+            if ($val > 100) {
                 $val = 100;
-            } elseif ($val<0) {
+            } elseif ($val < 0) {
                 $val = 0;
             }
         }
+
         return $val;
     }
 }

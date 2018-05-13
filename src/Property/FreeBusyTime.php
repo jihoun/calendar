@@ -7,11 +7,11 @@ class FreeBusyTime extends IProperty
 
     protected $fmttypeparam = null;
 
-    public function getParams()
+    public function getParams(): array
     {
-        return array($this->fmttypeparam);
+        return [$this->fmttypeparam];
     }
-    public function getValue()
+    public function getValue(): ?string
     {
         //TODO
         return null;

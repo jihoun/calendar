@@ -8,7 +8,7 @@ class RSVPExpectation extends IParameter
 {
     const NAME = 'RSVP';
 
-    public function getValue()
+    public function getValue(): ?string
     {
         //TODO
         return null;

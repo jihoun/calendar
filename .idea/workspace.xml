@@ -2,89 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e2cb797-382f-4335-be7a-37120ad92068" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/calendar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/calendar.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Calendar.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calendar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Alarm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Alarm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Event.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/FreeBusy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/FreeBusy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/IComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/IComponent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Journal.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Journal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/TimeZone.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/TimeZone.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/ToDo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/ToDo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parameter/AlarmTriggerRelationship.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/AlarmTriggerRelationship.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parameter/AlternateTextRepresentation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/AlternateTextRepresentation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parameter/CalendarUserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/CalendarUserType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parameter/CommonName.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/CommonName.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parameter/Delegatees.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/Delegatees.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parameter/Delegators.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/Delegators.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parameter/DirectoryEntryReference.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/DirectoryEntryReference.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parameter/FormatType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/FormatType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parameter/FreeBusyTimeType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/FreeBusyTimeType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parameter/GroupOfListMembership.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/GroupOfListMembership.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parameter/IParameter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/IParameter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parameter/InlineEncoding.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/InlineEncoding.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parameter/Language.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/Language.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parameter/ParticipationRole.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/ParticipationRole.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parameter/ParticipationStatus.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/ParticipationStatus.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parameter/RSVPExpectation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/RSVPExpectation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parameter/RecurrenceIdentifierRange.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/RecurrenceIdentifierRange.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parameter/RelationshipType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/RelationshipType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parameter/SentBy.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/SentBy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parameter/TimeZoneIdentifier.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/TimeZoneIdentifier.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parameter/ValueDataTypes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parameter/ValueDataTypes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/Attachment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Attachment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/Attendee.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Attendee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/Categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Categories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/Classification.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Classification.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/DateTimeCreated.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/DateTimeCreated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/DateTimeDue.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/DateTimeDue.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/DateTimeEnd.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/DateTimeEnd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/DateTimeStamp.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/DateTimeStamp.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/DateTimeStart.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/DateTimeStart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/Description.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Description.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/Duration.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Duration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/EventStatus.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/EventStatus.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/ExceptionDateTimes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/ExceptionDateTimes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/FreeBusyTime.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/FreeBusyTime.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/GeographicPosition.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/GeographicPosition.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/IDateTime.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/IDateTime.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/IProperty.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/IProperty.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/IText.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/IText.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/ITextList.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/ITextList.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/IanaProperty.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/IanaProperty.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/Location.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Location.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/Organizer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Organizer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/PercentComplete.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/PercentComplete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/Priority.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Priority.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/ProductIdentifier.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/ProductIdentifier.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/RecurrenceDateTimes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/RecurrenceDateTimes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/RecurrenceId.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/RecurrenceId.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/RecurrenceRule.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/RecurrenceRule.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/RelatedTo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/RelatedTo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/RequestStatus.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/RequestStatus.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/Resources.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Resources.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/SequenceNumber.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/SequenceNumber.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/Status.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Status.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/Summary.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Summary.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/TimeTransparency.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/TimeTransparency.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/TimeZoneName.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/TimeZoneName.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/TimeZoneOffsetFrom.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/TimeZoneOffsetFrom.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/TimeZoneOffsetTo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/TimeZoneOffsetTo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/TimeZoneProperty.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/TimeZoneProperty.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/Url.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/Url.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Property/XProperty.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Property/XProperty.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Calendar.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Calendar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Component/Alarm.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Component/Alarm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Component/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Component/Event.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Component/TimeZone.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Component/TimeZone.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Property/Duration.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Property/Duration.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -102,59 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Calendar.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Calendar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="154" column="47" selection-start-line="154" selection-start-column="47" selection-end-line="154" selection-end-column="47" />
-              <folding>
-                <element signature="e#40#69#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Duration.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Property/Duration.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Alarm.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Component/Alarm.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Event.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Component/Event.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TimeZone.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Component/TimeZone.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="85">
+              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -199,7 +69,6 @@
         <option value="$PROJECT_DIR$/src/Property/Url.php" />
         <option value="$PROJECT_DIR$/src/Property/TimeZoneOffsetTo.php" />
         <option value="$PROJECT_DIR$/src/Property/TimeZoneOffsetFrom.php" />
-        <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/src/Property/TimeZoneName.php" />
         <option value="$PROJECT_DIR$/src/Property/TimeTransparency.php" />
         <option value="$PROJECT_DIR$/src/Property/Summary.php" />
@@ -235,6 +104,7 @@
         <option value="$PROJECT_DIR$/tests/Component/Event.php" />
         <option value="$PROJECT_DIR$/tests/Component/TimeZone.php" />
         <option value="$PROJECT_DIR$/tests/Calendar.php" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -315,6 +185,11 @@
             <path>
               <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
               <item name="calendar" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="calendar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="calendar" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -440,7 +315,7 @@
       <workItem from="1496712971036" duration="247000" />
       <workItem from="1517917486965" duration="2516000" />
       <workItem from="1518133404440" duration="584000" />
-      <workItem from="1526222148055" duration="4164000" />
+      <workItem from="1526222148055" duration="4743000" />
     </task>
     <servers />
   </component>
@@ -462,7 +337,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10847000" />
+    <option name="totallyTimeSpent" value="11426000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="39" y="23" width="1641" height="1027" extended-state="6" />
@@ -473,7 +348,7 @@
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.32941177" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.36666667" />
-      <window_info anchor="right" id="Terminal" order="5" visible="true" weight="0.35209507" />
+      <window_info anchor="right" id="Terminal" order="5" visible="true" weight="0.58348966" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18949343" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection Results" visible="true" weight="0.32903227" />
@@ -860,8 +735,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="85">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
         </state>
       </provider>
     </entry>

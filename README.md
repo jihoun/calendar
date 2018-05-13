@@ -8,7 +8,7 @@ You can load this library in your project using composer:
 ```json
 {
    "require": {
-       "jihoun/calendar": "dev-master"
+       "jihoun/calendar": "^1.0.0"
    },
 }
 ```
